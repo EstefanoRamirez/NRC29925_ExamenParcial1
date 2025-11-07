@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, pre {
 
 /* --- 4. Reglas de style.css (Original) - MODIFICADAS --- */
 
-/* [CAMBIO] Título centrado en la barra de navegación */
+/* Título centrado en la barra de navegación */
 .navbar-center, .navbar-center .navbar-text {
     position: absolute;
     left: 50%;
@@ -132,4 +132,21 @@ h1, h2, h3, h4, h5, h6, pre {
 }
 .container-fluid .text-center .lead {
     color: #858796; /* El gris de la plantilla, como en la foto de jQuery */
+}
+
+/* --- 7. [NUEVO] Títulos de Página de Módulo (grupos) --- */
+/* (Esta regla se aplicará a grupo1.html, etc.) */
+.container-fluid > h1.h3 {
+    text-align: center !important;
+    color: #000000 !important; /* Negro puro */
+    font-family: 'Roboto Mono', monospace !important;
+    text-transform: uppercase;
+}
+
+/* --- 8. [NUEVO] Títulos de Tarjeta de Módulo (Examples) --- */
+/* (Esta regla se aplicará a grupo1.html, etc.) */
+.card-header h6 {
+    color: #000000 !important; /* Negro puro */
+    font-weight: 700 !important;
+    font-family: 'Roboto Mono', monospace !important;
 }
