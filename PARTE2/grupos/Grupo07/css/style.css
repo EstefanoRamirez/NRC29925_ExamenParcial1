@@ -35,6 +35,10 @@ h1, h2, h3, h4, h5, h6, pre {
     border-top: 1px solid #333;
 }
 
+.sidebar .nav-item .nav-link i {
+    margin-right: 12px; 
+}
+
 .btn-primary {
      background-color: #000 !important;
      border-color: #000 !important;
@@ -134,7 +138,9 @@ h1, h2, h3, h4, h5, h6, pre {
     font-family: 'Roboto Mono', monospace !important;
 }
 
-/* --- ESTILOS DE PANELES (GRUPO 7) --- */
+
+/* --- INICIO ESTILOS ESPECÍFICOS DE PANELES (ORIGINALES DEL CLIENTE) --- */
+
 .panel {
     border: 2px solid #000;
     border-radius: 0;
@@ -208,8 +214,8 @@ h1, h2, h3, h4, h5, h6, pre {
 }
 
 .panel-4 .panel-body {
-    height: 100%;
     padding: 0;
+    height: 100%;
     position: relative;
     overflow: hidden; 
 }
