@@ -1,9 +1,21 @@
 $(document).ready(function() {
-    
-    // Ejemplo de cómo podrían inicializar sus tooltips de Bootstrap 5
-    // var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    // var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    //   return new bootstrap.Tooltip(tooltipTriggerEl)
-    // })
-
+    $('#btn-mostrar-ejercicio').on('click', function() {
+        var ejercicio = $('#ejercicio-contenido');
+        
+        if (ejercicio.is(':visible')) {
+            // Si está visible, lo oculta
+            ejercicio.slideUp();
+            $(this).html(' Visualizar Ejercicio');
+        } else {
+            // Si está oculto, lo muestra
+            ejercicio.slideDown(function() {
+                // Si tienes funciones de inicialización, se ejecutan aquí
+                if (typeof inicializarScrollspy === 'function') inicializarScrollspy(document);
+            });
+            $(this).html(' Ocultar Ejercicio');
+        }
+    });
 });
+
+
+

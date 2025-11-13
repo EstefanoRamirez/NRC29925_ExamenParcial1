@@ -1,0 +1,51 @@
+body{
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    overflow: hidden;
+}
+h4{
+    text-align: center;
+}
+.img{
+    background-image: url(/img/foto.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 0 auto;
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ACB6E5;
+}
+.container-incon{
+    font-size: 30px;
+    margin-left: 500px;
+    color: black;
+    opacity: 0.5;
+}
+#barra-progreso-container {
+  animation: aparecer 0.6s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+#barra-progreso::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.2), transparent);
+  animation: brillo 1.5s linear infinite;
+  border-radius: 15px;
+}
+
+@keyframes brillo {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}

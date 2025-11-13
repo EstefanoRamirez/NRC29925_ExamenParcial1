@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6, pre {
     color: #858796; 
 }
 
-.container-fluid > h1.h3 {
+.container-fluid h1.h3 {
     text-align: center !important;
     color: #000000 !important; 
     font-family: 'Roboto Mono', monospace !important;
@@ -132,4 +132,165 @@ h1, h2, h3, h4, h5, h6, pre {
     color: #000000 !important; 
     font-weight: 700 !important;
     font-family: 'Roboto Mono', monospace !important;
+}
+
+/* --- ESTILOS DE PANELES (GRUPO 7) --- */
+.panel {
+    border: 2px solid #000;
+    border-radius: 0;
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.panel:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.panel-heading {
+    border-bottom: 2px solid #000;
+    border-radius: 0;
+    /* [CAMBIO] Títulos de panel centrados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.panel-title {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+/* [CAMBIO] Corrección de texto gris y padding */
+.panel-body {
+    padding: 20px; /* Arregla el problema de "muy pegado" */
+    color: #000 !important; /* Arregla el texto gris */
+    font-family: 'Nunito', sans-serif; /* Fuente más legible */
+}
+/* [CAMBIO] Corrección del subtítulo "Tipos de paneles" */
+.panel-body h3 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    color: #000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.panel-1 .panel-heading {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.panel-2 .panel-heading {
+    background-color: #000000;
+    color: #fff;
+}
+
+.panel-3 .panel-heading {
+    background-color: #000000;
+    color: #fff;
+}
+
+.panel-4 .panel-heading {
+    background-color: #000000;
+    color: #fff;
+}
+
+/* Estilos específicos para panel-4 (Ejercicio) */
+.panel-4 {
+    height: 850px; /* Altura aumentada para el iframe */
+}
+
+.panel-4 .panel-body {
+    height: 100%;
+    padding: 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+.panel-4 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Contenedor responsivo para videos (mantiene relación 16:9) */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-responsive video,
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hacer imágenes dentro de los paneles responsivas */
+.panel-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilos del acordeón dentro de panel-2 */
+.panel-2 .accordion-button {
+    background-color: #000;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 0;
+    border-color: #333;
+}
+.panel-2 .accordion-button:not(.collapsed) {
+    background-color: #222;
+    color: #fff;
+    box-shadow: none;
+}
+.panel-2 .accordion-body {
+    background-color: #fff;
+    color: #000;
+}
+.panel-2 .img-responsive {
+    border: 1px solid #e6e6e6;
+    padding: 6px;
+    background: #fafafa;
+}
+.exec {
+    justify-content: center;
+}
+
+/* Sidebar y Topbar Fijas */
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
 }

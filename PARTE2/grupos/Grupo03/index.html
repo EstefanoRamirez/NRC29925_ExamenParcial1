@@ -131,12 +131,1036 @@
                 </nav>
 
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4">Scrollspy - Grupo 03</h1>
-                    
+                    <div class="row mb-4">
+                        <div class="col-12 text-center">
+                            <h1 class="h3 mb-4">Scrollspy y Tabs - Grupo 03</h1>
+                        </div>
                     </div>
+
+                    <!-- SECCIÓN TEORÍA -->
+                    <div class="card content-card mb-4">
+                        <div class="card-header">
+                            <h6 class="m-0 font-weight-bold">TEORÍA</h6>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">¿Qué es Scrollspy?</h5>
+                            <p class="text-justify">
+                                <strong>Scrollspy</strong> es un plugin de Bootstrap que permite actualizar automáticamente los enlaces de navegación basándose en la posición del scroll en la página. Es especialmente útil para crear tablas de contenido (table of contents) que se actualizan dinámicamente mientras el usuario se desplaza por el documento.
+                            </p>
+                            
+                            <h5 class="card-title mt-4">¿Qué son las Tabs?</h5>
+                            <p class="text-justify">
+                                Las <strong>Tabs (Pestañas)</strong> son componentes de Bootstrap que permiten organizar contenido en múltiples paneles, mostrando solo uno a la vez. Los usuarios pueden alternar entre diferentes secciones haciendo clic en las pestañas correspondientes, lo que mejora la organización y la experiencia del usuario al evitar el desplazamiento excesivo.
+                            </p>
+
+                            <h5 class="card-title mt-4">Características Principales:</h5>
+                            <ul>
+                                <li><strong>Scrollspy:</strong> Actualiza automáticamente los enlaces de navegación según la posición del scroll</li>
+                                <li><strong>Data Attributes:</strong> Se configura mediante atributos HTML como <code>data-spy="scroll"</code>, <code>data-target</code> y <code>data-offset</code></li>
+                                <li><strong>Tabs:</strong> Permite organizar contenido en múltiples paneles intercambiables</li>
+                                <li><strong>Navegación Dinámica:</strong> Los elementos de navegación se resaltan automáticamente cuando su sección correspondiente está visible</li>
+                                <li><strong>Responsive:</strong> Funciona perfectamente en dispositivos móviles y tablets</li>
+                            </ul>
+
+                            <h5 class="card-title mt-4">Atributos Clave de Scrollspy:</h5>
+                            <ul>
+                                <li><code>data-spy="scroll"</code>: Activa el plugin Scrollspy en el elemento</li>
+                                <li><code>data-target="#menu"</code>: Especifica el ID del elemento de navegación que se actualizará</li>
+                                <li><code>data-offset="0"</code>: Define el offset en píxeles desde la parte superior antes de activar un elemento</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN EJEMPLO -->
+                    <div class="card content-card mb-4">
+                        <div class="card-header">
+                            <h6 class="m-0 font-weight-bold">EJEMPLO</h6>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Video Tutorial</h5>
+                            <div class="mb-4">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <video class="embed-responsive-item" controls>
+                                        <source src="Recursos/video/tutorial.mp4" type="video/mp4">
+                                        Tu navegador no soporta la reproducción de videos.
+                                    </video>
+                                </div>
+                            </div>
+
+                            <h5 class="card-title mt-4">Explicación Detallada del Código</h5>
+                            
+                            <div class="mb-4">
+                                <h6 class="font-weight-bold">1. Estructura HTML de las Tabs</h6>
+                                <p class="text-justify">
+                                    Las tabs se crean usando la clase <code>nav nav-tabs</code> de Bootstrap. Cada pestaña tiene un atributo <code>data-bs-toggle="tab"</code> (en Bootstrap 5) y un enlace que apunta al ID del panel correspondiente. También se incluyen atributos de accesibilidad como <code>role</code> y <code>aria-*</code>.
+                                </p>
+                                <div class="bg-light p-3 rounded mb-3">
+                                    <pre><code>&lt;ul class="nav nav-tabs" role="tablist"&gt;
+  &lt;li class="nav-item" role="presentation"&gt;
+    &lt;a class="nav-link active" data-bs-toggle="tab" href="#django"&gt;Django&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-item" role="presentation"&gt;
+    &lt;a class="nav-link" data-bs-toggle="tab" href="#bootstrap"&gt;Bootstrap&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                </div>
+                                <img src="Recursos/img/prueba.png" class="img-fluid rounded mb-3" alt="Estructura de Tabs">
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="font-weight-bold">2. Contenido de los Paneles</h6>
+                                <p class="text-justify">
+                                    Cada panel de contenido se define con la clase <code>tab-pane</code> y debe tener un ID que coincida con el href de la pestaña correspondiente. El panel activo por defecto debe tener las clases <code>fade show active</code>. También se incluye el atributo <code>role="tabpanel"</code> para accesibilidad.
+                                </p>
+                                <div class="bg-light p-3 rounded mb-3">
+                                    <pre><code>&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane fade show active" id="django" role="tabpanel"&gt;
+    &lt;!-- Contenido del panel --&gt;
+  &lt;/div&gt;
+  &lt;div class="tab-pane fade" id="bootstrap" role="tabpanel"&gt;
+    &lt;!-- Contenido del panel --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="font-weight-bold">3. Implementación de Scrollspy</h6>
+                                <p class="text-justify">
+                                    Para activar Scrollspy, se agregan los atributos <code>data-spy="scroll"</code>, <code>data-target="#menu"</code> y <code>data-offset="0"</code> al elemento contenedor del contenido desplazable. El menú de navegación debe tener enlaces que apunten a los IDs de las secciones.
+                                </p>
+                                <div class="bg-light p-3 rounded mb-3">
+                                    <pre><code>&lt;div class="col-md-9 contenido-scrollspy" 
+     data-spy="scroll" 
+     data-target="#menu" 
+     data-offset="0"&gt;
+  &lt;div class="panel panel-primary" id="dj1"&gt;
+    &lt;!-- Contenido --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-md-3" id="menu"&gt;
+  &lt;ul class="nav nav-pills nav-stacked"&gt;
+    &lt;li&gt;&lt;a href="#dj1"&gt;Sección 1&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <img src="Recursos/img/prueba.png" class="img-fluid rounded mb-3" alt="Implementación Scrollspy">
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="font-weight-bold">4. Estilos CSS Personalizados</h6>
+                                <p class="text-justify">
+                                    Se define una altura fija y scroll para el contenedor con Scrollspy, permitiendo que el plugin funcione correctamente al detectar las secciones visibles.
+                                </p>
+                                <div class="bg-light p-3 rounded mb-3">
+                                    <pre><code>.contenido-scrollspy {
+  overflow-y: scroll;
+  height: 550px;
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <h6 class="font-weight-bold">5. Inicialización con JavaScript</h6>
+                                <p class="text-justify">
+                                    Bootstrap 5 inicializa automáticamente los componentes cuando se cargan los scripts mediante los atributos <code>data-bs-*</code>. Para Scrollspy, se puede usar JavaScript personalizado con Intersection Observer API para detectar las secciones visibles y actualizar el menú de navegación automáticamente.
+                                </p>
+                                <div class="bg-light p-3 rounded mb-3">
+                                    <pre><code>&lt;script src="js/vendor/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  // Scrollspy se inicializa automáticamente o manualmente
+  var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#menu',
+    offset: 0
+  });
+&lt;/script&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN EJECUCIÓN DEL CÓDIGO -->
+                    <div class="card content-card mb-4">
+                        <div class="card-header">
+                            <h6 class="m-0 font-weight-bold">EJECUCIÓN DEL CÓDIGO</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-justify mb-4">
+                                A continuación puedes probar y visualizar el funcionamiento del código de Scrollspy y Tabs. Haz clic en el botón para mostrar el ejemplo interactivo, luego haz clic en las diferentes pestañas y desplázate por el contenido para ver cómo Scrollspy actualiza automáticamente el menú de navegación.
+                            </p>
+                            
+                            <div class="text-center mb-4">
+                                <button class="btn btn-primary btn-lg" type="button" id="btn-mostrar-ejemplo">
+                                    <i class="fas fa-play"></i> Mostrar Ejemplo Interactivo
+                                </button>
+                            </div>
+                            
+                            <!-- Ejemplo Interactivo -->
+                            <div class="ejemplo-interactivo" id="ejemplo-interactivo" style="display: none;">
+                                <div class="container-fluid px-0">
+                                    <h3 class="mb-3">Tabs</h3>
+
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" id="django-tab" data-bs-toggle="tab" href="#django-ejemplo" role="tab" aria-controls="django-ejemplo" aria-selected="true">Django</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="bootstrap-tab" data-bs-toggle="tab" href="#bootstrap-ejemplo" role="tab" aria-controls="bootstrap-ejemplo" aria-selected="false">Bootstrap</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="python-tab" data-bs-toggle="tab" href="#python-ejemplo" role="tab" aria-controls="python-ejemplo" aria-selected="false">Python</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="rwd-tab" data-bs-toggle="tab" href="#rwd-ejemplo" role="tab" aria-controls="rwd-ejemplo" aria-selected="false">RWD</a>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link" id="nodejs-tab" data-bs-toggle="tab" href="#nodejs-ejemplo" role="tab" aria-controls="nodejs-ejemplo" aria-selected="false">NodeJs</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="tab-content border border-top-0 p-3">
+                                        <div class="tab-pane fade show active" id="django-ejemplo" role="tabpanel" aria-labelledby="django-tab">
+                                            <div class="row">
+                                                <div class="col-md-9 contenido-scrollspy-ejemplo" data-spy="scroll" data-target="#menu-ejemplo-django" data-offset="0">
+                                                    <img src="Recursos/img/django.jpg" class="img-fluid mb-3" alt="Django">
+                                                    <div class="card mb-3" id="dj1-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Introducción a Django</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Django es un framework web de alto nivel escrito en Python que fomenta el desarrollo rápido y el diseño limpio y pragmático. Fue diseñado para ayudar a los desarrolladores a tomar aplicaciones desde el concepto hasta la finalización lo más rápido posible.</p>
+                                                            <p>Django se encarga de gran parte de las complicaciones del desarrollo web, por lo que puedes concentrarte en escribir tu aplicación sin necesidad de reinventar la rueda. Es gratuito y de código abierto.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="dj2-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Instalación de Django</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Para instalar Django, puedes usar pip, el gestor de paquetes de Python. El comando básico es:</p>
+                                                            <pre><code>pip install django</code></pre>
+                                                            <p>Una vez instalado, puedes verificar la instalación ejecutando:</p>
+                                                            <pre><code>django-admin --version</code></pre>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="dj3-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Óptimo Entorno de Desarrollo</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Para un entorno de desarrollo óptimo con Django, se recomienda:</p>
+                                                            <ul>
+                                                                <li>Usar entornos virtuales (virtualenv o venv)</li>
+                                                                <li>Configurar un IDE adecuado (PyCharm, VS Code, etc.)</li>
+                                                                <li>Utilizar un sistema de control de versiones (Git)</li>
+                                                                <li>Configurar una base de datos adecuada para desarrollo</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="dj4-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Conexión de Django con PostgreSQL</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Para conectar Django con PostgreSQL, necesitas instalar el adaptador psycopg2:</p>
+                                                            <pre><code>pip install psycopg2-binary</code></pre>
+                                                            <p>Luego, configura la base de datos en settings.py con los parámetros de conexión apropiados.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="dj5-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Diseño de Aplicaciones</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Django sigue el patrón de diseño MVT (Model-View-Template). Los modelos definen la estructura de datos, las vistas manejan la lógica de negocio, y los templates se encargan de la presentación.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="sticky-top" style="top: 20px;">
+                                                        <ul class="nav nav-pills flex-column" id="menu-ejemplo-django">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#dj1-ejemplo">Introducción a Django</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#dj2-ejemplo">Instalación de Django</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#dj3-ejemplo">Óptimo Entorno de Desarrollo</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#dj4-ejemplo">Conexión con PostgreSQL</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#dj5-ejemplo">Diseño de Aplicaciones</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="bootstrap-ejemplo" role="tabpanel" aria-labelledby="bootstrap-tab">
+                                            <div class="row">
+                                                <div class="col-md-9 contenido-scrollspy-ejemplo" data-spy="scroll" data-target="#menu-ejemplo-bootstrap" data-offset="0">
+                                                    <img src="Recursos/img/bootstrap.jpg" class="img-fluid mb-3" alt="Bootstrap">
+                                                    <div class="card mb-3" id="b1-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Introducción a Bootstrap 3</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Bootstrap es un framework front-end de código abierto para diseñar sitios web y aplicaciones web. Contiene plantillas de diseño basadas en HTML y CSS para tipografía, formularios, botones, navegación y otros componentes de interfaz.</p>
+                                                            <p>Desarrollado originalmente por Twitter, Bootstrap se ha convertido en uno de los frameworks más populares del mundo, facilitando el desarrollo de interfaces web responsivas y modernas. Su filosofía se basa en proporcionar herramientas que permitan a los desarrolladores crear interfaces consistentes y profesionales de manera rápida y eficiente.</p>
+                                                            <p>Bootstrap incluye un sistema de grid responsivo, componentes reutilizables, plugins de JavaScript y utilidades CSS que simplifican significativamente el proceso de desarrollo web. Es compatible con todos los navegadores modernos y se actualiza constantemente para mantenerse al día con las mejores prácticas del desarrollo web.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="b2-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Filosofía Mobile First</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Bootstrap 3 adopta un enfoque "mobile-first", lo que significa que el diseño se optimiza primero para dispositivos móviles y luego se escala para pantallas más grandes. Esta metodología garantiza que las aplicaciones se vean y funcionen perfectamente en todos los dispositivos, desde smartphones hasta monitores de escritorio.</p>
+                                                            <p>El enfoque mobile-first implica que los estilos base se diseñan para pantallas pequeñas, y luego se utilizan media queries para agregar estilos adicionales a medida que aumenta el tamaño de la pantalla. Esto es más eficiente que el enfoque tradicional de diseñar para desktop y luego reducir para móviles.</p>
+                                                            <p>Esta filosofía se refleja en el sistema de grid de Bootstrap, donde las clases por defecto aplican estilos para móviles, y las clases con prefijos como <code>sm</code>, <code>md</code>, <code>lg</code> y <code>xl</code> se aplican en pantallas más grandes. Esto asegura una experiencia óptima en todos los dispositivos.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="b3-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Mockups del Proyecto</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Los mockups son esenciales para planificar el diseño antes de comenzar el desarrollo. Ayudan a visualizar la estructura y el flujo de la aplicación, permitiendo identificar problemas de diseño temprano en el proceso.</p>
+                                                            <p>Con Bootstrap, puedes crear mockups rápidamente usando sus componentes predefinidos, lo que acelera significativamente el proceso de diseño y desarrollo. Los componentes de Bootstrap como cards, modals, navbars y forms proporcionan una base sólida para crear prototipos funcionales.</p>
+                                                            <p>Bootstrap también ofrece temas y plantillas predefinidas que pueden servir como punto de partida para tus proyectos. Estas plantillas incluyen ejemplos de layouts comunes, lo que te permite comenzar rápidamente y personalizar según tus necesidades específicas.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="b4-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Primeros Pasos</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Para comenzar con Bootstrap, simplemente incluye los archivos CSS y JS en tu proyecto HTML. Puedes descargarlo desde el sitio oficial o usar un CDN para una carga más rápida:</p>
+                                                            <pre><code>&lt;!-- CSS de Bootstrap --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- JavaScript de Bootstrap (incluye Popper) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+                                                            <p>Una vez incluido, puedes comenzar a usar todas las clases y componentes de Bootstrap en tu HTML. Bootstrap utiliza clases CSS para aplicar estilos, lo que hace que sea muy fácil de usar. Por ejemplo, puedes crear un botón simplemente agregando la clase <code>btn btn-primary</code> a un elemento button.</p>
+                                                            <p>Bootstrap también requiere jQuery para algunos de sus componentes JavaScript, aunque en Bootstrap 5 esto ha cambiado y ahora usa JavaScript vanilla. Asegúrate de verificar la versión de Bootstrap que estás usando para conocer los requisitos específicos.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="b5-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Grid System</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>El sistema de grid de Bootstrap utiliza 12 columnas y permite crear diseños responsivos de manera sencilla mediante clases predefinidas. Las clases de grid como <code>col-md-6</code>, <code>col-lg-4</code> permiten controlar el ancho de los elementos en diferentes tamaños de pantalla, facilitando la creación de layouts adaptativos.</p>
+                                                            <p>El grid se basa en flexbox, lo que proporciona un control más preciso sobre el diseño. Cada fila puede contener hasta 12 columnas, y puedes combinar diferentes clases para crear layouts complejos. Por ejemplo, <code>col-md-6</code> significa que el elemento ocupará 6 de las 12 columnas (50% del ancho) en pantallas medianas y superiores.</p>
+                                                            <p>Bootstrap también incluye clases de utilidad para offsets, ordenamiento y alineación, lo que te da control total sobre la disposición de tus elementos. El sistema de grid es completamente responsivo y se adapta automáticamente a diferentes tamaños de pantalla, haciendo que sea fácil crear diseños que se vean bien en todos los dispositivos.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="sticky-top" style="top: 20px;">
+                                                        <ul class="nav nav-pills flex-column" id="menu-ejemplo-bootstrap">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#b1-ejemplo">Introducción a Bootstrap 3</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#b2-ejemplo">Filosofía Mobile First</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#b3-ejemplo">Mockups del Proyecto</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#b4-ejemplo">Primeros Pasos</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#b5-ejemplo">Grid System</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="tab-pane fade" id="python-ejemplo" role="tabpanel" aria-labelledby="python-tab">
+                                            <div class="row">
+                                                <div class="col-md-9 contenido-scrollspy-ejemplo" data-spy="scroll" data-target="#menu-ejemplo-python" data-offset="0">
+                                                    <img src="Recursos/img/python.jpg" class="img-fluid mb-3" alt="Python">
+                                                    <div class="card mb-3" id="p1-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Introducción a Python</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Su filosofía de diseño enfatiza la legibilidad del código con el uso notable de espacios en blanco significativos. Python fue creado por Guido van Rossum y fue lanzado por primera vez en 1991.</p>
+                                                            <p>Python es ampliamente utilizado en desarrollo web, ciencia de datos, inteligencia artificial, automatización y muchas otras áreas debido a su sintaxis clara y su gran ecosistema de bibliotecas. El lenguaje es conocido por su simplicidad y facilidad de aprendizaje, lo que lo convierte en una excelente opción tanto para principiantes como para desarrolladores experimentados.</p>
+                                                            <p>Una de las características más destacadas de Python es su filosofía "Zen de Python", que enfatiza principios como la simplicidad, la legibilidad y la elegancia del código. Python soporta múltiples paradigmas de programación, incluyendo programación orientada a objetos, funcional e imperativa, lo que lo hace extremadamente versátil.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="p2-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Instalación de Python</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Para instalar Python, puedes descargarlo desde el sitio oficial python.org o usar un gestor de paquetes según tu sistema operativo. Python está disponible para Windows, macOS y Linux, y el proceso de instalación varía según la plataforma.</p>
+                                                            <pre><code># En Windows, descarga el instalador desde python.org
+# Ejecuta el instalador y marca la opción "Add Python to PATH"
+
+# En Linux (Ubuntu/Debian):
+sudo apt-get update
+sudo apt-get install python3 python3-pip
+
+# En macOS:
+brew install python3
+
+# Verificar instalación:
+python3 --version
+pip3 --version</code></pre>
+                                                            <p>Es importante verificar que Python se haya instalado correctamente ejecutando <code>python --version</code> o <code>python3 --version</code> en la terminal. También asegúrate de que pip, el gestor de paquetes de Python, esté instalado y funcionando correctamente.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="p3-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Entornos Virtuales</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Los entornos virtuales permiten aislar las dependencias de un proyecto, evitando conflictos entre diferentes proyectos que pueden requerir versiones diferentes de las mismas bibliotecas. Python incluye el módulo <code>venv</code> para crear entornos virtuales.</p>
+                                                            <pre><code># Crear un entorno virtual:
+python3 -m venv nombre_entorno
+
+# Activar en Windows:
+nombre_entorno\Scripts\activate
+
+# Activar en Linux/Mac:
+source nombre_entorno/bin/activate
+
+# Desactivar (en cualquier sistema):
+deactivate</code></pre>
+                                                            <p>Una vez activado el entorno virtual, cualquier paquete que instales con pip se instalará solo en ese entorno, no globalmente. Esto es esencial para mantener las dependencias organizadas y evitar conflictos entre proyectos. También es una buena práctica incluir el directorio del entorno virtual en tu archivo <code>.gitignore</code> si usas control de versiones.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="p4-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Gestión de Paquetes con pip</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>pip es el gestor de paquetes estándar de Python. Permite instalar, actualizar y gestionar bibliotecas de terceros de manera sencilla. pip viene incluido con Python desde la versión 3.4, aunque puede que necesites instalarlo por separado en algunas distribuciones de Linux.</p>
+                                                            <pre><code># Instalar un paquete:
+pip install nombre_paquete
+
+# Instalar una versión específica:
+pip install nombre_paquete==1.2.3
+
+# Actualizar un paquete:
+pip install --upgrade nombre_paquete
+
+# Ver paquetes instalados:
+pip list
+
+# Guardar dependencias en requirements.txt:
+pip freeze > requirements.txt
+
+# Instalar desde requirements.txt:
+pip install -r requirements.txt</code></pre>
+                                                            <p>El archivo <code>requirements.txt</code> es fundamental para cualquier proyecto Python, ya que permite recrear el entorno de desarrollo en cualquier máquina. Siempre es buena práctica mantener este archivo actualizado y compartirlo con tu equipo o incluirlo en tu repositorio de código.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="p5-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Estructura de un Proyecto Python</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Una estructura típica de proyecto Python sigue convenciones que facilitan la organización y el mantenimiento del código. Aunque no hay una estructura única obligatoria, hay patrones comunes que se recomiendan seguir:</p>
+                                                            <pre><code>mi_proyecto/
+├── README.md              # Documentación del proyecto
+├── requirements.txt       # Dependencias del proyecto
+├── setup.py              # Configuración para distribución (opcional)
+├── src/                  # Código fuente principal
+│   └── mi_proyecto/
+│       ├── __init__.py
+│       ├── modulo1.py
+│       └── modulo2.py
+├── tests/                # Tests unitarios
+│   └── test_modulo1.py
+└── docs/                 # Documentación adicional
+    └── guia.md</code></pre>
+                                                            <p>Esta estructura ayuda a mantener el código organizado, facilita las pruebas y hace que el proyecto sea más fácil de entender para otros desarrolladores. El archivo <code>__init__.py</code> es necesario para que Python reconozca un directorio como un paquete, y el archivo <code>README.md</code> debe contener información sobre cómo instalar, configurar y usar el proyecto.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="sticky-top" style="top: 20px;">
+                                                        <ul class="nav nav-pills flex-column" id="menu-ejemplo-python">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#p1-ejemplo">Introducción a Python</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#p2-ejemplo">Instalación de Python</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#p3-ejemplo">Entornos Virtuales</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#p4-ejemplo">Gestión de Paquetes</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#p5-ejemplo">Estructura de Proyecto</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="rwd-ejemplo" role="tabpanel" aria-labelledby="rwd-tab">
+                                            <div class="row">
+                                                <div class="col-md-9 contenido-scrollspy-ejemplo" data-spy="scroll" data-target="#menu-ejemplo-rwd" data-offset="0">
+                                                    <img src="Recursos/img/rwd.jpg" class="img-fluid mb-3" alt="RWD">
+                                                    <div class="card mb-3" id="r1-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Introducción a Responsive Web Design</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Responsive Web Design (RWD) es un enfoque de diseño web que hace que las páginas web se vean y funcionen bien en una variedad de dispositivos y tamaños de pantalla, desde smartphones hasta monitores de escritorio de alta resolución.</p>
+                                                            <p>El diseño responsivo utiliza técnicas como media queries, imágenes flexibles y layouts fluidos para adaptar el contenido a diferentes resoluciones de pantalla. Este enfoque se ha convertido en esencial en el desarrollo web moderno, ya que los usuarios acceden a sitios web desde una amplia gama de dispositivos.</p>
+                                                            <p>El concepto de diseño responsivo fue popularizado por Ethan Marcotte en 2010, y desde entonces se ha convertido en un estándar de la industria. Un diseño responsivo no solo mejora la experiencia del usuario, sino que también puede mejorar el SEO y reducir los costos de mantenimiento al eliminar la necesidad de mantener versiones separadas del sitio para diferentes dispositivos.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="r2-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Media Queries</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Las media queries son la base del diseño responsivo. Permiten aplicar estilos CSS según las características del dispositivo, como el ancho de la pantalla, la orientación o la resolución. Las media queries son parte de la especificación CSS3 y son ampliamente soportadas por los navegadores modernos.</p>
+                                                            <pre><code>/* Ejemplo básico de media query */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Media query para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+
+/* Media query para desktop */
+@media (min-width: 1025px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}</code></pre>
+                                                            <p>Las media queries permiten crear diseños que se adaptan dinámicamente a diferentes tamaños de pantalla, lo que es fundamental para el diseño responsivo. Puedes combinar múltiples condiciones y usar diferentes características del dispositivo para crear diseños altamente personalizados.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="r3-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Viewport Meta Tag</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>El viewport meta tag es esencial para el diseño responsivo. Se coloca en el <code>&lt;head&gt;</code> del HTML y le dice al navegador cómo controlar las dimensiones y el escalado de la página en dispositivos móviles. Sin este tag, los navegadores móviles pueden renderizar la página como si fuera para desktop, haciendo que se vea muy pequeña.</p>
+                                                            <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+                                                            <p>Los atributos más comunes del viewport incluyen:</p>
+                                                            <ul>
+                                                                <li><code>width=device-width</code>: Establece el ancho del viewport al ancho del dispositivo</li>
+                                                                <li><code>initial-scale=1.0</code>: Establece el nivel de zoom inicial</li>
+                                                                <li><code>maximum-scale=1.0</code>: Previene el zoom del usuario (usar con precaución)</li>
+                                                                <li><code>user-scalable=no</code>: Desactiva el zoom del usuario (no recomendado para accesibilidad)</li>
+                                                            </ul>
+                                                            <p>Este tag es crucial para que el diseño responsivo funcione correctamente en dispositivos móviles, ya que sin él, los navegadores móviles pueden aplicar un zoom automático que distorsiona el diseño.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="r4-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Imágenes Responsivas</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Para hacer las imágenes responsivas, es importante usar técnicas que permitan que las imágenes se escalen correctamente sin desbordarse del contenedor. Hay varias formas de lograr esto, tanto con CSS como con atributos HTML modernos.</p>
+                                                            <pre><code>/* Método 1: CSS básico */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Método 2: Usando la clase de Bootstrap */
+&lt;img src="imagen.jpg" class="img-fluid" alt="Descripción"&gt;
+
+/* Método 3: Usando srcset para diferentes resoluciones */
+&lt;img src="imagen-small.jpg" 
+     srcset="imagen-small.jpg 480w, 
+             imagen-medium.jpg 768w, 
+             imagen-large.jpg 1200w"
+     sizes="(max-width: 480px) 100vw, 
+            (max-width: 768px) 50vw, 
+            33vw"
+     alt="Descripción"&gt;</code></pre>
+                                                            <p>El uso de <code>max-width: 100%</code> asegura que las imágenes nunca excedan el ancho de su contenedor, mientras que <code>height: auto</code> mantiene la proporción de aspecto. Para un mejor rendimiento, considera usar el atributo <code>srcset</code> para servir diferentes tamaños de imagen según el dispositivo del usuario.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="r5-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Breakpoints Comunes</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Los breakpoints son puntos donde el diseño cambia para adaptarse a diferentes tamaños de pantalla. Aunque no hay breakpoints universales, hay rangos comunes que se usan ampliamente en el diseño responsivo. Estos breakpoints ayudan a crear diseños que se adaptan a los dispositivos más comunes.</p>
+                                                            <pre><code>/* Breakpoints comunes */
+/* Extra small devices (phones, menos de 576px) */
+@media (max-width: 575.98px) { }
+
+/* Small devices (tablets verticales, 576px y más) */
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+/* Medium devices (tablets horizontales, 768px y más) */
+@media (min-width: 768px) and (max-width: 991.98px) { }
+
+/* Large devices (desktops, 992px y más) */
+@media (min-width: 992px) and (max-width: 1199.98px) { }
+
+/* Extra large devices (large desktops, 1200px y más) */
+@media (min-width: 1200px) { }</code></pre>
+                                                            <p>Estos breakpoints corresponden aproximadamente a:</p>
+                                                            <ul>
+                                                                <li><strong>Mobile:</strong> hasta 576px (smartphones)</li>
+                                                                <li><strong>Tablet (vertical):</strong> 576px - 768px</li>
+                                                                <li><strong>Tablet (horizontal):</strong> 768px - 992px</li>
+                                                                <li><strong>Desktop:</strong> 992px - 1200px</li>
+                                                                <li><strong>Large Desktop:</strong> 1200px y superior</li>
+                                                            </ul>
+                                                            <p>Estos breakpoints son similares a los usados por frameworks como Bootstrap, lo que facilita la integración con estas herramientas. Sin embargo, siempre es importante probar tu diseño en dispositivos reales para asegurar que funcione correctamente.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="sticky-top" style="top: 20px;">
+                                                        <ul class="nav nav-pills flex-column" id="menu-ejemplo-rwd">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#r1-ejemplo">Introducción a RWD</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#r2-ejemplo">Media Queries</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#r3-ejemplo">Viewport Meta Tag</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#r4-ejemplo">Imágenes Responsivas</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#r5-ejemplo">Breakpoints Comunes</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nodejs-ejemplo" role="tabpanel" aria-labelledby="nodejs-tab">
+                                            <div class="row">
+                                                <div class="col-md-9 contenido-scrollspy-ejemplo" data-spy="scroll" data-target="#menu-ejemplo-nodejs" data-offset="0">
+                                                    <img src="Recursos/img/node.jpg" class="img-fluid mb-3" alt="Node.js">
+                                                    <div class="card mb-3" id="n1-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Introducción a Node.js</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Node.js es un entorno de ejecución de JavaScript construido sobre el motor V8 de Chrome. Permite ejecutar JavaScript en el servidor, abriendo nuevas posibilidades para el desarrollo web. Node.js fue creado por Ryan Dahl en 2009 y ha revolucionado el desarrollo backend con JavaScript.</p>
+                                                            <p>Node.js es ideal para aplicaciones en tiempo real, APIs, microservicios y aplicaciones que requieren alta concurrencia gracias a su modelo de I/O no bloqueante basado en eventos. Este modelo permite que Node.js maneje miles de conexiones simultáneas de manera eficiente, lo que lo hace perfecto para aplicaciones como chats, juegos en línea y sistemas de streaming.</p>
+                                                            <p>Una de las principales ventajas de Node.js es que permite usar el mismo lenguaje (JavaScript) tanto en el frontend como en el backend, lo que simplifica el desarrollo y permite compartir código entre cliente y servidor. Node.js también tiene un ecosistema masivo de paquetes disponibles a través de npm, el gestor de paquetes más grande del mundo.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="n2-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Instalación de Node.js</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Para instalar Node.js, puedes descargar el instalador desde nodejs.org o usar un gestor de versiones como nvm (Node Version Manager), que es especialmente útil si necesitas trabajar con múltiples versiones de Node.js en diferentes proyectos.</p>
+                                                            <pre><code># Instalación con nvm (recomendado)
+# En Linux/Mac:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+nvm install node
+nvm use node
+
+# En Windows, descarga nvm-windows desde GitHub
+
+# Verificar instalación:
+node --version
+npm --version
+
+# Instalación directa desde nodejs.org
+# Descarga el instalador para tu sistema operativo
+# y sigue las instrucciones del instalador</code></pre>
+                                                            <p>npm (Node Package Manager) viene incluido con Node.js y es esencial para gestionar dependencias. Una vez instalado Node.js, puedes verificar que npm esté funcionando correctamente ejecutando <code>npm --version</code>. Es recomendable usar nvm para gestionar versiones de Node.js, especialmente si trabajas en múltiples proyectos que pueden requerir diferentes versiones.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="n3-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Gestión de Paquetes con npm</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>npm es el gestor de paquetes de Node.js y el registro de paquetes más grande del mundo. Permite instalar, actualizar y gestionar dependencias de manera sencilla. npm viene incluido con Node.js, por lo que no necesitas instalarlo por separado.</p>
+                                                            <pre><code># Inicializar un proyecto:
+npm init
+npm init -y  # Con valores por defecto
+
+# Instalar paquetes:
+npm install nombre_paquete           # Instalar localmente
+npm install -g nombre_paquete        # Instalar globalmente
+npm install nombre_paquete --save    # Guardar en dependencies
+npm install nombre_paquete --save-dev # Guardar en devDependencies
+
+# Actualizar paquetes:
+npm update nombre_paquete
+npm update  # Actualizar todos
+
+# Ejecutar scripts:
+npm start
+npm test
+npm run nombre_script
+
+# Ver información:
+npm list          # Ver paquetes instalados
+npm outdated      # Ver paquetes desactualizados
+npm audit         # Auditar seguridad</code></pre>
+                                                            <p>El archivo <code>package.json</code> es el corazón de cualquier proyecto Node.js. Contiene la configuración del proyecto, scripts, dependencias y metadatos. Este archivo permite que otros desarrolladores instalen todas las dependencias necesarias simplemente ejecutando <code>npm install</code>.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="n4-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Crear un Servidor Básico</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Node.js incluye módulos integrados que permiten crear servidores HTTP sin necesidad de frameworks externos. Aunque para aplicaciones complejas se recomienda usar frameworks como Express.js, es útil entender cómo funciona un servidor básico.</p>
+                                                            <pre><code>// server.js
+const http = require('http');
+const fs = require('fs');
+const path = require('path');
+
+const server = http.createServer((req, res) => {
+  // Determinar el tipo de contenido
+  let contentType = 'text/html';
+  let filePath = './index.html';
+  
+  if (req.url === '/') {
+    filePath = './index.html';
+  } else if (req.url === '/about') {
+    filePath = './about.html';
+  }
+  
+  // Leer y servir el archivo
+  fs.readFile(filePath, (err, content) => {
+    if (err) {
+      res.writeHead(404);
+      res.end('Página no encontrada');
+    } else {
+      res.writeHead(200, {'Content-Type': contentType});
+      res.end(content);
+    }
+  });
+});
+
+const PORT = 3000;
+server.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});</code></pre>
+                                                            <p>Este ejemplo muestra cómo crear un servidor HTTP básico que puede servir archivos HTML estáticos. Para aplicaciones más complejas que requieren routing, middlewares, manejo de formularios y otras características avanzadas, se recomienda usar frameworks como Express.js, que simplifican significativamente el desarrollo.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card mb-3" id="n5-ejemplo">
+                                                        <div class="card-header bg-primary">
+                                                            <h5 class="mb-0 text-white">Express.js Framework</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <p>Express.js es el framework web más popular para Node.js. Facilita la creación de APIs y aplicaciones web proporcionando una capa delgada de características fundamentales para aplicaciones web y móviles. Express simplifica el manejo de rutas, middlewares y respuestas HTTP.</p>
+                                                            <pre><code>// Instalar Express:
+// npm install express
+
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+// Middleware para parsear JSON
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Rutas
+app.get('/', (req, res) => {
+  res.send('Página de inicio');
+});
+
+app.get('/api/usuarios', (req, res) => {
+  res.json({ usuarios: ['Juan', 'María', 'Pedro'] });
+});
+
+app.post('/api/usuarios', (req, res) => {
+  const nuevoUsuario = req.body;
+  // Lógica para guardar usuario
+  res.status(201).json({ mensaje: 'Usuario creado', usuario: nuevoUsuario });
+});
+
+// Iniciar servidor
+app.listen(PORT, () => {
+  console.log(`Servidor Express corriendo en http://localhost:${PORT}`);
+});</code></pre>
+                                                            <p>Express proporciona una API robusta para crear servidores web y APIs RESTful. Incluye características como routing, middlewares, manejo de plantillas, y soporte para múltiples motores de plantillas. Express es minimalista y flexible, permitiendo agregar solo las funcionalidades que necesitas mediante middlewares y plugins adicionales.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="sticky-top" style="top: 20px;">
+                                                        <ul class="nav nav-pills flex-column" id="menu-ejemplo-nodejs">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#n1-ejemplo">Introducción a Node.js</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#n2-ejemplo">Instalación de Node.js</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#n3-ejemplo">Gestión de Paquetes</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#n4-ejemplo">Servidor Básico</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" href="#n5-ejemplo">Express.js Framework</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECCIÓN EJERCICIO -->
+                    <div class="card content-card mb-4">
+                        <div class="card-header">
+                            <h6 class="m-0 font-weight-bold">EJERCICIO</h6>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-justify mb-4">
+                                En esta sección encontrarás un ejercicio práctico para implementar Scrollspy y Tabs desde cero. Incluye la explicación detallada del código principal con imágenes ilustrativas y la ejecución del código directamente en la página web.
+                            </p>
+                            
+                            <div class="text-center mb-4">
+                                <button class="btn btn-primary btn-lg" type="button" id="btn-mostrar-ejercicio">
+                                    <i class="fas fa-code"></i> Mostrar Ejercicio
+                                </button>
+                            </div>
+                            
+                            <!-- Contenedor del Ejercicio -->
+<div class="ejercicio-contenido" id="ejercicio-contenido" style="display: none;">
+    
+    <h5 class="card-title mb-4">Explicación del Código Principal</h5>
+    
+    <!-- 1. Estructura HTML Base -->
+    <div class="mb-4">
+        <h6 class="font-weight-bold">1. Estructura HTML Base</h6>
+        <p class="text-justify mb-3">
+            La página activa <strong>Scrollspy</strong> directamente en la etiqueta <code>&lt;body&gt;</code>. 
+            Ahí indicamos cuál es el menú que se va a marcar automáticamente y el espacio de desplazamiento que debe considerar.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-3 rounded">
+<pre><code>&lt;body 
+  data-spy="scroll" 
+  data-target="#table-of-contents" 
+  data-offset="100"&gt;
+
+  &lt;!-- Contenido de la página --&gt;
+
+&lt;/body&gt;</code></pre>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- la misma imagen que ya tenías -->
+                <img src="Recursos/img/ejercicio-estructura.png" class="img-fluid rounded" alt="Estructura HTML del ejercicio">
             </div>
         </div>
     </div>
+
+    <!-- 2. Menú lateral (reemplaza “Implementación de Tabs”) -->
+    <div class="mb-4">
+        <h6 class="font-weight-bold">2. Menú lateral (Tabla de Contenido)</h6>
+        <p class="text-justify mb-3">
+            El atributo <code>data-target="#table-of-contents"</code> del <code>body</code> apunta a este menú lateral. 
+            Es una lista vertical con enlaces a cada sección del sitio: header, menú, información, video, footer e integrantes.
+            Bootstrap 3 usa <code>.nav</code>, <code>.nav-pills</code> y <code>.nav-stacked</code> para este tipo de menú.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-3 rounded">
+<pre><code>&lt;aside class="col-lg-3 col-md-3 col-sm-12 left-menu"&gt;
+  &lt;nav id="table-of-contents"&gt;
+    &lt;ul class="nav nav-pills nav-stacked"&gt;
+      &lt;li class="active"&gt;&lt;a href="#header"&gt;Header&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#menu"&gt;Menú&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#info"&gt;Información&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#video-section"&gt;Video&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#footer"&gt;Footer&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#tabla"&gt;Integrantes&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/aside&gt;</code></pre>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- mantenemos tu imagen -->
+                <img src="Recursos/img/ejercicio-tabs.png" class="img-fluid rounded" alt="Menú lateral del ejercicio">
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Configuración de Scrollspy (las secciones que se vigilan) -->
+    <div class="mb-4">
+        <h6 class="font-weight-bold">3. Secciones que Scrollspy va marcando</h6>
+        <p class="text-justify mb-3">
+            Cada enlace del menú anterior apunta a una sección que tiene ese mismo <code>id</code>. 
+            Al hacer scroll, Bootstrap agrega la clase <code>active</code> al elemento del menú cuyo <code>href</code> coincide con la sección visible.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-3 rounded">
+<pre><code>&lt;header class="row" id="header"&gt;
+  &lt;!-- Header con el logo --&gt;
+&lt;/header&gt;
+
+&lt;nav class="navbar navbar-inverse" id="menu"&gt;
+  &lt;!-- Barra de navegación --&gt;
+&lt;/nav&gt;
+
+&lt;section class="col-lg-6 col-md-6 col-sm-12" id="info"&gt;
+  &lt;!-- Contenido principal (cuadro verde) --&gt;
+&lt;/section&gt;
+
+&lt;aside class="col-lg-3 col-md-3 col-sm-12" id="video-section"&gt;
+  &lt;!-- Video de YouTube --&gt;
+&lt;/aside&gt;
+
+&lt;footer class="row" id="footer"&gt;
+  &lt;!-- Footer con iconos --&gt;
+&lt;/footer&gt;
+
+&lt;div class="row" id="tabla"&gt;
+  &lt;!-- Tabla de integrantes del grupo 5 --&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- mantenemos tu imagen -->
+                <img src="Recursos/img/ejercicio-scrollspy.png" class="img-fluid rounded" alt="Configuración de Scrollspy">
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Estilos CSS Personalizados -->
+    <div class="mb-4">
+        <h6 class="font-weight-bold">4. Estilos CSS Personalizados</h6>
+        <p class="text-justify mb-3">
+            Para que el menú izquierdo se vea como un panel y los botones queden alineados, se aplican estilos adicionales.
+            También se le da una altura mínima al cuadro verde para que tenga el mismo alto que el video de la derecha.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-3 rounded">
+<pre><code>.left-menu .nav-pills {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+.left-menu .nav-pills &gt; li &gt; a {
+  padding: 15px 20px;
+  display: block;
+}
+
+.content-section {
+  background-color: #339933;
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  min-height: 400px; /* para empatar con el video */
+}</code></pre>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- mantenemos tu imagen -->
+                <img src="Recursos/img/ejercicio-css.png" class="img-fluid rounded" alt="Estilos CSS">
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Inicialización con JavaScript -->
+    <div class="mb-4">
+        <h6 class="font-weight-bold">5. Inicialización con JavaScript</h6>
+        <p class="text-justify mb-3">
+            En el index se usa jQuery para mostrar/ocultar la tabla del Grupo 3. 
+            Cuando se muestra contenido nuevo que cambia el alto de la página, se puede pedir a Bootstrap que vuelva a calcular el scrollspy.
+        </p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="bg-light p-3 rounded">
+<pre><code>&lt;script&gt;
+$(document).ready(function () {
+  // ocultar tabla al inicio
+  $('#tablaGrupo5').hide();
+
+  // mostrar/ocultar tabla al hacer clic en "Grupo3"
+  $('#grupo3Link').click(function (e) {
+    e.preventDefault();
+    $('#tablaGrupo3').slideToggle(400, function () {
+      if ($('#tablaGrupo3').is(':visible')) {
+        $('html, body').animate({
+          scrollTop: $('#tablaGrupo3').offset().top - 20
+        }, 500);
+      }
+      // refrescar scrollspy por si cambió el alto
+      $('body').scrollspy('refresh');
+    });
+  });
+});
+&lt;/script&gt;</code></pre>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- mantenemos tu imagen -->
+                <img src="Recursos/img/ejercicio-javascript.png" class="img-fluid rounded" alt="Inicialización JavaScript">
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <h5 class="card-title mb-4">Ejecución del Código</h5>
+    <p class="text-justify mb-4">
+           A continuación puedes ver y probar el ejercicio completo funcionando. Desplázate por el contenido para ver cómo Scrollspy actualiza automáticamente el menú de navegación.
+    </p>
+
+
+<!-- Ejercicio Interactivo (cargando tu index real) -->
+<div class="ejercicio-interactivo-ejecucion">
+    <div class="container-fluid px-0">
+        <iframe
+            src="Prueba/SECCION%20B/index.html"
+            class="iframe-ejercicio"
+            title="Demostración Scrollspy"
+            frameborder="0">
+        </iframe>
+    </div>
+</div>
+
+
 
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

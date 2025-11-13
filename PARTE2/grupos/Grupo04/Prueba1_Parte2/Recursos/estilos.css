@@ -1,0 +1,95 @@
+        body {
+            /* padding-top: 50px; si el navbar fuera fixed-top */
+            background-color: #EEE; /* Fondo general */
+        }
+        
+        /* Contenedor principal para centrar el contenido (en lugar de width: 1300px) */
+        .container {
+            max-width: 1260px;
+        }
+
+        /* Estilos de las secciones */
+        #header {
+            background-color: rgba(0, 255, 255, 0.5); /* Color del header*/
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-radius: 10px;
+            border: 5px solid rgba(121, 121, 121, 1);
+        }
+        #leftMenu, #content, #rightMenu {
+            min-height: 320px;
+            padding-top: 30px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border: 5px solid rgba(121, 121, 121, 1);
+        }
+        #leftMenu {
+            background-color: white; /* Color del leftMenu original */
+            padding: 10px;
+        }
+        #rightMenu {
+            background-color: black;
+            padding: 10px;
+        }
+        /* Requisito 6: Contenido centrado */
+        #content {
+            background-color: rgba(51, 153, 51, 1); /* Color del content */
+            color: white;
+            text-align: center;
+        }
+        #content h2 { color: white; margin-bottom: 20px; }
+        #content p { font-size: 18px; }
+        
+        #rightMenu {
+            background-color: white;
+            padding: 10px;
+        }
+        
+        /* Footer (Requisito 4) */
+        #footer {
+            background-color: yellow; /* Color del footer*/
+            padding: 10px 0;
+            border-radius: 10px;
+            border: 5px solid rgba(121, 121, 121, 1);
+        }
+        
+        /* Estilo para los botones del leftMenu*/
+        .Boton { 
+            display: block;
+            margin: 10px auto;
+            width: 90%;
+            font-size: 16px;
+            padding: 10px;
+            justify-content: center;  /* Centra ícono y texto horizontalmente */
+            align-items: center;      /* Centra verticalmente ícono y texto */
+            text-align: center;       /* Asegura que el texto quede centrado */
+            gap: 8px; 
+        }
+        .Boton .glyphicon {
+            margin-right: 8px;
+        }
+
+        /* Evitar que el menú se corte dentro del iframe */
+.navbar .dropdown-menu {
+  overflow: visible !important;
+}
+
+/* Espaciado y fondo del "megamenu" */
+.navbar .dropdown-menu .row {
+  margin: 0;
+}
+
+.navbar .dropdown-menu strong {
+  color: #337ab7;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.navbar .dropdown-menu a {
+  color: #333 !important;
+}
+
+.navbar .dropdown-menu a:hover {
+  background-color: #f5f5f5 !important;
+  text-decoration: none;
+}

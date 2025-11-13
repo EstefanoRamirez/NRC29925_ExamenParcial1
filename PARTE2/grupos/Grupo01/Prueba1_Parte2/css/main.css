@@ -1,0 +1,292 @@
+/* Aplicar layout centrado sólo en páginas normales (no en la página de login con fondo glass) */
+body:not(.glass-bg) {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #FFF;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 30px;
+}
+
+.Texto {
+  text-align: center;
+  color: #383636;
+  font-family: Arial;
+  font-size: 15px;
+}
+
+/* HEADER */
+#header {
+  width: 100%;
+  height: 170px;
+  background-color: rgba(0, 255, 255);
+  border: 4px solid rgba(116, 112, 112);
+  border-radius: 10px;
+}
+
+/* navBar */
+#navBar {
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 255, 0);
+  border: 4px solid rgba(116, 112, 112);
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+/* leftMenu */
+#leftMenu {
+  height: 320px;
+  background-color: rgba(255, 255, 255);
+  border: 4px solid rgba(116, 112, 112);
+  border-radius: 10px;
+  padding-top: 30px;
+}
+
+
+#leftMenu .side-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+  background: #f7f7f7; 
+  color: #222 !important;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin: 8px 0; 
+  border: 1px solid #ddd;
+  box-shadow: none; 
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+#leftMenu .side-btn .side-icon {
+  font-size: 18px;
+  color: #222;
+  width: 28px;
+  text-align: center;
+}
+#leftMenu .side-btn .side-text {
+  flex: 1;
+  text-align: center;
+}
+#leftMenu .side-btn:hover {
+  background: #efefef; 
+  transform: none;
+}
+
+
+/* content */
+#content {
+  height: 320px;
+  background-color: rgba(51, 153, 51);
+  border: 4px solid rgba(116, 112, 112);
+  border-radius: 10px;
+}
+
+/* rigthMenu */
+#rightMenu {
+  height: 320px;
+  background-color: rgba(0, 0, 0);
+  border: 4px solid rgba(116, 112, 112);
+  border-radius: 10px;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* footer */
+#footer {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 255, 0);
+  border: 4px solid rgba(116, 112, 112);
+  border-radius: 10px;
+  padding-top: 10px;
+  clear: both;
+}
+
+
+/* Social buttons (footer) */
+.social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  align-items: center;
+}
+.social-list li {
+  display: inline-block;
+}
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 3px 0 rgba(0,0,0,0.14), inset 0 1px 0 rgba(255,255,255,0.08);
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.social-btn i,
+.social-btn [class^="icon-"],
+.social-btn [class*=" icon-"] {
+  font-size: 16px;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+.social-btn .social-label {
+  font-size: 14px;
+  line-height: 1;
+}
+.social-btn.facebook { background: linear-gradient(#2e66a6, #1f557f); color: #fff; }
+.social-btn.twitter  { background: linear-gradient(#3ec1e6, #18a7d6); color: #fff; }
+.social-btn.youtube  { background: linear-gradient(#e04747, #c93a3a); color: #fff; }
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+}
+
+#footer .social-list { margin-top: 6px; }
+#Espe_img {
+  display: block;
+  margin: 8px auto;
+  width: auto;
+  max-height: 140px; 
+}
+
+.glass-bg {
+  min-height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(135deg, #2b0f4a 0%, #2e1a5a 25%, #1b2b50 60%, #0f1724 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass-card {
+  width: 100%;
+  max-width: 420px;
+  margin: 6vh auto;
+  background: rgba(255,255,255,0.06);
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 8px 30px rgba(5,10,20,0.6);
+  padding: 32px 28px;
+  backdrop-filter: blur(8px) saturate(120%);
+  -webkit-backdrop-filter: blur(8px) saturate(120%);
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* sutil brillo superior */
+.glass-card::before{
+  content: "";
+  position: absolute;
+  left: -40%;
+  top: -60px;
+  width: 200%;
+  height: 160px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.0));
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+.glass-avatar {
+  width: 96px;
+  height: 96px;
+  margin: 6px auto 14px auto;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.glass-avatar svg { width: 54px; height: 54px; fill: rgba(255,255,255,0.9); }
+
+.glass-avatar .bi,
+.glass-avatar i[class^="bi-"] {
+  font-size: 46px;
+  color: rgba(255,255,255,0.95);
+  line-height: 1;
+}
+.input-field .bi,
+.input-field i[class^="bi-"] {
+  font-size: 16px;
+  color: rgba(255,255,255,0.85);
+  flex: 0 0 22px;
+  display: inline-block;
+  width: 22px;
+  text-align: center;
+}
+
+.glass-card h1 {
+  font-size: 20px;
+  margin: 6px 0 18px 0;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.input-row { margin-bottom: 14px; }
+.input-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.input-field svg { width: 20px; height: 20px; fill: rgba(255,255,255,0.8); flex: 0 0 20px; }
+.input-field input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  font-size: 15px;
+}
+.input-field input::placeholder { color: rgba(255,255,255,0.6); }
+
+.options-row { display:flex; align-items:center; justify-content:space-between; margin-top:6px; }
+.options-row label { display:flex; align-items:center; gap:8px; color: rgba(255,255,255,0.85); font-size:14px; }
+.options-row a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 13px; }
+
+.btn-login {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px 14px;
+  background: linear-gradient(180deg, rgba(10,12,18,0.95), rgba(3,5,12,0.95));
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.06);
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.btn-login:active { transform: translateY(1px); }
+
+
+
+
+
+
+

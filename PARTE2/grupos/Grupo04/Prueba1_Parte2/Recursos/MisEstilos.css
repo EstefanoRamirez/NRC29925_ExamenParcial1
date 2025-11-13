@@ -1,0 +1,170 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background: #DEDEDE;
+  display: flex;
+  min-height: 100vh;
+}
+
+form{
+  margin: auto;
+  width: 50%;
+  max-width: 500px;
+  background: #F3F3F3;
+  padding: 30px;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 20px;
+  color: (0,0,0,0.5);
+}
+
+input{
+  display: block;
+  padding: 10px;
+  width: 100%;
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+input[type=submit]{
+  background: linear-gradient(#FFDA63, #FFB940);
+  border:0;
+  color: brown;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 0;
+}
+
+input[tyoe=submit]:hover{
+  opacity: 1;
+}
+
+input[tyoe=submit]:active{
+  transform: scale(0.95);
+}
+
+/* RESPONSIVE */
+@media(max-width:780px){
+  form{
+    width: 95%;
+  }
+}
+
+/* Centrar el formulario */
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+/* Fondo y espacio */
+.formulario-login {
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Espaciado entre radios */
+.formulario-login .radio label {
+  margin-right: 10px;
+}
+
+/* --- MisEstilos.css --- */
+
+/* Fondo general */
+body {
+  background-color: #e5e5e5;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Estilo general del formulario */
+form {
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  padding: 30px;
+}
+
+/* Título */
+form h2 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Sección de género */
+.seccion fieldset {
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+}
+
+.seccion legend {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Botón de ingresar */
+.btn-warning {
+  background: linear-gradient(to bottom, #ffce54, #f6b93b);
+  border: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Botón hover */
+.btn-warning:hover {
+  background: linear-gradient(to bottom, #f6b93b, #ffce54);
+  color: #000;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+  form h2 {
+    font-size: 1.5em;
+  }
+}
+
+.input-group {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Evita que los inputs se desborden dentro del modal */
+.modal-body .form-control {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Ajusta el fieldset para no empujar el contenido */
+fieldset {
+  margin: 10px 0;
+  padding: 10px 12px;
+}
+
+/* Reduce padding interno del modal para mantener proporciones */
+.modal-body {
+  padding: 20px 30px;
+}
+
+.modal-dialog {
+  max-width: 700px;
+  margin: 30px auto;
+}
+
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh; /* un poco menos para evitar cortes */
+}

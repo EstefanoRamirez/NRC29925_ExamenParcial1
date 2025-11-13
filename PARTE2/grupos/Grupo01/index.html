@@ -132,11 +132,837 @@
 
                 <div class="container-fluid">
                     <h1 class="h3 mb-4">Tooltip and Popover - Grupo 01</h1>
+                    <br>
                     
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-lg-6">
+                                    <h2 class="card-title">¿Qué es Tooltip?</h2>
+                                    <p>Un Tooltip es un pequeño cuadro de texto que aparece cuando el usuario
+                                        pasa el cursor sobre un elemento de la interfaz gráfica de usuario (GUI).
+                                        Su propósito principal es proporcionar información adicional, una breve
+                                        explicación o el nombre de un elemento sin ocupar espacio permanente en la pantalla.
+                                        Son una forma eficaz de ofrecer ayuda contextual sin abrumar al usuario.
+                                    </p>
+                                </div>
+
+                                <div class="col-lg-6 text-center">
+                                    <div class="ratio ratio-16x9">
+                                        <video controls class="demo-video img-fluid rounded" src="videos/Tooltip_Teoria.mp4" preload="none" playsinline style="width:100%; height:100%; object-fit:cover; cursor:pointer;">
+                                            Tu navegador no soporta el elemento <code>video</code>.
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-            </div>
-        </div>
-    </div>
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row justify-content-center align-items-center">
+
+                                <div class="col-lg-6 text-center">
+                                    <img src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2024/10/tooltip.png?resize=1005%2C420&ssl=1" class="img-tooltip" alt="Logo de Bootstrap">
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2 class="card-title">¿Cuándo conviene usar un Tooltip?</h2>
+                                    <ul>
+                                        <li>Para aclarar iconos o botones sin texto.</li>
+                                        <li>En formularios o campos de entrada, para guiar al usuario.</li>
+                                        <li>Al mostrar abreviaturas o términos técnicos, explicando su significado.</li>
+                                        <li>En elementos deshabilitados o inactivos, cuando se necesita dar contexto o motivo.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <h2 class="sub">Características clave</h2>
+                    <br>
+
+                    <div class="row">
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2 content-card large-text">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center text-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-info mb-1">
+                                                Brevedad
+                                            </div>
+                                            <hr>
+                                            <div class="text-gray-50 small">
+                                                La información debe ser concisa y al grano. No están diseñados para párrafos largos.
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2 content-card large-text">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center text-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success  text-info mb-1">
+                                                Contextual
+                                            </div>
+                                            <hr>
+                                            <div class="text-gray-50 small">
+                                                La información que proporcionan es relevante para el elemento al que están asociados.
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2 content-card large-text">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center text-center" >
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success  text-info mb-1">
+                                                Temporal 
+                                            </div>
+                                            <hr>
+                                            <div class="text-gray-50 small">
+                                                Aparecen al interactuar (al pasar el ratón) y desaparecen cuando la interacción termina (al quitar el ratón).
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2 content-card large-text">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center text-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-info mb-1">
+                                                No interactivo
+                                            </div>
+                                            <hr>
+                                            <div class="text-gray-50 small">
+                                                Los tooltips generalmente no son clicables ni permiten la interacción directa con el texto que contienen.
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <h2 class="sub">Ejemplo de Tooltip con Bootstrap 5</h2>
+                    <br>
+                    <div class="row align-items-center mb-4">
+                        <div class="col-lg-6">
+                            <p>Para crear un tooltip, agregue el <code>data-bs-toggle="tooltip"</code> como atributo a un elemento.
+                                Utilice el <code>title</code> como atributo para especificar el texto que debe mostrarse dentro del tooltip.</p>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold">HTML</h6>
+                                </div>                               
+                                <div class="card-body">
+<pre><code>&lt;button class="btn btn-info btn-block" data-bs-toggle="tooltip" data-bs-placement="left" title="Hola"&gt;
+    Presionar
+&lt;/button&gt;
+
+</code></pre>
+                                </div>
+                            </div>
+                        <p class="small text-muted mt-3 text-justify"> <strong>Nota:</strong> Los tooltips no se activan solo con los atributos HTML,
+                            deben inicializarse con JavaScript para funcionar en todo el documento.
+                        </p>
+                        </div>
+
+                        <div class="col-lg-6 mb-3 mb-lg-0">
+                            <div class="ratio ratio-16x9">
+                                <video controls class="img-fluid rounded" 
+                                    src="videos/Eje1_Tooltip.mp4" 
+                                    preload="metadata" 
+                                    playsinline
+                                    style="width:100%; height:100%; object-fit:cover; cursor:pointer;">
+                                    Tu navegador no soporta el elemento <code>video</code>.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        El siguiente fragmento de código permite habilitar todos los tooltips presentes en la página, buscando los elementos que 
+                        contienen el atributo <code>data-bs-toggle="tooltip"</code> y activándolos de forma automática.
+                    </p>
+
+                    <div class="row align-items-center mb-4">
+                        <div class="col-lg-6">
+                            <div class="card shadow mb-4 h-100">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold">JavaScript</h6>
+                                </div>                                
+                                <div class="card-body">
+<pre><code>
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-flex justify-content-center align-items-center mb-3 mb-lg-0">
+                            <div style="max-width:100%;">
+                                <img src="img/Tooltip_Eje1.png" alt="Código JavaScript para inicializar Tooltip" class="img-tooltip rounded img-fluid">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="tooltip" class="mt-4"></div>
+                    <h2 class="sub">Tooltips de posicionamiento</h2>
+                    <br>
+                    <p>Por defecto, el tooltip aparecerá encima del elemento. Al utilizar el atributo <code>data-bs-placement</code> se puede establecer la posición de la información sobre herramientas en la parte superior, inferior, izquierda o derecha del elemento
+                    </p>
+                    <ul>
+                        <li><code>data-bs-placement="right"</code> muestra el tooltip a la derecha del botón.</li>
+                        <li><code>data-bs-placement="left"</code> muestra el tooltip a la izquierda del botón.</li>
+                        <li><code>data-bs-placement="top"</code> muestra el tooltip en la parte superior del botón.</li>
+                        <li><code>data-bs-placement="bottom"</code> muestra el tooltip en la parte inferior del botón.</li>
+                    </ul>
+
+
+                    <br>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Ejemplo Tooltip</h6>
+                        </div>
+                        <div class="card-body">
+<pre><code>
+&lt;div class="row"&gt;
+    &lt;div class="col-xs-12 col-sm-3"&gt;
+    &lt;button class="btn btn-info btn-block" data-bs-toggle="tooltip" data-bs-placement="right" title="Derecha"&gt;Presionar 1&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-3"&gt;
+    &lt;button class="btn btn-info btn-block" data-bs-toggle="tooltip" data-bs-placement="left" title="Izquierda"&gt;Presionar 2&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-3"&gt;
+    &lt;button class="btn btn-info btn-block" data-bs-toggle="tooltip" data-bs-placement="top"  title="Arriba"&gt;Presionar 3&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-3"&gt;
+    &lt;button class="btn btn-info btn-block" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Abajo"&gt;Presionar 4&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+                        </div>
+                    </div>
+                    <p class="small text-muted mt-3"> <strong>Nota:</strong> Los Tooltips deben inicializarse con JavaScript para funcionar.</p>
+
+                    <div class="text-end mb-4">
+                        <img src="img/Tooltip_Eje2.png" alt="Ejemplo Tooltips" class="img-fluid float-end" style="max-width: 100%;">
+                    </div>
+                
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Ejemplo 1: tooltip a la derecha del botón</h6>
+                        </div>
+                        <div class="card-body">
+<pre><code>&lt;button class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="right" title="Derecha"&gt;
+    Pasa el mouse por mí
+&lt;/button&gt;
+</code></pre>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary execute" data-code="tooltip-derecha">Ejecutar</button>
+                    <div id="tooltip-derecha" class="mt-4 text-center"></div>
+                    <br>
+                
+                    <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold">Ejemplo 2: tooltip a la izquierda del botón</h6>
+                    </div>
+                    <div class="card-body">
+<pre><code>&lt;button class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="left" title="Izquierda"&gt;
+    Pasa el mause por mí
+&lt;/button&gt;
+</code></pre>
+                    </div>
+                </div>
+                <button class="btn btn-primary execute" data-code="tooltip-izquierda">Ejecutar</button>
+                <div id="tooltip-izquierda" class="mt-4 text-center"></div>
+
+                <br>
+
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold">Ejemplo 3: tooltip a la arriba del botón</h6>
+                    </div>
+                    <div class="card-body">
+<pre><code>&lt;button class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="top" title="Arriba"&gt;
+    Pasa el mause por mí
+&lt;/button&gt;
+</code></pre>
+                    </div>
+                </div>
+                    <button class="btn btn-primary execute" data-code="tooltip-arriba">Ejecutar</button>
+                            <br><br>
+                    <div id="tooltip-arriba" class="mt-4 text-center"></div>
+                <br>
+
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold">Ejemplo 4: tooltip a la abajo del botón</h6>
+                    </div>
+                    <div class="card-body">
+<pre><code>&lt;button class="btn btn-info" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Abajo"&gt;
+    Pasa el mause por mí
+&lt;/button&gt;
+</code></pre>
+                    </div>
+                </div>
+                <button class="btn btn-primary execute" data-code="tooltip-abajo">Ejecutar</button>
+                    
+                <div id="tooltip-abajo" class="mt-4 text-center"></div>
+                <br>
+
+
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-lg-6">
+                                    <h2 class="card-title">¿Qué es Popover?</h2>
+                                    <p>Un Popover es un pequeño cuadro superpuesto que aparece cuando el usuario interactúa con un elemento 
+                                        de la interfaz de usuario (haciendo clic). A diferencia de un Tooltip, un Popover está diseñado para mostrar 
+                                        contenido más rico y complejo a menudo interactivo y puede contener detalles contextuales, opciones o formularios pequeños
+                                        , conservando la fluidez de la interacción.
+                                    </p>
+                                </div>
+                                <div class="col-lg-6 text-center">
+                                    <div class="ratio ratio-16x9">
+                                        <video controls class="demo-video img-fluid rounded" 
+                                            src="videos/Popover_Teoria.mp4" 
+                                            preload="none" 
+                                            playsinline
+                                            style="width:100%; height:100%; object-fit:cover; cursor:pointer;">
+                                            Tu navegador no soporta el elemento <code>video</code>.
+                                        </video>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row justify-content-center align-items-center">
+
+                                <div class="col-lg-6 text-center">
+                                    <img src="https://forum.xojo.com/uploads/default/original/3X/1/a/1a380b89b3442c6d785a4ad99cc911910021e0f9.png" class="img-popover" alt="Logo de Bootstrap">
+                                </div>
+                                <div class="col-lg-6">
+                                    <h2 class="card-title">¿Cuándo conviene usar un Popover?</h2>
+                                    <ul>
+                                        <li>Cuando se necesita mostrar más información que en un tooltip</li>
+                                        <li>En formularios o ayuda contextual</li>
+                                        <li>Para mostrar contenido adicional bajo demanda</li>
+                                        <li>Cuando se desea mantener al usuario en el mismo contexto visual</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h2 class="sub">Características clave</h2>
+                    <br>
+
+
+                    <div class="row">
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2 content-card large-text">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center text-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-info mb-1">
+                                                Interactivo
+                                            </div>
+                                            <hr>
+                                            <div class="text-gray-50 small">
+                                                A menudo permite al usuario interactuar con el contenido dentro del Popover (hacer clic en enlaces, rellenar campos, etc.).
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2 content-card large-text">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center text-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success  text-info mb-1">
+                                                Persistentemente 
+                                            </div>
+                                            <hr>
+                                            <div class="text-gray-50 small">
+                                                Permanece visible hasta que el usuario hace clic fuera de él, presiona Esc, o interactúa de otra manera para cerrarlo, no solo al quitar el cursor.
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2 content-card large-text">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center text-center" >
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success  text-info mb-1">
+                                                Contenido rico 
+                                            </div>
+                                            <hr>
+                                            <div class="text-gray-50 small">
+                                                Puede albergar mucho más que texto plano, incluyendo imágenes, enlaces, botones e incluso pequeños formularios.
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2 content-card large-text">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center text-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-info mb-1">
+                                                Tiene un "puntero"
+                                            </div>
+                                            <hr>
+                                            <div class="text-gray-50 small">
+                                                A menudo incluyen una pequeña flecha que apunta al elemento que lo activó, reforzando la relación contextual.
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h2 class="sub">Ejemplos de Popover con Bootstrap 5</h2>
+                    <br>
+
+                    <div class="row align-items-center mb-4">
+                        <div class="col-lg-6">
+                            <p>Para crear un popover, agregue el <code>data-bs-toggle="popover"</code> como atributo a un elemento. 
+                                Además, utilice el <code>title</code> atributo para especificar el texto del encabezado del popover y
+                                 <code>data-bs-content</code> atributo para especificar el texto que debe mostrarse dentro del cuerpo del popover:</p>
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold">HTML</h6>
+                                </div>                                
+                                <div class="card-body">
+<pre><code>
+&lt;button class="btn btn-info" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra consequat felis, ac efficitur mauris vestibulum non." title="Título Mensaje 1"&gt;
+    Presionar
+&lt;/button&gt;
+</code></pre>
+
+</code></pre>
+                                </div>
+                            </div>
+                        <p class="small text-muted mt-3 text-justify"> <strong>Nota:</strong> Los tooltips no se activan solo con los atributos HTML,
+                            deben inicializarse con JavaScript para funcionar en todo el documento.
+                        </p>                            
+                        </div>
+
+                        <div class="col-lg-6 mb-3 mb-lg-0">
+                            <div class="ratio">
+                                <video controls class="img-fluid rounded" 
+                                    src="videos/Eje1_Popover.mp4" 
+                                    preload="metadata" 
+                                    playsinline
+                                    style="width:100%; height:100%; object-fit:cover; cursor:pointer;">
+                                    Tu navegador no soporta el elemento <code>video</code>.
+                                </video>
+                            </div> 
+                        </div>  
+                    </div>                    
+
+                    <p>
+                        El siguiente fragmento de código permite habilitar todos los popovers presentes en la página, buscando los elementos que
+                        contienen el atributo <code>data-bs-toggle="popover"</code> y activándolos de forma automática.
+                    </p>
+                    <div class="row align-items-center mb-4">
+                        <div class="col-lg-6">
+                            <div class="card shadow mb-4 h-100">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold">JavaScript</h6>
+                                </div>
+                                <div class="card-body">
+<pre><code>
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 d-flex justify-content-center align-items-center mb-3 mb-lg-0">
+                            <div style="max-width:100%;">
+                                <img src="img/Popover_Eje1.png" alt="Código JavaScript para inicializar Popover" class="img-tooltip rounded img-fluid">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h2 class="sub">Popover de posicionamiento</h2>
+                    <p>Por defecto, el popover aparecerá al lado derecho del elemento. Al utilizar el atributo <code>data-bs-placement</code> como atributo para establecer la posición del popover en la parte superior, inferior, izquierda o derecha del elemento
+                    </p>
+                    <ul>
+                        <li><code>data-bs-toggle="popover" data-bs-placement="right"</code> muestra el popover a la derecha del botón.</li>
+                        <li><code>data-bs-toggle="popover" data-bs-placement="left"</code> muestra el popover a la izquierda del botón.</li>
+                        <li><code>data-bs-toggle="popover" data-bs-placement="top"</code> muestra el popover en la parte superior del botón.</li>
+                        <li><code>data-bs-toggle="popover" data-bs-placement="bottom"</code> muestra el popover en la parte inferior del botón.</li>
+                    </ul>
+                <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Ejemplo Popover</h6>
+                        </div>
+                        <div class="card-body">
+
+<pre><code>
+&lt;div class="row"&gt;
+    &lt;div class="col-xs-12 col-sm-3"&gt;
+        &lt;button class="btn btn-info btn-block" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra consequat felis, ac efficitur mauris vestibulum non." title="Mensaje 1..."&gt;Presionar&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-3"&gt;
+        &lt;button class="btn btn-info btn-block" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra consequat felis, ac efficitur mauris vestibulum non." title="Mensaje 2..."&gt;Presionar&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-3"&gt;
+        &lt;button class="btn btn-info btn-block" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra consequat felis, ac efficitur mauris vestibulum non." title="Mensaje 3..."&gt;Presionar&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="col-xs-12 col-sm-3"&gt;
+        &lt;button class="btn btn-info btn-block" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra consequat felis, ac efficitur mauris vestibulum non." title="Mensaje 4..."&gt;Presionar&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+                        </div>
+                    </div>
+                    <p class="small text-muted mt-3">Nota: Los Popovers deben inicializarse con JavaScript para funcionar.</p>
+
+                    <div class="text-end mb-4">
+                        <img src="img/Popover_Eje2.png" alt="Ejemplo Popovers" class="img-fluid float-end" style="max-width: 100%;">
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Ejemplo: popover a la derecha del botón</h6>
+                        </div>
+                        <div class="card-body">
+<pre><code>&lt;button class="btn btn-info" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra consequat felis, ac efficitur mauris vestibulum non." title="Mensaje 1..."&gt;
+    Presionar
+&lt;/button&gt;
+</code></pre>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary execute-popover" data-code="popover-derecha">Ejecutar</button>
+                    <div id="popover-derecha" class="mt-4 text-center"></div>
+                    <br><br>
+                    <div class="card shadow mb-4">
+                    <div class="card-header py-3">  
+                        <h6 class="m-0 font-weight-bold">Ejemplo: popover a la izquierda del botón</h6>
+                    </div>
+                    <div class="card-body">
+<pre><code>&lt;button class="btn btn-info" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra consequat felis, ac efficitur mauris vestibulum non." title="Mensaje 2..."&gt;
+    Presionar
+&lt;/button&gt;
+</code></pre>
+                    </div>      
+                </div>
+                <button class="btn btn-primary execute-popover" data-code="popover-izquierda">Ejecutar</button>
+                <div id="popover-izquierda" class="mt-4 text-center"></div>
+                <br><br>    
+                <div class="card shadow mb-4">                  
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold">Ejemplo: popover a la arriba del botón</h6>
+                    </div>
+                    <div class="card-body">
+<pre><code>&lt;button class="btn btn-info" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra consequat felis, ac efficitur mauris vestibulum non." title="Mensaje 3..."&gt;
+    Presionar
+&lt;/button&gt;
+</code></pre>
+                    </div>
+                </div>
+                <button class="btn btn-primary execute-popover" data-code="popover-arriba">Ejecutar</button>
+                <div id="popover-arriba" class="mt-4 text-center"></div>
+                <br><br>
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold">Ejemplo: popover a la abajo del botón</h6>
+                    </div>
+                    <div class="card-body">
+<pre><code>&lt;button class="btn btn-info" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra consequat felis, ac efficitur mauris vestibulum non." title="Mensaje 4..."&gt;
+    Presionar
+&lt;/button&gt;
+</code></pre>
+                    </div>
+                </div>
+                <button class="btn btn-primary execute-popover" data-code="popover-abajo">Ejecutar</button>
+                <div id="popover-abajo" class="mt-4 text-center"></div>
+                <br>   
+                
+                <h1 class="h3 mb-4">Tooltip and Popover - Ejemplo de la Prueba</h1>
+                    
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row align-items-stretch">
+                                <div class="col-md-7 d-flex flex-column justify-content-center">
+                                    <p>1)<strong>"Docente"</strong>:</p>
+                                    <ul>
+                                        <li><strong>data-bs-toggle="tooltip"</strong>: marca el elemento para que Bootstrap le aplique tooltip.</li>
+                                        <li><strong>data-bs-placement="bottom"</strong>: coloca el tooltip debajo del elemento.</li>
+                                        <li><strong>title="Información del docente"</strong>: texto que muestra el tooltip.</li>
+                                    </ul>
+                                    <p>Código:</p>
+                                    <pre><code>&lt;a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Información del docente"&gt;Docente&lt;/a&gt;</code></pre>
+
+                                    <hr>
+
+                                    <p>2) <strong>"Comandante"</strong>:</p>
+                                    <p>Código:</p>
+                                    <pre><code>&lt;a class="nav-link" href="Comandante.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Abrir página Comandante"&gt;Comandante&lt;/a&gt;</code></pre>
+                                </div>
+                                <div class="col-md-5 text-center d-flex flex-column justify-content-center align-items-center">
+                                    <img src="img/Docente.png" alt="Docente" class="img-tooltip rounded mb-3 img-fluid">
+                                    <small class="text-muted d-block mb-2">Imagen: <code>img/Docente.png</code></small>
+                                    <hr>
+                                    <img src="img/Comandante.png" alt="Comandante" class="img-tooltip rounded mt-2 img-fluid">
+                                    <small class="text-muted d-block mt-2">Imagen: <code>img/Comandante.png</code></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-7">
+                                    <h6>3) Botón "Buscar"</h6>
+                                    <p>Botón para buscar en el sitio. Tooltip abajo.</p>
+                                    <p>Código:</p>
+                                    <pre><code>&lt;button class="btn btn-outline-light" type="submit" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Buscar en el sitio"&gt;Buscar&lt;/button&gt;</code></pre>
+                                </div>
+                                    <div class="col-md-5 text-center">
+                                    <img src="img/Buscar.png" alt="Buscar" class="img-tooltip rounded">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-5 text-center">
+                                    <img src="img/login.png" alt="Login" class="img-tooltip rounded">
+                                </div>
+                                <div class="col-md-7">
+                                    <h6>4) Botón lateral "LOGIN"</h6>
+                                    <p>Tooltip a la derecha que indica la navegación a la página de inicio de sesión.</p>
+                                    <p>Código:</p>
+                                    <pre><code>&lt;a href="login.html" class="btn btn-secondary side-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Ir a la página de inicio de sesión"&gt;LOGIN&lt;/a&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-7">
+                                    <h6>5) Botón lateral "Registro"</h6>
+                                    <p>Tooltip a la derecha que describe la acción de registrar un nuevo usuario.</p>
+                                    <p>Código:</p>
+                                    <pre><code>&lt;a href="formRegistro.html" class="btn btn-secondary side-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Registro de nuevo usuario"&gt;Registro&lt;/a&gt;</code></pre>
+                                </div>
+                                <div class="col-md-5 text-center">
+                                    <img src="img/registro.png" alt="Registro" class="img-tooltip rounded">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-5 text-center">
+                                    <img src="img/producto.png" alt="Producto" class="img-tooltip rounded">
+                                </div>
+                                <div class="col-md-7">
+                                    <h6>6) Botón lateral "Producto"</h6>
+                                    <p>Tooltip a la derecha que explica el propósito de crear o administrar productos.</p>
+                                    <p>Código:</p>
+                                    <pre><code>&lt;a href="formProducto.html" class="btn btn-secondary side-btn" data-bs-toggle="tooltip" data-bs-placement="right" title="Crear o administrar productos"&gt;Producto&lt;/a&gt;</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-7">
+                                    <h6>7) Botón para abrir el modal "Formulario"</h6>
+                                    <p>Este proyecto inicializa también elementos con <code>data-bs-tooltip="true"</code>.</p>
+                                    <p>Código:</p>
+                                    <pre><code>&lt;a href="#" class="btn btn-primary side-btn" data-bs-toggle="modal" data-bs-target="#formularioModal" data-bs-tooltip="true" title="Abrir formulario"&gt;Abrir Formulario&lt;/a&gt;</code></pre>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>   
+                                    <div class="card shadow-sm mt-3">
+                                        <div class="card-body">
+        
+                            <h6 class="card-title">Teoría: botones dentro del modal</h6>
+                                <p>8) Botón de cierre “X” del modal</p>
+                                <pre><code>&lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            data-bs-toggle="tooltip" data-bs-placement="left" title="Cerrar"&gt;&lt;/button&gt;</code></pre>
+                                <p>Tooltip a la izquierda que indica “Cerrar”.</p>
+
+                                <p>9) Botón “Guardar” dentro del modal</p>
+                                <pre><code>&lt;button type="submit" class="btn btn-primary float-end" data-bs-toggle="tooltip" data-bs-placement="top" title="Guardar los datos ingresados"&gt; ... &lt;/button&gt;</code></pre>
+                                <p>Tooltip arriba.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5 text-center">
+                                    <img src="img/formulario.png" alt="Formulario" class="img-tooltip rounded mb-3">
+                                    <small class="text-muted d-block mb-2">Imagen relacionada con el formulario</small>
+                                    <hr>
+                                    <img src="img/cerrar_guardar.png" alt="Cerrar y Guardar" class="img-tooltip rounded mt-3">
+                                    <small class="text-muted d-block mt-2">Imagen relacionada con cerrar/guardar</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4><strong>Ejemplos de Popover con Bootstrap 5</strong></h4>
+                    <br>
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <img src="img/grupo_popover.png" alt="Grupo 2" class="img-popover img-fluid rounded mb-2" style="max-width:320px;">
+                                        <small class="text-muted d-block mb-3">Imagen: <code>img/grupo_popover.png</code></small>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <p>10) "Grupo 2":</p>
+                                    <ul class="small mb-0">
+                                        <li class="mb-1"><code>data-bs-toggle="popover"</code>: activa el popover.</li>
+                                        <li class="mb-1"><code>data-bs-trigger="click"</code>: se abre al clic (no al hover).</li>
+                                        <li class="mb-1"><code>data-bs-placement="right"</code>: aparece a la derecha del enlace.</li>
+                                        <li class="mb-1"><code>data-bs-container="body"</code>: inserta el popover en &lt;body&gt; (evita problemas de overflow dentro del dropdown).</li>
+                                        <li class="mb-1"><code>data-bs-flip="false"</code>: evita que cambie de lado automáticamente si no cabe.</li>
+                                        <li class="mb-1"><code>title="..."</code>: título del popover (por ejemplo, "Grupo 2 - Integrantes").</li>
+                                        <li class="mb-1"><code>data-bs-content="..."</code>: contenido del popover (texto o html breve).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <div class="bg-light p-3 rounded overflow-auto">
+                                        <pre class="mb-0"><code>&lt;a class="dropdown-item" href="#" id="grupo2-link"
+   data-bs-toggle="popover" data-bs-trigger="click"
+   data-bs-placement="right" data-bs-container="body" data-bs-flip="false"
+   title="Grupo 2 - Integrantes"
+   data-bs-content="Muestra una tabla con los integrantes del Grupo 2 y sus correos."&gt;Grupo 2&lt;/a&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-header py-3">
+                            <h5 class="m-0 font-weight-bold">Redes sociales</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <img src="img/redes_popover.png" alt="Redes sociales" class="img-redes img-fluid rounded mb-3">
+                                    <div><small class="text-muted">Imagen de ejemplo: <code>img/social_facebook.png</code></small></div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-md-4">
+                                    <h6 class="text-muted">11) Facebook</h6>
+                                    <div class="bg-light p-2 rounded overflow-auto">
+                                        <pre class="mb-0"><code>&lt;a href="#" class="social-btn facebook"
+   data-bs-toggle="popover" data-bs-trigger="click"
+   data-bs-placement="left" data-bs-container="body" data-bs-flip="false"
+   title="Facebook"
+   data-bs-content="Visítanos en Facebook para novedades y publicaciones."&gt;Facebook&lt;/a&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="text-muted">12) Twitter</h6>
+                                    <div class="bg-light p-2 rounded overflow-auto">
+                                        <pre class="mb-0"><code>&lt;a href="#" class="social-btn twitter"
+   data-bs-toggle="popover" data-bs-trigger="click"
+   data-bs-placement="top" data-bs-container="body" data-bs-flip="false"
+   title="Twitter"
+   data-bs-content="Síguenos en Twitter para actualizaciones rápidas y noticias cortas."&gt;Twitter&lt;/a&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6 class="text-muted">13) YouTube</h6>
+                                    <div class="bg-light p-2 rounded overflow-auto">
+                                        <pre class="mb-0"><code>&lt;a href="#" class="social-btn youtube"
+   data-bs-toggle="popover" data-bs-trigger="click"
+   data-bs-placement="right" data-bs-container="body" data-bs-flip="false"
+   title="YouTube"
+   data-bs-content="Visita nuestro canal de YouTube para ver videos y tutoriales."&gt;YouTube&lt;/a&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p class="small text-muted mt-3">Importante: estos popovers funcionan porque en <code>js/main.js</code> se ejecuta la inicialización de <code>bootstrap.Popover</code> para los elementos con <code>data-bs-toggle="popover"</code> al cargar el DOM.</p>
+                        </div>
+                    </div>
+                    
+                    
+                <div class="container-fluid">
+                    <h1 class="h3 mb-4">Tooltip and Popover - Grupo 01</h1>
+                    
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                            <h6 class="m-0 font-weight-bold text-primary">PRUEBA_PARTE2 (Ejemplo ejecutable)</h6>
+                            <button id="runPruebaBtnGrupo01" class="btn btn-success">Ejecutar Proyecto</button>
+                        </div>
+                        <div class="card-body">
+                            <p>Presiona <strong>Ejecutar Proyecto</strong>.</p>
+                            <div id="pruebaContainer" style="display:none; margin-top:1rem;">
+                                <iframe id="pruebaIframe" src="" sandbox="allow-scripts allow-forms allow-same-origin" style="width:100%; height:700px; border:1px solid #e2e8f0; border-radius:6px;" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
 
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -146,6 +972,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     
     <script src="js/main.js"></script>
+     
     
 </body>
 

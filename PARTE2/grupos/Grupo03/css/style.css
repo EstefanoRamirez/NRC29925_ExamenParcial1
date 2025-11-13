@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6, pre {
     color: #858796; 
 }
 
-.container-fluid > h1.h3 {
+.container-fluid h1.h3 {
     text-align: center !important;
     color: #000000 !important; 
     font-family: 'Roboto Mono', monospace !important;
@@ -132,4 +132,142 @@ h1, h2, h3, h4, h5, h6, pre {
     color: #000000 !important; 
     font-weight: 700 !important;
     font-family: 'Roboto Mono', monospace !important;
+}
+
+/* Estilos para Scrollspy y Tabs */
+.contenido-scrollspy-ejemplo {
+    overflow-y: scroll;
+    height: 550px;
+    position: relative;
+}
+
+.ejemplo-interactivo {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.ejemplo-interactivo .nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.ejemplo-interactivo .nav-tabs .nav-link {
+    color: #495057;
+    border: 1px solid transparent;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.ejemplo-interactivo .nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #dee2e6;
+    isolation: isolate;
+}
+
+.ejemplo-interactivo .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.ejemplo-interactivo .nav-pills .nav-link {
+    border-radius: 0;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+.ejemplo-interactivo .nav-pills .nav-link.active,
+.ejemplo-interactivo .nav-pills .nav-link.active:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.ejemplo-interactivo pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.ejemplo-interactivo code {
+    color: #d63384;
+    background-color: transparent;
+    padding: 0;
+}
+
+.ejemplo-interactivo pre code {
+    color: #212529;
+}
+
+/* Scrollspy active state */
+.ejemplo-interactivo .nav-pills .nav-link.active[href*="#"] {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Estilos para la sección de Ejercicio */
+.ejercicio-contenido {
+    background-color: #fff;
+}
+
+.ejercicio-interactivo-ejecucion {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenido-scroll-ejercicio {
+    overflow-y: scroll;
+    height: 500px;
+    position: relative;
+}
+
+.ejercicio-interactivo-ejecucion .nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.ejercicio-interactivo-ejecucion .nav-tabs .nav-link {
+    color: #495057;
+    border: 1px solid transparent;
+}
+
+.ejercicio-interactivo-ejecucion .nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.ejercicio-interactivo-ejecucion .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.ejercicio-interactivo-ejecucion .nav-pills .nav-link {
+    border-radius: 0;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+.ejercicio-interactivo-ejecucion .nav-pills .nav-link.active,
+.ejercicio-interactivo-ejecucion .nav-pills .nav-link.active:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.iframe-ejercicio {
+    width: 100%;
+    min-height: 700px;   /* ajústalo si tu página es más alta */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
 }

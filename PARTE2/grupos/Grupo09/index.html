@@ -8,17 +8,19 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>EXAMEN PARCIAL 1 - Thumbnails y Media</title>
+    <title>EXAMEN PARCIAL 1 - Validación de Formularios</title>
 
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
     <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
-    
+
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -35,7 +37,7 @@
             </a>
 
             <hr class="sidebar-divider my-0">
-            
+
             <li class="nav-item">
                 <a class="nav-link" href="../Grupo01/index.html">
                     <i class="fas fa-fw fa-comment-alt"></i>
@@ -87,7 +89,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-image"></i>
-                    <span>Thumbnails and Media</span>
+                    <span>Validación de Formularios</span>
                 </a>
             </li>
 
@@ -98,7 +100,7 @@
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-                    
+
                     <div class="navbar-center">
                         EXAMEN PARCIAL 1
                     </div>
@@ -131,9 +133,920 @@
                 </nav>
 
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4">Thumbnails and Media - Grupo 09</h1>
-                    
-                    </div>
+                    <h1 class="h3 mb-4">Validación de Formularios - Grupo 09</h1>
+
+                    <!-- Sección 1: Teoría -->
+                    <section id="teoria" class="mb-5">
+                        <div class="card shadow mb-4 content-card">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">1) Teoría</h5>
+
+                                <h6 class="font-weight-bold mb-3">Conceptos Fundamentales</h6>
+
+                                <p>
+                                    La validación de formularios es un proceso fundamental en el desarrollo web que
+                                    consiste en verificar
+                                    que los datos ingresados por el usuario sean correctos, coherentes y cumplan con los
+                                    requisitos
+                                    establecidos antes de ser enviados al servidor. Su propósito principal es evitar
+                                    errores, mejorar la
+                                    experiencia del usuario y garantizar la integridad de la información.
+                                </p>
+                                <p>Existen dos tipos de validación:</p>
+                                <ul>
+                                    <li> <b>Validación del lado del cliente:</b> se realiza directamente en el navegador
+                                        del usuario mediante lenguajes como JavaScript o jQuery. Permite detectar
+                                        errores de forma rápida y visual sin necesidad de recargar la página.</li>
+                                    <li> <b>Validación del lado del servidor:</b> ocurre una vez que los datos se envían
+                                        al servidor, asegurando que la información sea segura y cumpla con los
+                                        parámetros esperados por la aplicación.</li>
+                                </ul>
+
+                                <!-- Bootstrap y jQuery Integration Card -->
+                                <div class="card bg-gradient-primary text-white mb-4">
+                                    <div class="card-body">
+                                        <h6 class="font-weight-bold mb-3"><i
+                                                class="fas fa-puzzle-piece mr-2"></i>Bootstrap y su integración con
+                                            jQuery</h6>
+                                        <p>Bootstrap, además de ser un framework CSS para el diseño visual de páginas
+                                            web, proporciona clases específicas para la validación de formularios.
+                                            Cuando se combina con jQuery, se logra una validación no solo funcional sino
+                                            también visualmente atractiva e intuitiva para el usuario.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Bootstrap Classes Card -->
+                                <div class="row mb-4">
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-header py-3">
+                                                <h6 class="m-0 font-weight-bold text-primary">Clases de Validación</h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="list-group">
+                                                    <div class="list-group-item border-left-success">
+                                                        <h6 class="mb-1 font-weight-bold text-success">
+                                                            <code>.is-valid</code>
+                                                        </h6>
+                                                        <p class="mb-0">Resalta los campos validados correctamente con
+                                                            color verde.</p>
+                                                    </div>
+                                                    <div class="list-group-item border-left-danger">
+                                                        <h6 class="mb-1 font-weight-bold text-danger">
+                                                            <code>.is-invalid</code>
+                                                        </h6>
+                                                        <p class="mb-0">Marca los campos con errores en color rojo.</p>
+                                                    </div>
+                                                    <div class="list-group-item border-left-info">
+                                                        <h6 class="mb-1 font-weight-bold text-info">
+                                                            <code>.valid-feedback</code> y
+                                                            <code>.invalid-feedback</code>
+                                                        </h6>
+                                                        <p class="mb-0">Muestran mensajes descriptivos debajo del campo.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Conceptos Fundamentales Card -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-header py-3">
+                                                <h6 class="m-0 font-weight-bold text-primary">Conceptos Fundamentales
+                                                </h6>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>La validación de formularios verifica que los datos ingresados sean
+                                                    correctos y coherentes antes de enviarlos al servidor.</p>
+                                                <div class="alert alert-info">
+                                                    <h6 class="font-weight-bold">Tipos de Validación:</h6>
+                                                    <ul class="mb-0">
+                                                        <li><b>Cliente:</b> En el navegador, usando JavaScript/jQuery.
+                                                        </li>
+                                                        <li><b>Servidor:</b> Después del envío, garantiza seguridad.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-warning border-left-warning">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    <strong>Tip:</strong> Las clases de Bootstrap pueden aplicarse dinámicamente
+                                    mediante jQuery según las condiciones que se cumplan en el formulario.
+                                </div>
+                                <p>A continuación un esquema mínimo de un manejador de envío con jQuery:</p>
+
+                                <div class="card">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Ejemplo</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card mb-3">
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary">HTML con Bootstrap
+                                                        </h6>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <pre><code id="code-html" class="language-html">&lt;form id="ejemploForm" class="needs-validation" novalidate&gt;
+    &lt;input type="text" class="form-control" id="nombre"
+           required placeholder="Nombre"&gt;
+    &lt;div class="invalid-feedback"&gt;
+        Campo requerido
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn btn-primary mt-2"&gt;
+        Enviar
+    &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card mb-3">
+                                                    <div class="card-header py-3">
+                                                        <h6 class="m-0 font-weight-bold text-primary">jQuery</h6>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <pre><code id="code-js" class="language-javascript">$(document).ready(function() {
+    $('#ejemploForm').on('submit', function(e) {
+        e.preventDefault();
+        var input = $('#nombre');
+        
+        if (input[0].checkValidity()) {
+            input.addClass('is-valid');
+            alert('¡Formulario válido!');
+        } else {
+            input.addClass('is-invalid');
+        }
+    });
+});</code></pre>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn btn-primary execute mb-3"
+                                            data-target="result-teoria">Ejecutar</button>
+                                        <div id="result-teoria" class="mt-3 border rounded p-3" style="display: none;">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>Consideraciones y buenas prácticas:</p>
+                                <ul>
+                                    <li>Combinar validación del lado del cliente (UX) con la validación del lado del
+                                        servidor (seguridad).</li>
+                                    <li>Mostrar mensajes claros y accesibles para usuarios y lectores de pantalla.</li>
+                                    <li>Evitar confiar únicamente en clases visuales; usar atributos <code>aria-*</code>
+                                        cuando sea necesario.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Sección 2: Ejemplo (Video) -->
+                    <section id="ejemplo" class="mb-5">
+                        <div class="card shadow mb-4 content-card">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">2) Ejemplo de Validaciones con JQuery y
+                                    Bootstrap</h5>
+                                <div class="row align-items-center">
+                                    <!-- Columna de texto a la izquierda -->
+                                    <div class="col-md-5">
+                                        <div class="card border-left-primary shadow h-100 py-2">
+                                            <div class="card-body">
+                                                <h5 class="text-primary font-weight-bold">Explicación del Video</h5>
+                                                <p class="mb-3">En este video se muestra paso a paso cómo implementar la
+                                                    validación de formularios utilizando Bootstrap y jQuery:</p>
+                                                <ul class="mb-0">
+                                                    <li class="mb-2">Configuración inicial del formulario</li>
+                                                    <li class="mb-2">Implementación de validaciones en tiempo real</li>
+                                                    <li class="mb-2">Manejo de errores y retroalimentación visual</li>
+                                                    <li class="mb-2">Mejores prácticas y consejos</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Video a la derecha con tamaño aumentado -->
+                                    <div class="col-md-7">
+                                        <div class="ratio ratio-16x9" style="height: 300px;">
+                                            <iframe width="95%" height="100%"
+                                                src="https://www.youtube.com/embed/ReK_vlT8vT0?si=zt-pFmuTUL2hKskD"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                referrerpolicy="strict-origin-when-cross-origin"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="card">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Ejemplo</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <pre><code id="code-ejemplo"><!-- HTML -->
+&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;
+            &lt;div class="shadow-lg p-3 mb-5 mt-4 bg-body rounded"&gt;
+                &lt;div class="p-3 mb-2 bg-primary bg-gradient fw-bold text-white"&gt;Formulario&lt;/div&gt;
+
+                &lt;form class="row g-3 needs-validation" novalidate&gt;
+                    &lt;div class="col-md-4"&gt;
+                        &lt;label for="nombre" class="form-label"&gt;Nombre&lt;/label&gt;
+                        &lt;input type="text" class="form-control" id="nombre" value="Juan Pablo" required&gt;
+                        &lt;div class="valid-feedback"&gt;¡Campo válido!&lt;/div&gt;
+                        &lt;div class="invalid-feedback"&gt;Debe completar los datos.&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="col-md-4"&gt;
+                        &lt;label for="apellido" class="form-label"&gt;Apellido&lt;/label&gt;
+                        &lt;input type="text" class="form-control" id="apellido" required&gt;
+                        &lt;div class="valid-feedback"&gt;¡Campo válido!&lt;/div&gt;
+                        &lt;div class="invalid-feedback"&gt;Debe completar los datos.&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="col-md-3"&gt;
+                        &lt;label for="pais" class="form-label"&gt;País&lt;/label&gt;
+                        &lt;select class="form-select" id="pais" required&gt;
+                            &lt;option selected disabled value=""&gt;Seleccione...&lt;/option&gt;
+                            &lt;option&gt;México&lt;/option&gt;
+                            &lt;option&gt;Colombia&lt;/option&gt;
+                            &lt;option&gt;Perú&lt;/option&gt;
+                            &lt;option&gt;Chile&lt;/option&gt;
+                            &lt;option&gt;Argentina&lt;/option&gt;
+                        &lt;/select&gt;
+                        &lt;div class="valid-feedback"&gt;¡Campo válido!&lt;/div&gt;
+                        &lt;div class="invalid-feedback"&gt;Debe completar los datos.&lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;button class="btn btn-warning fw-bold" type="submit"&gt;Enviar&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+<!-- jQuery -->
+$(document).ready(function () {
+    $('.needs-validation').each(function () {
+        $(this).on('submit', function (event) {
+            let form = this;
+
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            } else {
+                alert('FORM VALIDADO');
+            }
+
+            $(form).addClass('was-validated');
+        });
+    });
+});</code></pre>
+                                    </div>
+                                </div>
+                                <p class="mt-3"><strong>Explicación visual del código:</strong></p>
+
+                                <!-- Explicación paso a paso -->
+                                <div class="card mb-4">
+                                    <div class="card-header bg-gradient-primary text-white py-3">
+                                        <h5 class="mb-0 font-weight-bold"><i class="fas fa-code mr-2"></i>Paso a Paso:
+                                            Validación con Bootstrap y jQuery</h5>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <!-- Paso 1 -->
+                                        <div class="p-4 border-bottom">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary text-white rounded-circle p-3 mr-3">
+                                                    <h4 class="mb-0">1</h4>
+                                                </div>
+                                                <h5 class="font-weight-bold text-primary mb-0">Configuración Bootstrap
+                                                </h5>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-5 mb-4 mb-md-0">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="mb-3">
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            La clase <code>needs-validation</code> inicializa el
+                                                            formulario
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            El atributo <code>novalidate</code> desactiva validación
+                                                            nativa
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Clases de feedback para retroalimentación visual
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <img src="img/paso1.png" class="img-fluid rounded shadow-lg"
+                                                        alt="Configuración Bootstrap"
+                                                        style="max-height: 400px; width: 100%; object-fit: contain;">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Paso 2 -->
+                                        <div class="p-4 border-bottom bg-light">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary text-white rounded-circle p-3 mr-3">
+                                                    <h4 class="mb-0">2</h4>
+                                                </div>
+                                                <h5 class="font-weight-bold text-primary mb-0">Estructura de Validación
+                                                </h5>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-7 order-md-2 mb-4 mb-md-0">
+                                                    <img src="img/paso2.png" class="img-fluid rounded shadow-lg"
+                                                        alt="Estructura de Validación"
+                                                        style="max-height: 400px; width: 100%; object-fit: contain;">
+                                                </div>
+                                                <div class="col-md-5 order-md-1">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="mb-3">
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Atributo <code>required</code> para campos obligatorios
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Mensajes personalizados para cada campo
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Layout responsive con Bootstrap grid
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Paso 3 -->
+                                        <div class="p-4 border-bottom">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary text-white rounded-circle p-3 mr-3">
+                                                    <h4 class="mb-0">3</h4>
+                                                </div>
+                                                <h5 class="font-weight-bold text-primary mb-0">Validación jQuery</h5>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-5 mb-4 mb-md-0">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="mb-3">
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Event handler <code>submit</code> para validación
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Método <code>checkValidity()</code> para verificación
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Clases dinámicas para feedback visual
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <img src="img/paso3.png" class="img-fluid rounded shadow-lg"
+                                                        alt="Validación jQuery"
+                                                        style="max-height: 400px; width: 100%; object-fit: contain;">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Paso 4 -->
+                                        <div class="p-4 bg-light">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary text-white rounded-circle p-3 mr-3">
+                                                    <h4 class="mb-0">4</h4>
+                                                </div>
+                                                <h5 class="font-weight-bold text-primary mb-0">Feedback en Tiempo Real
+                                                </h5>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-7 order-md-2 mb-4 mb-md-0">
+                                                    <img src="img/paso4.png" class="img-fluid rounded shadow-lg"
+                                                        alt="Feedback en Tiempo Real"
+                                                        style="max-height: 400px; width: 100%; object-fit: contain;">
+                                                </div>
+                                                <div class="col-md-5 order-md-1">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="mb-3">
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Validación inmediata al escribir
+                                                        </li>
+                                                        <li class="mb-3">
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Mensajes específicos por campo
+                                                        </li>
+                                                        <li>
+                                                            <i class="fas fa-check-circle text-success mr-2"></i>
+                                                            Prevención de envío con errores
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- Sección 4: Ejercicio (esqueleto) -->
+                    <section id="ejercicio" class="mb-5">
+                        <div class="card shadow mb-4 content-card">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">3) Ejecución del código</h5>
+                                <button class="btn btn-primary execute mb-3"
+                                    data-target="result-ejemplo">Ejecutar</button>
+                                <div id="result-ejemplo" class="mt-3"></div>
+                            </div>
+                    </section>
+
+                    <!-- Copia y pega este bloque completo para reemplazar tu sección 4 -->
+                    <section id="ejercicio" class="mb-5">
+                        <div class="card shadow mb-4 content-card">
+                            <div class="card-header py-3">
+                                <h5 class="m-0 font-weight-bold text-primary">4) Ejercicio de la Prueba - Funcionamiento
+                                    Visual</h5>
+                            </div>
+                            <div class="card-body">
+                                <p class="mb-4">
+                                    A continuación, se presenta el funcionamiento visual paso a paso del formulario
+                                    modal, demostrando la validación implementada con jQuery y Bootstrap.
+                                </p>
+
+                                <div class="card">
+                                    <div class="card-header bg-gradient-dark text-white py-3">
+                                        <h5 class="mb-0 font-weight-bold"><i class="fas fa-stream mr-2"></i>Flujo de
+                                            Funcionamiento del Formulario Modal</h5>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div class="p-4 border-bottom">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mr-3"
+                                                    style="width: 50px; height: 50px;">
+                                                    <h4 class="mb-0 font-weight-bold">1</h4>
+                                                </div>
+                                                <h5 class="font-weight-bold text-primary mb-0">Accionar el Modal</h5>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-7 mb-3 mb-md-0">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="d-flex align-items-start">
+                                                            <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
+                                                            <span>El proceso comienza cuando el usuario hace clic en el
+                                                                botón "Formulario", que está configurado para desplegar
+                                                                la ventana modal.</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <img src="img/paso1_prueba.png"
+                                                        class="img-fluid rounded shadow-lg"
+                                                        alt="Botón para abrir el formulario">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-4 border-bottom bg-light">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mr-3"
+                                                    style="width: 50px; height: 50px;">
+                                                    <h4 class="mb-0 font-weight-bold">2</h4>
+                                                </div>
+                                                <h5 class="font-weight-bold text-primary mb-0">Visualización del
+                                                    Formulario</h5>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-5 order-md-2 mb-3 mb-md-0">
+                                                    <img src="img/paso2_prueba.png"
+                                                        class="img-fluid rounded shadow-lg"
+                                                        alt="Modal del formulario vacío">
+                                                </div>
+                                                <div class="col-md-7 order-md-1">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="d-flex align-items-start">
+                                                            <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
+                                                            <span>Se muestra el formulario modal vacío, superpuesto
+                                                                sobre el contenido, listo para que el usuario ingrese
+                                                                sus datos.</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-4 border-bottom">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mr-3"
+                                                    style="width: 50px; height: 50px;">
+                                                    <h4 class="mb-0 font-weight-bold">3</h4>
+                                                </div>
+                                                <h5 class="font-weight-bold text-primary mb-0">Validación de Campos
+                                                    Vacíos</h5>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-7 mb-3 mb-md-0">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="d-flex align-items-start">
+                                                            <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
+                                                            <span>Al intentar guardar sin datos, el script de validación
+                                                                se activa, mostrando mensajes de error claros y
+                                                                aplicando estilos visuales en rojo.</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <img src="img/paso3_prueba.png"
+                                                        class="img-fluid rounded shadow-lg"
+                                                        alt="Errores de validación en campos vacíos">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-4 border-bottom bg-light">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mr-3"
+                                                    style="width: 50px; height: 50px;">
+                                                    <h4 class="mb-0 font-weight-bold">4</h4>
+                                                </div>
+                                                <h5 class="font-weight-bold text-primary mb-0">Validación de Reglas
+                                                    Específicas</h5>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-5 order-md-2 mb-3 mb-md-0">
+                                                    <img src="img/paso4_prueba.png"
+                                                        class="img-fluid rounded shadow-lg"
+                                                        alt="Error de validación por contraseñas que no coinciden">
+                                                </div>
+                                                <div class="col-md-7 order-md-1">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="d-flex align-items-start">
+                                                            <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
+                                                            <span>La validación maneja reglas complejas, como la
+                                                                coincidencia de contraseñas, mostrando errores
+                                                                específicos mientras los campos válidos se marcan en
+                                                                verde.</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="p-4">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mr-3"
+                                                    style="width: 50px; height: 50px;">
+                                                    <h4 class="mb-0 font-weight-bold">5</h4>
+                                                </div>
+                                                <h5 class="font-weight-bold text-primary mb-0">Mensaje de Éxito</h5>
+                                            </div>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-7 mb-3 mb-md-0">
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li class="d-flex align-items-start">
+                                                            <i class="fas fa-check-circle text-success mr-2 mt-1"></i>
+                                                            <span>Cuando todos los campos son válidos, se muestra un
+                                                                mensaje de confirmación, completando el flujo de
+                                                                interacción del usuario.</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <img src="img/paso5_prueba.png"
+                                                        class="img-fluid rounded shadow-lg"
+                                                        alt="Mensaje de éxito de la validación">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <iframe id="iframe-ejercicio" src="PARTE2-PRUEBA/index.html" width="100%" height="800px"
+                                    style="border: none;" title="Ejercicio de Formulario Embebido">
+                                    Tu navegador no es compatible con iframes.
+                                </iframe>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-----------------Explicacion de Prueba Parte II
+----------------------------------------------------------------------------------------------->
+                    <section id="ejercicio" class="mb-5">
+                        <div class="card shadow mb-4 content-card">
+                            <div class="card-body">
+                                <h5 class="card-title font-weight-bold">4.1) Explicación del ejercicio de la Prueba</h5>
+                                <!-- Explicación de la validación con referencias de código -->
+                                <div class="mt-4 p-4 bg-light rounded border">
+                                    <h6 class="font-weight-bold text-primary mb-3"><i
+                                            class="fas fa-info-circle mr-2"></i>Explicación de la Validación de
+                                        Formularios</h6>
+
+                                    <p>
+                                        La validación del formulario embebido se logra mediante una combinación de HTML
+                                        y JavaScript. A continuación se detallan sus componentes clave con las partes
+                                        específicas del código donde se encuentran.
+                                    </p>
+
+                                    <!-- Detalles del HTML -->
+                                    <h6 class="font-weight-bold text-info"><i class="fas fa-file-code mr-2"></i>HTML del
+                                        Formulario </h6>
+                                    <ul class="mb-3">
+                                        <li>
+                                            <strong>Contenedor del Formulario:</strong> El formulario tiene un ID único
+                                            (<code>formularioValidacionModal</code>) y el atributo
+                                            <code>novalidate</code>.
+                                            <ul>
+                                                <li>El <code>id</code> es crucial para que el JavaScript lo identifique
+                                                    y manipule.</li>
+                                                <li>El atributo <code>novalidate</code> es fundamental: inhabilita la
+                                                    validación automática del navegador, permitiendo aplicar <em>nuestra
+                                                        propia validación personalizada</em> usando JavaScript.</li>
+                                                <li><strong>Código HTML:</strong>
+                                                    <code>&lt;form id="formularioValidacionModal" novalidate&gt;</code>
+
+                                            </ul>
+                                        </li>
+                                        <img src="img/form1.png" class="img-fluid rounded shadow-lg"
+                                            alt="Configuración Bootstrap"
+                                            style="max-height: 250px; width: 100%; object-fit: contain;">
+                                        <li>
+                                            <strong>Campos del Formulario:</strong> Campos como Nombre, Usuario,
+                                            Contraseñas y Género usan el atributo <code>required</code>, indicando que
+                                            son obligatorios. El campo <code>select</code> para Género tiene una opción
+                                            inicial (<code>--Seleccione--</code>) deshabilitada y seleccionada por
+                                            defecto, lo que lo convierte en un campo obligatorio efectivo.
+                                            <ul>
+
+                                                <li><strong>Código HTML Nombre:</strong>
+                                                    <code>&lt;input type="text" id="nombreModal" name="nombreModal" class="form-control" placeholder="Ingrese el nombre..." required&gt;</code>
+                                                </li>
+                                                <img src="img/form2.png" class="img-fluid rounded shadow-lg"
+                                                    alt="Configuración Bootstrap"
+                                                    style="max-height:250px; width: 100%; object-fit: contain;">
+                                                <li><strong>Código HTML Usuario:</strong>
+                                                    <code>&lt;input type="text" id="usuarioModal" name="usuarioModal" class="form-control" placeholder="Ingrese el usuario..." required&gt;</code>
+                                                </li>
+                                                <img src="img/form3.png" class="img-fluid rounded shadow-lg"
+                                                    alt="Configuración Bootstrap"
+                                                    style="max-height: 250px; width: 100%; object-fit: contain;">
+                                                <li><strong>Código HTML Contraseña:</strong>
+                                                    <code>&lt;input type="password" id="pass1Modal" name="pass1Modal" class="form-control" placeholder="Ingrese la contraseña..." required&gt;</code>
+                                                </li>
+                                                <img src="img/form4.png" class="img-fluid rounded shadow-lg"
+                                                    alt="Configuración Bootstrap"
+                                                    style="max-height: 250px; width: 100%; object-fit: contain;">
+                                                <li><strong>Código HTML Confirmar Contraseña:</strong>
+                                                    <code>&lt;input type="password" id="pass2Modal" name="pass2Modal" class="form-control" placeholder="Confirme la contraseña..." required&gt;</code>
+                                                </li>
+                                                <img src="img/form5.png" class="img-fluid rounded shadow-lg"
+                                                    alt="Configuración Bootstrap"
+                                                    style="max-height: 250px; width: 100%; object-fit: contain;">
+                                                <li><strong>Código HTML Género:</strong>
+                                                    <code>&lt;select class="form-control" id="generoModal" name="generoModal" required&gt;</code>
+                                                </li>
+                                                <img src="img/form6.png" class="img-fluid rounded shadow-lg"
+                                                    alt="Configuración Bootstrap"
+                                                    style="max-height: 250px; width: 100%; object-fit: contain;">
+                                                <li><strong>Código HTML Opción Género:</strong>
+                                                    <code>&lt;option value="" selected disabled&gt;--Seleccione--&lt;/option&gt;</code>
+                                                </li>
+                                                <img src="img/form7.png" class="img-fluid rounded shadow-lg"
+                                                    alt="Configuración Bootstrap"
+                                                    style="max-height: 250px; width: 100%; object-fit: contain;">
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Espacios para Mensajes de Error:</strong> Cada campo de entrada
+                                            tiene un contenedor vacío
+                                            <code>&lt;span class="help-block"&gt;&lt;/span&gt;</code> inmediatamente
+                                            después. Este espacio es donde el JavaScript <em>insertará</em> los mensajes
+                                            de error específicos si un campo no es válido.
+                                            <ul>
+                                                <li><strong>Código HTML Nombre:</strong>
+                                                    <code>&lt;span class="help-block"&gt;&lt;/span&gt;</code>
+                                                </li>
+                                                <li><strong>Código HTML Usuario:</strong>
+                                                    <code>&lt;span class="help-block"&gt;&lt;/span&gt;</code>
+                                                </li>
+                                                <li><strong>Código HTML Contraseña:</strong>
+                                                    <code>&lt;span class="help-block"&gt;&lt;/span&gt;</code>
+                                                </li>
+                                                <li><strong>Código HTML Confirmar Contraseña:</strong>
+                                                    <code>&lt;span class="help-block"&gt;&lt;/span&gt;</code>
+                                                </li>
+                                                <li><strong>Código HTML Género:</strong>
+                                                    <code>&lt;span class="help-block"&gt;&lt;/span&gt;</code>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Detalles del JavaScript -->
+                                    <h6 class="font-weight-bold text-info"><i class="fas fa-code mr-2"></i>JavaScript
+                                        (PARTE2-PRUEBA/js/main.js)</h6>
+                                    <p>
+                                        El archivo <code>main.js</code> contiene la lógica de la validación, que se
+                                        activa cuando el usuario intenta enviar el formulario.
+                                    </p>
+                                    <ul class="mb-0">
+                                        <li>
+                                            <strong>Escuchar el Evento de Envío:</strong> El script escucha el evento
+                                            <code>submit</code> del formulario identificado por su
+                                            <code>id="formularioValidacionModal"</code>. Esto le dice al navegador que,
+                                            cuando se intente enviar el formulario (haciendo clic en el botón
+                                            "Guardar"), debe ejecutar una función específica.
+                                            <ul>
+                                                <li><strong>Código JavaScript:</strong>
+                                                    <code>$('#formularioValidacionModal').on('submit', function (event) {</code>
+
+                                                    <code>PARTE2-PRUEBA/js/main.js</code>)
+                                                </li>
+
+                                            </ul>
+                                            <img src="img/formjs.png" class="img-fluid rounded shadow-lg"
+                                                alt="Configuración Bootstrap"
+                                                style="max-height: 175px; width: 100%; object-fit: contain;">
+                                        </li>
+                                        <li>
+                                            <strong>Función de Validación (Dentro del evento
+                                                <code>submit</code>):</strong>
+                                            <ul>
+                                                <li><strong><code>preventDefault()</code>:</strong> Lo primero que hace
+                                                    la función es llamar a <code>event.preventDefault();</code>. Esto
+                                                    <strong>evita que el formulario se envíe</strong> si hay errores, ya
+                                                    que recordemos que <code>novalidate</code> inhabilitó la validación
+                                                    nativa del navegador.
+                                                    <ul>
+                                                        <li><strong>Código JavaScript:</strong>
+                                                            <code>event.preventDefault();</code> (
+                                                        </li>
+                                                        <img src="img/formjs2.png" class="img-fluid rounded shadow-lg"
+                                                            alt="Configuración Bootstrap"
+                                                            style="max-height: 175px; width: 100%; object-fit: contain;">
+                                                    </ul>
+                                                </li>
+                                                <li><strong>Variable de Control de Validez:</strong> Se declara una
+                                                    variable <code>esValido</code> inicializada en <code>true</code>. Si
+                                                    alguna validación falla, esta variable se cambia a
+                                                    <code>false</code>.
+                                                    <ul>
+                                                        <li><strong>Código JavaScript:</strong>
+                                                            <code>var esValido = true;</code>
+                                                        </li>
+                                                        <img src="img/formjs3.png" class="img-fluid rounded shadow-lg"
+                                                            alt="Configuración Bootstrap"
+                                                            style="max-height: 175px; width: 100%; object-fit: contain;">
+                                                    </ul>
+                                                </li>
+                                                <li><strong>Limpiar Errores Anteriores:</strong> Antes de comenzar la
+                                                    validación, se limpian las clases CSS (<code>has-error</code>,
+                                                    <code>has-success</code>) y los mensajes de error anteriores para
+                                                    que no se acumulen o se muestren resultados incorrectos de un
+                                                    intento previo.
+                                                    <ul>
+                                                        <li><strong>Código JavaScript:</strong>
+                                                            <code>$('.form-group').removeClass('has-error has-success');</code>
+                                                            y <code>$('.help-block').text('');</code>
+                                                        </li>
+                                                        <img src="img/formjs4.png" class="img-fluid rounded shadow-lg"
+                                                            alt="Configuración Bootstrap"
+                                                            style="max-height: 175px; width: 100%; object-fit: contain;">
+                                                    </ul>
+                                                </li>
+                                                <li><strong>Validaciones Individuales:</strong> La función verifica cada
+                                                    campo uno por uno.
+                                                    <ul>
+                                                        <li><strong>Campos Requeridos:</strong> Comprueba si el valor
+                                                            del campo está vacío (después de quitar espacios en blanco
+                                                            con <code>.trim()</code>). Por ejemplo, para el campo
+                                                            <code>nombreModal</code>:
+                                                            <ul>
+                                                                <li><strong>Código JavaScript:</strong>
+
+                                                                    <img src="img/formjs5.png"
+                                                                        class="img-fluid rounded shadow-lg"
+                                                                        alt="Configuración Bootstrap"
+                                                                        style="max-height: 400px; width: 100%; object-fit: contain;">
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><strong>Contraseñas Iguales y Longitud Mínima:</strong>
+                                                            Compara los valores de los campos <code>pass1Modal</code> y
+                                                            <code>pass2Modal</code>, y verifica que la contraseña tenga
+                                                            al menos 6 caracteres.
+                                                            <ul>
+                                                                <li><img src="img/formjs7.png"
+                                                                        class="img-fluid rounded shadow-lg"
+                                                                        alt="Configuración Bootstrap"
+                                                                        style="max-height: 800px; width: 100%; object-fit: contain;">
+                                                                </li>
+                                                                <li><strong>Código JavaScript (Validación de la primera
+                                                                        contraseña):</strong>
+                                                                    <pre><code>var pass1 = $('#pass1Modal');
+// ... (otras condiciones)
+} else if (pass1.val().length &lt; 6) {
+    pass1.closest('.form-group').addClass('has-error');
+    pass1.closest('.form-group').find('.help-block').text('La contraseña debe tener al menos 6 caracteres.');
+    esValido = false;
+} else {
+    pass1.closest('.form-group').addClass('has-success');
+}</code></pre>
+
+                                                                </li>
+                                                                <li><strong>Código JavaScript (Validación de la segunda
+                                                                        contraseña):</strong>
+                                                                    <pre><code>var pass2 = $('#pass2Modal');
+// ... (otras condiciones)
+} else if (pass1.val() !== pass2.val()) {
+    pass2.closest('.form-group').addClass('has-error');
+    pass2.closest('.form-group').find('.help-block').text('Las contraseñas no coinciden.');
+    esValido = false;
+} else {
+    // Solo marcamos como éxito si la primera contraseña también es válida
+    if (pass1.closest('.form-group').hasClass('has-success')) {
+        pass2.closest('.form-group').addClass('has-success');
+    }
+}</code></pre>
+
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><strong>Campo Select:</strong> Verifica si se ha
+                                                            seleccionado una opción diferente al placeholder inicial
+                                                            (<code>--Seleccione--</code>).
+                                                            <ul>
+                                                                <li><strong>Código JavaScript:</strong>
+
+
+                                                                </li>
+                                                                <img src="img/formjs8.png"
+                                                                    class="img-fluid rounded shadow-lg"
+                                                                    alt="Configuración Bootstrap"
+                                                                    style="max-height: 400px; width: 100%; object-fit: contain;">
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li><strong>Enviar o Mostrar Resultado si es Válido:</strong> Si la
+                                                    variable <code>esValido</code> sigue siendo <code>true</code>
+                                                    después de todas las comprobaciones, significa que el formulario
+                                                    pasó todas las validaciones. En este ejemplo, se muestra un mensaje
+                                                    de alerta.
+                                                    <ul>
+                                                        <li><strong>Código JavaScript:</strong>
+
+
+                                                        </li>
+                                                        <img src="img/formjs9.png" class="img-fluid rounded shadow-lg"
+                                                            alt="Configuración Bootstrap"
+                                                            style="max-height: 400px; width: 100%; object-fit: contain;">
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <strong>Opcional: Limpiar Validación al Cerrar el Modal:</strong> Se puede
+                                            añadir un evento que limpie todo el formulario y sus mensajes de error
+                                            cuando el usuario cierra el modal sin enviarlo.
+                                            <ul>
+                                                <li><strong>Código JavaScript:</strong>
+
+
+                                                </li>
+                                                <img src="img/formjs10.png" class="img-fluid rounded shadow-lg"
+                                                    alt="Configuración Bootstrap"
+                                                    style="max-height: 400px; width: 100%; object-fit: contain;">
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Fin de la explicación -->
+                            </div>
+                        </div>
+                    </section>
+                    ```
+                    <!---------------------------------------------------------------------------------------------------------------->
+
+                </div>
             </div>
         </div>
     </div>
@@ -142,11 +1055,136 @@
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="../../js/sb-admin-2.min.js"></script>
-    
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    
+
     <script src="js/main.js"></script>
-    
+
+    <script>
+        $(document).ready(function () {
+
+            $('.execute').on('click', function () {
+                var target = $(this).data('target');
+                var $resultDiv = $('#' + target);
+
+                if (target === 'result-teoria') {
+                    $resultDiv.html(`
+                        <form id="ejemploForm" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="nombre"
+                                    required placeholder="Nombre">
+                                <div class="invalid-feedback">
+                                    Campo requerido
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    `);
+
+                    // Aplicar la validación al formulario
+                    $('#ejemploForm').on('submit', function (e) {
+                        e.preventDefault();
+                        var input = $('#nombre');
+
+                        if (input[0].checkValidity()) {
+                            input.removeClass('is-invalid').addClass('is-valid');
+                            alert('¡Formulario válido!');
+                        } else {
+                            input.removeClass('is-valid').addClass('is-invalid');
+                        }
+                    });
+
+                    // Mostrar el contenedor
+                    $resultDiv.show();
+                } else if (target === 'result-ejemplo') {
+                    $resultDiv.html(`
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="shadow-lg p-3 mb-5 mt-4 bg-body rounded">
+                                        <div class="p-3 mb-2 bg-primary bg-gradient fw-bold text-white">Formulario</div>
+                                        <form class="row g-3 needs-validation" novalidate>
+                                            <div class="col-md-4">
+                                                <label for="nombre" class="form-label">Nombre</label>
+                                                <input type="text" class="form-control" id="nombre" required>
+                                                <div class="valid-feedback">¡Campo válido!</div>
+                                                <div class="invalid-feedback">Debe completar los datos.</div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="apellido" class="form-label">Apellido</label>
+                                                <input type="text" class="form-control" id="apellido" required>
+                                                <div class="valid-feedback">¡Campo válido!</div>
+                                                <div class="invalid-feedback">Debe completar los datos.</div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label for="pais" class="form-label">País</label>
+                                                <select class="form-select" id="pais" required>
+                                                    <option selected disabled value="">Seleccione...</option>
+                                                    <option>México</option>
+                                                    <option>Colombia</option>
+                                                    <option>Perú</option>
+                                                    <option>Chile</option>
+                                                    <option>Argentina</option>
+                                                </select>
+                                                <div class="valid-feedback">¡Campo válido!</div>
+                                                <div class="invalid-feedback">Debe completar los datos.</div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-warning fw-bold" type="submit">Enviar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `);
+
+                    // Add validation handlers
+                    var forms = $resultDiv.find('form.needs-validation');
+                    forms.each(function () {
+                        $(this).on('submit', function (event) {
+                            event.preventDefault();
+                            event.stopPropagation();
+
+                            var form = $(this);
+                            var inputs = form.find('input, select');
+                            var isValid = true;
+
+                            inputs.each(function () {
+                                if (!this.checkValidity()) {
+                                    isValid = false;
+                                }
+                                $(this).removeClass('is-valid is-invalid')
+                                    .addClass(this.checkValidity() ? 'is-valid' : 'is-invalid');
+                            });
+
+                            if (isValid) {
+                                alert('FORM VALIDADO - Todos los campos son correctos');
+                            }
+
+                            form.addClass('was-validated');
+                        });
+
+                        // Real-time validation
+                        $(this).find('input, select').on('input change', function () {
+                            $(this).removeClass('is-valid is-invalid')
+                                .addClass(this.checkValidity() ? 'is-valid' : 'is-invalid');
+                        });
+                    });
+
+                    $resultDiv.show();
+                } else {
+                    // Para otros ejemplos, mantener el comportamiento original
+                    var codeEl = $(this).prevAll('pre').first().find('code');
+                    if (codeEl.length === 0) {
+                        codeEl = $(this).siblings('pre').find('code');
+                    }
+                    var codeText = codeEl.text() || '';
+                    $resultDiv.html(codeText).show();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

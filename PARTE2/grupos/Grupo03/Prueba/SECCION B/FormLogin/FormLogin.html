@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Estilos personalizados -->
+	<link rel="stylesheet" href="estilos-login.css">
+</head>
+
+<body>
+	<div class="login-wrapper">
+		<div class="login-box">
+			<h2>Formulario</h2>
+
+			<form>
+				<!-- Campo Nombre (nuevo) -->
+				<div class="form-group input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-user"></i>
+					</span>
+					<input type="text" class="form-control" placeholder="Ingrese el nombre..." required>
+				</div>
+
+				<!-- Campo Usuario -->
+				<div class="form-group input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-pencil"></i>
+					</span>
+					<input type="text" class="form-control" placeholder="Ingrese el usuario..." required>
+				</div>
+
+				<!-- Campo Contraseña -->
+				<div class="form-group input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-lock"></i>
+					</span>
+					<input type="password" class="form-control" placeholder="Ingrese la contraseña..." required>
+				</div>
+
+				<!-- Campo Confirmar Contraseña -->
+				<div class="form-group input-group">
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-lock"></i>
+					</span>
+					<input type="password" class="form-control" placeholder="Confirme la contraseña..." required>
+				</div>
+
+				<!-- Sección de Género -->
+				<div class="seccion-genero">
+					<h4>Género</h4>
+					<div class="form-group genero-select">
+						<label for="genero">Seleccione su género</label>
+						<select id="genero" class="form-control" required>
+							<option value="">--Seleccione--</option>
+							<option value="masculino">Masculino</option>
+							<option value="femenino">Femenino</option>
+							<option value="lgbt">Lesbiana</option>
+							<option value="lgbt">Gay</option>
+							<option value="lgbt">Bisexual</option>
+							<option value="lgbt">Transexual</option>
+							<option value="lgbt">Intersexual</option>
+						</select>
+					</div>
+				</div>
+
+				<!-- Checkbox Recuérdame -->
+				<div class="form-group checkbox-group">
+					<label>
+						<input type="checkbox"> Recuérdame
+					</label>
+				</div>
+
+				<!-- Botón Guardar -->
+				<button type="submit" class="btn-guardar">
+					<i class="glyphicon glyphicon-floppy-disk"></i> Guardar
+				</button>
+
+			</form>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+/* Reset small defaults and integrate with Bootstrap grid */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 10px;
+  background: #DEDEDE;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 10px;
+  color:#fff;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 28px;
+}
+
+.Texto{
+  text-align: center;
+  color:#000;
+  font-size: 16px;
+}
+
+.Boton{
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(121,121,121,1);
+  background: #fff;
+}
+
+/* Header style (cyan bar with rounded border) */
+#header{
+  background: #00FFFF;
+  padding: 12px 8px;
+  border: 3px solid rgba(121,121,121,1);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Logo sizing - reduce height so header isn't too tall */
+#Espe_img, #Espe_img img{
+  max-width: 640px;
+  max-height: 100px; /* logo más pequeño */
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Navbar adjustments - leave Bootstrap to handle layout */
+#navBar{
+  margin-bottom: 12px;
+}
+.navbar-inverse{
+  background-color: #5ec0e4;
+  border-color: rgba(121,121,121,1);
+  border-radius: 6px;
+}
+.navbar-inverse .navbar-nav>li>a{ color: #fff; }
+
+/* Navbar behavior: desktop vs mobile */
+@media (min-width: 768px){
+  /* desktop: keep search input compact on the right */
+  .navbar-form .form-control{ width: 240px; }
+}
+
+@media (max-width: 767px){
+  /* mobile: expanded collapse area should look like the mock (dark block)
+     center menu items and make search full-width with blue button */
+  .navbar-inverse .navbar-collapse{
+    background: #222;
+    padding: 18px 12px;
+  }
+  .navbar-inverse .navbar-nav{
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
+  .navbar-inverse .navbar-nav>li{
+    display: block;
+  }
+  .navbar-inverse .navbar-nav>li>a{
+    padding: 12px 8px;
+    color: #ddd;
+    font-size: 18px;
+  }
+  .navbar-form{
+    width: 100%;
+    margin-top: 12px;
+    padding: 0 20px; /* desplazar más a la derecha/izquierda */
+  }
+  .navbar-form .form-group{ width: 100%; }
+  .navbar-form .form-control{ width: 100%; }
+  .navbar-form .btn{ width: 100%; margin-top: 8px; }
+}
+
+/* Left panel styling */
+#leftMenu{ margin-bottom: 12px; }
+.panel-default{ border-color: rgba(121,121,121,1); }
+.list-group-item{ font-size: 14px; }
+
+/* Ensure top edges of the three columns align */
+.panel{ margin: 0; display: flex; flex-direction: column; }
+.panel .panel-body{ padding: 12px; flex: 1 1 auto; height: 100%; overflow: auto; }
+.content-box{ margin-top: 0; }
+.video-wrapper{ margin-top: 0; }
+
+/* Content box (green) */
+.content-box{
+  background: #2e8b39; /* green */
+  color: rgba(0,0,0,0.7);
+  padding: 18px; /* menos padding para reducir altura */
+  border-radius: 8px;
+  border: 3px solid rgba(121,121,121,1);
+  margin-bottom: 12px;
+  /* allow content-box to stretch when using flex row */
+  flex: 1 1 auto;
+}
+
+/* center content (title + details) both vertically and horizontally */
+.content-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  text-align: center;
+}
+
+/* Right menu iframe wrapper */
+.embed-responsive{ border: 4px solid rgba(0,0,0,0.8); border-radius: 8px; margin-bottom: 12px; }
+
+/* Video wrapper used to force equal height with other columns */
+.video-wrapper{
+  border: 4px solid rgba(0,0,0,0.8);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  flex: 1 1 auto;
+  display: flex;
+}
+.video-wrapper iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Force same fixed height on all devices */
+.panel, .content-box, .video-wrapper{ height: 260px; }
+
+/* Footer social bar: yellow */
+#footer{ margin-top: 12px; }
+.social-bar{ background: #ff0; padding: 8px; border: 3px solid rgba(121,121,121,1); border-radius: 8px; display: flex; justify-content: center; align-items: center; width: 100%; }
+.social-bar .btn{ margin: 4px; }
+
+/* Social icons in footer (using inline SVG placeholders). If you prefer IcoMoon,
+   replace the SVGs with the generated icon font and classes from icomoon.io */
+.social-icons{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+}
+.social-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 14px;
+  border-radius:6px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  min-width:110px;
+}
+.social-icon .label{ margin-left:8px; font-size:14px; }
+.social-icon svg{ width:18px; height:18px; }
+.social-icon.fb{ background:#3b5998; }
+.social-icon.tw{ background:#1da1f2; }
+.social-icon.yt{ background:#e52d27; }
+.social-icon:focus, .social-icon:hover{ opacity:0.95; text-decoration:none; }
+
+/* Make the main row behave as flex on wider screens so columns match heights */
+@media (min-width: 768px){
+  /* Use flexbox and align items at the top so top borders line up in tablet/desktop */
+  #mainRow{ display: flex; align-items: flex-start; }
+  #mainRow > aside, #mainRow > section{ display: flex; flex-direction: column; padding-top: 0; margin-top: 0; }
+  /* make the left panel content stretch */
+  .panel{ display: flex; flex-direction: column; align-self: stretch; }
+  .panel .panel-body{ flex: 1 1 auto; }
+  .panel .list-group{ flex: 1 1 auto; }
+  /* ensure the three boxes have similar (y menores) minimum height */
+  .panel, .content-box, .video-wrapper{ min-height: 260px; }
+  .panel, .content-box, .video-wrapper{ height: 260px; }
+  .content-box, .video-wrapper{ align-self: stretch; }
+}
+
+/* Ajuste para pantallas muy anchas: aumentar un poco la altura si se desea */
+@media (min-width: 1200px){
+  .panel, .content-box, .video-wrapper{ min-height: 300px; }
+}
+
+/* Responsive tweaks */
+@media (max-width: 767px){
+  .content-box{ padding: 18px; }
+  h2{ font-size: 22px; }
+}
+
+

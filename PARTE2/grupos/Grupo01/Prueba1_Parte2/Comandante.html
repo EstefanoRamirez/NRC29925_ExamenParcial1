@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Comandante - Login</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="glass-bg">
+  <main>
+    <section class="glass-card" role="dialog" aria-labelledby="titulo">
+      <div class="glass-avatar" aria-hidden="true">
+        <i class="bi bi-person" aria-hidden="true"></i>
+      </div>
+
+      <h1 id="titulo">LOGIN</h1>
+
+  <form class="login-form" action="" method="get">
+        <div class="input-row">
+          <label class="input-field">
+            <i class="bi bi-person" aria-hidden="true"></i>
+            <input id="username" name="username" type="text" placeholder="Username" required>
+          </label>
+        </div>
+
+        <div class="input-row">
+          <label class="input-field">
+            <i class="bi bi-lock" aria-hidden="true"></i>
+            <input id="password" name="password" type="password" placeholder="Password" required>
+          </label>
+        </div>
+
+        <div class="options-row">
+          <label><input type="checkbox" name="remember"> Recuerdame</label>
+          <a href="#" class="forgot">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <div style="margin-top:18px; display:flex; gap:8px; justify-content:center; align-items:center;">
+          <button type="button" id="backBtn" class="btn btn-outline-secondary">Regresar</button>
+          <button type="submit" class="btn-login">INGRESAR</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Bootstrap 5 bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Reuse project's main JS which initializes tooltips/popovers -->
+  <script src="js/main.js"></script>
+
+  <script>
+    // Botón regresar: intenta history.back() dentro del iframe; si no hay historial, redirige a index.html
+    (function(){
+      var back = document.getElementById('backBtn');
+      if(!back) return;
+      back.addEventListener('click', function(e){
+        try{
+          if(window.history && window.history.length > 1){
+            window.history.back();
+          } else {
+            window.location.href = 'index.html';
+          }
+        }catch(err){
+          // Fallback seguro
+          window.location.href = 'index.html';
+        }
+      });
+    })();
+  </script>
+
+  </body>
+  </html>

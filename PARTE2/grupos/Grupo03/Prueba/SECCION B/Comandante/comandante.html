@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Login de Estudiante - ESPE</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/MisEstilos.css">
+
+</head>
+<body>
+
+<div class="container login-container-wrapper">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+            
+            <header class="page-header-custom">
+                <div class="text-center">
+                    <img src="./img/logo_ESPE.png" class="img-responsive logo-img" alt="Logo ESPE">
+                </div>
+            </header>
+            
+            <div class="jumbotron login-jumbotron">
+                
+                <h1 class="panel-title-custom">Miguel Villacres</h1>
+                <div class="student-photo">
+                    <img src="./img/mi_foto.png" class="img-responsive img-circle center-block" alt="Foto del Estudiante">
+                </div>
+
+                <hr>
+
+                <form class="form-horizontal login-form" id="loginForm">
+                    
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </span>
+                        <input type="text" class="form-control" name="usuario" placeholder="Usuario..." required>
+                    </div>
+
+                    <div class="form-group input-group">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-lock"></span>
+                        </span>
+                        <input type="password" class="form-control" name="password" placeholder="Contraseña..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"> Recuérdame
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block btn-login">
+                            <span class="glyphicon glyphicon-log-in"></span> Ingresar
+                        </button>
+                    </div>
+                    
+                    <div class="form-group text-right">
+                        <a href="#" class="forgot-link">¿Olvidó la contraseña?</a>
+                    </div>
+                </form>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

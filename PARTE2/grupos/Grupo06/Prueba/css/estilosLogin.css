@@ -1,0 +1,23 @@
+body,
+html {
+   margin: 0;
+   justify-content: center;
+   background-image: url('img/img1.webp');
+}
+
+.img1 {
+   display: block;
+   margin: 20px auto;
+   width: 80px;
+   height: 80px;
+   object-fit: cover;
+}
+
+input.form-control {
+   border-radius: 10px;
+}
+
+button.btn {
+   border-radius: 10px;
+   font-weight: bold;
+}

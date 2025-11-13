@@ -133,3 +133,84 @@ h1, h2, h3, h4, h5, h6, pre {
     font-weight: 700 !important;
     font-family: 'Roboto Mono', monospace !important;
 }
+.ejercicio-interactivo-ejecucion {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 4px;
+}
+.ejercicio-interactivo-ejecucion .nav-tabs {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.ejercicio-interactivo-ejecucion .nav-tabs .nav-link {
+    color: #495057;
+    border: 1px solid transparent;
+}
+
+.ejercicio-interactivo-ejecucion .nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #dee2e6;
+}
+
+.ejercicio-interactivo-ejecucion .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+
+.ejercicio-interactivo-ejecucion .nav-pills .nav-link {
+    border-radius: 0;
+    color: #495057;
+    margin-bottom: 5px;
+}
+
+.ejercicio-interactivo-ejecucion .nav-pills .nav-link.active,
+.ejercicio-interactivo-ejecucion .nav-pills .nav-link.active:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.iframe-ejercicio {
+    width: 100%;
+    min-height: 700px;   /* ajústalo si tu página es más alta */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+}
+.contenido-scroll-ejercicio {
+    overflow-y: scroll;
+    height: 500px;
+    position: relative;
+}
+.card:hover,
+.content-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+}
+.card:hover,
+.content-card:hover {
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+.card,
+.content-card {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+
+

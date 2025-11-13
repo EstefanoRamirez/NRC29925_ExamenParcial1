@@ -1,0 +1,342 @@
+/* Estilos personalizados para el formulario de login */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DEDEDE;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #FFFFFF;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 550px;
+}
+
+.login-box h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #D81B60;
+    margin-bottom: 35px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+}
+
+.input-group-addon {
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 12px 14px;
+    font-size: 16px;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+.input-group-addon i:before {
+    font-size: 16px;
+}
+
+.input-group .form-control {
+    display: table-cell;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 14px;
+    color: #555;
+    height: 44px;
+}
+
+.input-group .form-control:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
+
+.input-group .form-control::placeholder {
+    color: #999;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.glyphicon {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Sección de Género */
+.seccion-genero {
+    margin: 30px 0;
+    padding: 25px 0;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.seccion-genero h4 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 400;
+    color: #5a5a5a;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.genero-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+.seccion-genero label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #5a5a5a;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.seccion-genero .form-control {
+    flex: 1;
+    min-width: 200px;
+    padding: 6px 30px 6px 10px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #666;
+    background-color: white;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 20px;
+}
+
+.seccion-genero .form-control:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 3px rgba(102, 175, 233, 0.4);
+}
+
+/* Checkbox */
+.checkbox-group {
+    margin: 20px 0;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Botón Guardar */
+.btn-guardar {
+    width: 100%;
+    padding: 12px;
+    background: #2196F3;
+    border: none;
+    border-radius: 24px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-guardar:hover {
+    background: #1976D2;
+}
+
+.btn-guardar:active {
+    transform: scale(0.98);
+}
+
+.btn-guardar i {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-box {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+    
+    .login-box h2 {
+        font-size: 26px;
+        margin-bottom: 25px;
+    }
+    
+    .seccion-genero {
+        padding: 20px 0;
+    }
+    
+    .seccion-genero h4 {
+        font-size: 20px;
+    }
+    
+    .genero-select {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .seccion-genero label {
+        width: 100%;
+    }
+    
+    .seccion-genero .form-control {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-wrapper {
+        padding: 10px;
+    }
+    
+    .login-box {
+        padding: 25px 15px;
+    }
+    
+    .login-box h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .input-group-addon,
+    .input-group .form-control {
+        font-size: 13px;
+        padding: 10px 12px;
+        height: 40px;
+    }
+    
+    .input-group-addon {
+        padding: 10px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .seccion-genero {
+        margin: 20px 0;
+        padding: 15px 0;
+    }
+    
+    .seccion-genero h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    .seccion-genero label {
+        font-size: 13px;
+    }
+    
+    .seccion-genero .form-control {
+        font-size: 13px;
+        padding: 8px 30px 8px 10px;
+    }
+    
+    .checkbox-group label {
+        font-size: 13px;
+    }
+    
+    .btn-guardar {
+        font-size: 15px;
+        padding: 11px;
+    }
+}
+
+@media (max-width: 390px) {
+    .login-box {
+        padding: 20px 12px;
+    }
+    
+    .login-box h2 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    
+    .input-group-addon,
+    .input-group .form-control {
+        font-size: 12px;
+        padding: 9px 10px;
+        height: 38px;
+    }
+    
+    .seccion-genero h4 {
+        font-size: 16px;
+    }
+    
+    .seccion-genero label {
+        font-size: 12px;
+    }
+    
+    .seccion-genero .form-control {
+        font-size: 12px;
+        padding: 7px 25px 7px 8px;
+    }
+    
+    .btn-guardar {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Diseño para pantallas amplias (PC) */
+@media (min-width: 1200px) {
+    .login-box {
+        max-width: 600px;
+        padding: 50px 60px;
+    }
+    
+    .login-box h2 {
+        font-size: 36px;
+    }
+}

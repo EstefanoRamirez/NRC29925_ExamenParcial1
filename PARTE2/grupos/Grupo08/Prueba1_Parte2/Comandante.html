@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login Comandante</title>
+    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="Recursos/estilos.css" type="text/css"/>
+        
+</head>
+<body class="comandante-body-elaborate">
+
+    <div class="container" style="margin-top: 20px;">
+  <ol class="breadcrumb">
+    <li><a href="index.html">Inicio</a></li>
+    <li class="active">Comandante</li>
+  </ol>
+</div>
+
+    <div class="container">
+        <div class="col-sm-6 col-sm-offset-3" style="background-color: rgba(255,255,255, 0.9); padding: 20px; border-radius: 10px; margin-top: 50px;">
+            
+            <div class="form-group text-center">
+                <h1>Formulario Comandante</h1>
+                <img src="Recursos/img/login_logo.jpg" alt="Logo de Login" style="max-width: 80px; margin: 15px auto; display: block;">
+            </div>
+
+            <hr>
+
+            <form class="form-horizontal">
+                
+                <div class="form-group input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </span>
+                    <input type="text" class="form-control" name="nombre" placeholder="Ingrese su nombre..." required>
+                </div>
+
+                <div class="form-group input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    </span>
+                    <input type="email" class="form-control" name="email" placeholder="Enter Email..." required>
+                </div>
+
+                <div class="form-group input-group">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-lock"></span>
+                    </span>
+                    <input type="password" class="form-control" name="password" placeholder="Enter Password..." required>
+                </div>
+                  
+                <div class="form-group">
+                    <label for="genero" class="control-label col-sm-2">Género:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" id="genero" name="genero">
+                            <option value="">Seleccione...</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="lgtb">LGTB</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-1 col-sm-11">
+                        <label>
+                            <input type="checkbox">
+                            Recordarme
+                        </label>
+                    </div>
+                </div>
+                  
+                <div class="form-group">
+                      <button class="btn btn-primary btn-block" style="font-size: 18px;">Guardar</button>
+                </div>
+
+                <div class="form-group text-right">
+                      <a href="#">¿Olvidaste la Contraseña?</a>
+                </div>
+            </form>
+            
+            <a href="index.html" class="btn btn-default btn-block" style="margin-top: 10px;">Volver al Inicio</a>
+            </div>
+    </div>
+
+<script src="./js/vendor/jquery-1.11.0.min.js"></script>
+<script src="./js/vendor/bootstrap.min.js"></script>
+
+</body>
+</html>

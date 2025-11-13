@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PRUEBA</title>
+    
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <!-- IcoMoon Icons -->
+    <link rel="stylesheet" href="./Recursos/style.css">
+    
+    <!-- Hoja de estilos personalizada -->
+    <link rel="stylesheet" href="./Recursos/estilos.css">
+</head>
+<body data-spy="scroll" data-target="#table-of-contents" data-offset="100">
+    <div class="container-fluid">
+        
+        <!-- HEADER -->
+        <header class="row" id="header">
+            <div class="col-xs-12">
+                <div class="header-section">
+                    <img src="Recursos/img/logo_ESPE.png" alt="Logo ESPE" class="img-responsive center-block">
+                </div>
+            </div>
+        </header>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-inverse" id="menu">
+            <div class="container-fluid">
+                
+                <!-- Botón colapsable para móviles -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Grupo 3</a>
+                </div>
+
+                <!-- Contenido del menú -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Docente</a></li>
+                        <li><a href="Comandante/comandante.html" target="_blank" rel="noopener noreferrer">Comandante</a></li>
+
+                        <!-- Submenú desplegable de Grupos -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Grupos<span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="disabled"><a>Grupo1</a></li>
+                                <li class="disabled"><a>Grupo2</a></li>
+                                <li><a href="#" id="grupo5Link">Grupo3</a></li>
+                                <li class="disabled"><a>Grupo4</a></li>
+                                <li class="disabled"><a>Grupo5</a></li>
+                                <li class="disabled"><a>Grupo6</a></li>
+                                <li class="disabled"><a>Grupo7</a></li>
+                                <li class="disabled"><a>Grupo8</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Barra de búsqueda -->
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Buscar">
+                        </div>
+                        <button type="submit" class="btn btn-default">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="row main-content-row">
+
+            <!-- LEFT MENU - TABLA DE CONTENIDO -->
+            <aside class="col-lg-3 col-md-3 col-sm-12 left-menu">
+    <div class="row left-menu-inner">
+        <div class="col-xs-6 toc-column">
+            <nav id="table-of-contents">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#header">Header</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#info">Información</a></li>
+                    <li><a href="#video-section">Video</a></li>
+                    <li><a href="#footer">Footer</a></li>
+                    <li><a href="#tabla">Integrantes</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-xs-6 btn-column">
+            <button class="btn btn-default btn-lg btn-block">
+                <span class="glyphicon glyphicon-user"></span> LOGIN
+            </button>
+            <button class="btn btn-default btn-lg btn-block">
+                <span class="glyphicon glyphicon-hdd"></span> Registro
+            </button>
+            <button class="btn btn-default btn-lg btn-block">
+                <span class="glyphicon glyphicon-book"></span> Producto
+            </button>
+            <a href="FormLogin/FormLogin.html" class="btn btn-default btn-lg btn-block">
+                <span class="glyphicon glyphicon-list-alt"></span> Formulario
+            </a>
+        </div>
+    </div>
+</aside>
+
+
+            <!-- CONTENT -->
+            <section class="col-lg-6 col-md-6 col-sm-12 equal-panel" id="info">
+                <div class="content-section text-center">
+                    <h2>Aplicación de Tecnologías Web</h2>
+                    <p><strong>Estudiantes: </strong>Miguel Villacres, Mateo Salvador</p>
+                    <p><strong>Grupo: </strong> 03</p>
+                    <p><strong>NRC: </strong> 29925</p>
+                </div>
+            </section>
+
+            <!-- RIGHT MENU -->
+            <aside class="col-lg-3 col-md-3 col-sm-12 equal-panel" id="video-section">
+                <div class="video-container">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_mLQ4BaMPoY" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="row" id="footer">
+            <div class="col-xs-12">
+                <div class="footer-section">
+                     <a href="https://facebook.com" target="_blank" class="btn-facebook">
+                        <span class="icon-facebook2"></span> Facebook
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="btn-twitter">
+                        <span class="icon-twitter"></span> Twitter
+                    </a>
+                    <a href="https://youtube.com" target="_blank" class="btn-youtube">
+                        <span class="icon-youtube"></span> Youtube
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Tabla de integrantes del Grupo 5 -->
+         <div class="row" id="tabla">
+             <div class="col-xs-12">
+                 <div id="tablaGrupo5" style="margin-top: 20px; margin-bottom: 20px; padding: 20px; background-color: white; border: 2px solid #ccc; border-radius: 10px;">
+                     <h2 style="text-align: center;">Integrantes</h2>
+                     <h3 style="text-align: center;">Grupo 3</h3>
+                     <br>
+                     <div class="table-responsive">
+                         <table class="table table-condensed table-bordered">
+                             <thead>
+                                 <tr class="active">
+                                     <th style="text-align: center;">#</th>
+                                     <th style="text-align: center;">Nombre</th>
+                                     <th style="text-align: center;">Apellido</th>
+                                     <th style="text-align: center;">Correo</th>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                 <tr class="info">
+                                     <td style="text-align: center;">1</td>
+                                     <td style="text-align: center;">Mateo</td>
+                                     <td style="text-align: center;">Salvador</td>
+                                     <td style="text-align: center;">mosalvador@espe.edu.ec</td>
+                                 </tr>
+                                 <tr class="danger">
+                                     <td style="text-align: center;">2</td>
+                                     <td style="text-align: center;">Miguel</td>
+                                     <td style="text-align: center;">Villacres</td>
+                                     <td style="text-align: center;">machacon5@espe.edu.ec</td>
+                                 </tr>
+                             </tbody>
+                         </table>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+    </div>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- Script para mostrar/ocultar tabla -->
+    <script>
+        $(document).ready(function() {
+            $('#tablaGrupo5').hide();
+            $('#grupo5Link').click(function(e) {
+                e.preventDefault();
+                $('#tablaGrupo5').slideToggle(400, function() {
+                    if ($('#tablaGrupo5').is(':visible')) {
+                        $('html, body').animate({
+                            scrollTop: $('#tablaGrupo5').offset().top - 20
+                        }, 500);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

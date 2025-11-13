@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>EXAMEN - Laboratorio Parte I</title>
+   
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="Recursos/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="Recursos/css/bootstrap-theme.css" type="text/css">
+    <link rel="stylesheet" href="Recursos/css/bootstrap-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="Recursos/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="Recursos/css/bootstrap.css.map" type="text/css">
+    
+    <script src="Recursos/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    
+    <link rel="stylesheet" href="Recursos/estilos.css" type="text/css"/>
+    
+  </head>
+  
+  <body>
+    
+    <div class="container">
+    
+        <!-- header (Rectangle) -->      
+        <div id="header" class="row">
+            <div class="col-xs-12 text-center">
+                <img id="Espe_img" class="img-responsive center-block" src="Recursos/img/logo_ESPE.png" alt="Logo ESPE" style="max-height: 150px;">
+            </div>
+        </div>
+        
+        <!-- navBar (Rectangle) -->
+        <nav id="navBar" class="navbar navbar-inverse">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mega-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Inicio</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="mega-navbar">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Docente</a></li>
+        <li><a href="login.html">Comandante</a></li>
+
+        <!-- Simulación de MegaMenu -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Grupos <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" style="width:600px; padding:15px;">
+            <div class="row">
+              <div class="col-sm-3">
+                <strong>Grupos 1 - 3</strong>
+                <ul class="list-unstyled">
+                  <li class="disabled"><a href="#">Grupo 1</a></li>
+                  <li class="disabled"><a href="#">Grupo 2</a></li>
+                  <li class="disabled"><a href="#">Grupo 3</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-3">
+                <strong>Grupos 4 - 6</strong>
+                <ul class="list-unstyled">
+                  <li><a href="tabla.html">Grupo 4</a></li>
+                  <li class="disabled"><a href="#">Grupo 5</a></li>
+                  <li class="disabled"><a href="#">Grupo 6</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-3">
+                <strong>Grupos 7 - 8</strong>
+                <ul class="list-unstyled">
+                  <li class="disabled"><a href="#">Grupo 7</a></li>
+                  <li class="disabled"><a href="#">Grupo 8</a></li>
+                </ul>
+              </div>
+              <div class="col-sm-3">
+                <strong>Grupos 9 - 10</strong>
+                <ul class="list-unstyled">
+                  <li class="disabled"><a href="#">Grupo 9</a></li>
+                  <li class="disabled"><a href="#">Grupo 10</a></li>
+                </ul>
+              </div>
+            </div>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="navbar-form navbar-right" role="search" style="margin-right: 0px;">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Buscar">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+      </form>
+
+    </div>
+  </div>
+</nav>
+
+        
+        <div class="row">
+          <!-- leftMenu (Rectangle) -->
+          <div id="leftMenu" class="col-md-3 col-sm-3 col-xs-12">
+            <a href="#" class="btn btn-default Boton">
+                <span class="glyphicon glyphicon-user"></span> LOGIN
+            </a>
+            <a href="#" class="btn btn-default Boton">
+                <span class="glyphicon glyphicon-hdd"></span> Registro
+            </a>
+            <a href="#" class="btn btn-default Boton">
+                <span class="glyphicon glyphicon-book"></span> Producto
+            </a>
+            <!--Parte 2, agregar boton formulario-->
+            <button type="button" class="btn btn-default Boton" id="btnFormulario">
+            <span class="glyphicon glyphicon-list-alt"></span> Formulario
+            </button>
+
+  </a>
+          </div>
+          
+          <!-- content (Rectangle) -->
+          <div id="content" class="col-md-5 col-sm-5 col-xs-12">
+              <h2>Aplicaciones de Tecnologias Web</h2>
+              <p>Integrantes</p>
+              <p>Ariana Pulamarin</p>
+              <p>Styven Pilca</p>
+              <p>NRC: 29925</p>
+              <p>Grupo: 6</p>
+          </div>
+          
+          <!-- rightMenu (Rectangle) -->
+          <div id="rightMenu" class="col-md-4 col-sm-4 col-xs-12">
+              <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Pj1c9Q_8Y4k" allowfullscreen></iframe>
+              </div>
+          </div>
+         
+         <!-- footer (Rectangle) --> 
+        </div> <div id="footer" class="row">
+            <div class="col-xs-12 text-center">
+                
+                <a href="#" class="btn btn-primary btn-lg" style="background-color: #3b5998; border: none; margin: 5px;">
+                    <span class="glyphicon glyphicon-thumbs-up"></span> Facebook
+                </a>
+                <a href="#" class="btn btn-info btn-lg" style="background-color: #55acee; border: none; margin: 5px;">
+                    <span class="glyphicon glyphicon-send"></span> Twitter
+                </a>
+                <a href="#" class="btn btn-danger btn-lg" style="background-color: #cd201f; border: none; margin: 5px;">
+                    <span class="glyphicon glyphicon-film"></span> YouTube
+                </a>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Modal de Bootstrap -->
+<div class="modal fade" id="formularioModal" tabindex="-1" role="dialog" aria-labelledby="formularioModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title" id="formularioModalLabel">Formulario</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- Aquí se cargará el HTML externo -->
+      <div class="modal-body" id="contenidoFormulario">
+        <p>Cargando formulario...</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <script type="text/javascript" src="Recursos/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="Recursos/js/bootstrap.min.js"></script>
+    <script src="Recursos/js/main.js"></script>
+    
+  </body>
+</html>

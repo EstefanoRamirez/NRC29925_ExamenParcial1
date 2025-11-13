@@ -1,152 +1,761 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
 
     <title>EXAMEN PARCIAL 1 - Megamenu</title>
 
-    <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
+    <link
+      href="../../vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-    <link href="../../css/sb-admin-2.min.css" rel="stylesheet">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link href="css/style.css" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <link href="../../css/sb-admin-2.min.css" rel="stylesheet" />
 
-<body id="page-top">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      .mega-dropdown {
+        position: static !important;
+      }
+      .mega-dropdown-menu {
+        width: 100%;
+        padding: 20px;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+      }
+    </style>
+  </head>
+
+  <body id="page-top">
     <div id="wrapper">
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <a
+          class="sidebar-brand d-flex align-items-center justify-content-center"
+          href="../../index.html"
+        >
+          <div class="sidebar-brand-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="sidebar-brand-text mx-3">PARTE II</div>
+        </a>
+        <hr class="sidebar-divider my-0" />
+        <li class="nav-item">
+          <a class="nav-link" href="../Grupo01/index.html">
+            <i class="fas fa-fw fa-comment-alt"></i>
+            <span>Tooltip and Popover</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Grupo02/index.html">
+            <i class="fas fa-fw fa-sliders-h"></i>
+            <span>Slider</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Grupo03/index.html">
+            <i class="fas fa-fw fa-crosshairs"></i>
+            <span>Scrollspy</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-fw fa-stream"></i>
+            <span>Megamenu</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Grupo05/index.html">
+            <i class="fas fa-fw fa-tasks"></i>
+            <span>Progress Bar</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Grupo06/index.html">
+            <i class="fas fa-fw fa-list-ul"></i>
+            <span>List</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Grupo07/index.html">
+            <i class="fas fa-fw fa-columns"></i>
+            <span>Panel</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Grupo08/index.html">
+            <i class="fas fa-fw fa-certificate"></i>
+            <span>Badge</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Grupo09/index.html">
+            <i class="fas fa-fw fa-image"></i>
+            <span>Thumbnails and Media</span>
+          </a>
+        </li>
+      </ul>
 
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index.html">
-                <div class="sidebar-brand-icon">
-                    <i class="fas fa-users"></i>
+      <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+            <div class="navbar-center">EXAMEN PARCIAL 1</div>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../../../index.html" title="Inicio">
+                  <i class="fas fa-home fa-fw"></i>
+                </a>
+              </li>
+              <div class="topbar-divider d-none d-sm-block"></div>
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="mr-2 d-none d-lg-inline small">PARTES</span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="userDropdown"
+                >
+                  <a class="dropdown-item" href="../../../PARTE1/index.html">
+                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Parte I
+                  </a>
+                  <a class="dropdown-item" href="../../index.html">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Parte II
+                  </a>
                 </div>
-                <div class="sidebar-brand-text mx-3">PARTE II</div>
-            </a>
+              </li>
+            </ul>
+          </nav>
 
-            <hr class="sidebar-divider my-0">
-            
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo01/index.html">
-                    <i class="fas fa-fw fa-comment-alt"></i>
-                    <span>Tooltip and Popover</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo02/index.html">
-                    <i class="fas fa-fw fa-sliders-h"></i>
-                    <span>Slider</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo03/index.html">
-                    <i class="fas fa-fw fa-crosshairs"></i>
-                    <span>Scrollspy</span>
-                </a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-stream"></i>
-                    <span>Megamenu</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo05/index.html">
-                    <i class="fas fa-fw fa-tasks"></i>
-                    <span>Progress Bar</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo06/index.html">
-                    <i class="fas fa-fw fa-list-ul"></i>
-                    <span>List</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo07/index.html">
-                    <i class="fas fa-fw fa-columns"></i>
-                    <span>Panel</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo08/index.html">
-                    <i class="fas fa-fw fa-certificate"></i>
-                    <span>Badge</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../Grupo09/index.html">
-                    <i class="fas fa-fw fa-image"></i>
-                    <span>Thumbnails and Media</span>
-                </a>
-            </li>
+          <div class="container-fluid">
+            <h1 class="h3 mb-4">Megamenu - Grupo 04</h1>
 
-        </ul>
-        <div id="content-wrapper" class="d-flex flex-column">
-            <div id="content">
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    
-                    <div class="navbar-center">
-                        EXAMEN PARCIAL 1
-                    </div>
+            <div
+              class="card shadow mb-4 wow animate__animated animate__fadeInUp"
+            >
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold">Megamenú</h6>
+              </div>
+              <div class="card-body">
+                <p>
+                  El Megamenú es una evolución de los menús desplegables
+                  (dropdowns) tradicionales. Mientras que un dropdown simple
+                  solo muestra una lista de enlaces, un megamenú permite mostrar
+                  una gran cantidad de información de forma organizada, amigable
+                  y fácil de usar.
+                </p>
+                <p>
+                  Su principal ventaja es mejorar la usabilidad del sitio web,
+                  ya que disminuye la cantidad de clics necesarios para que el
+                  usuario llegue a cualquier parte del sitio. Es muy utilizado
+                  en sitios grandes o complejos, como tiendas de e-commerce o
+                  portales de noticias.
+                </p>
 
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="../../../index.html" title="Inicio">
-                                <i class="fas fa-home fa-fw"></i>
-                            </a>
-                        </li>
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline small">PARTES</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="../../../PARTE1/index.html">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Parte I
-                                </a>
-                                <a class="dropdown-item" href="../../index.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Parte II
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+                <img
+                  src="img/digrama_megamenu.png"
+                  alt="Diagrama de un megamenú"
+                  class="img-fluid mb-3"
+                  style="border: 1px solid #ddd"
+                />
 
-                <div class="container-fluid">
-                    <h1 class="h3 mb-4">Megamenu - Grupo 04</h1>
-                    
-                    </div>
+                <h5 class="h5 mt-4 mb-2">Características Clave</h5>
+                <ul>
+                  <li>
+                    <strong>Multi-columna:</strong> Generalmente se diseñan en
+                    varias columnas, lo que evita el scroll vertical excesivo.
+                  </li>
+                  <li>
+                    <strong>Contenido Enriquecido:</strong> Pueden contener
+                    elementos de conversión (formularios de registro,
+                    suscripción), imágenes de productos, videos y más.
+                  </li>
+                  <li>
+                    <strong>Mejora la Conversión:</strong> Al poder mostrar
+                    imágenes, permite destacar productos o categorías clave.
+                  </li>
+                  <li>
+                    <strong>Organización:</strong> La tipografía y la agrupación
+                    de opciones son cruciales para facilitar al usuario el
+                    escaneo visual de las opciones.
+                  </li>
+                </ul>
+              </div>
             </div>
+
+            <div
+              class="card shadow mb-4 wow animate__animated animate__fadeInUp"
+            >
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold">Video Tutorial</h6>
+              </div>
+              <div class="card-body">
+                <p>
+                  Este video explica los conceptos y el código para crear los
+                  siguientes ejemplos.
+                </p>
+                <video controls style="width: 100%; max-height: 500px">
+                  <source
+                    src="videos/Capítulo 2 - Megamenú.mp4"
+                    type="video/mp4"
+                  />
+                  Tu navegador no soporta el tag de video.
+                </video>
+              </div>
+            </div>
+
+            <div
+              class="card shadow mb-4 wow animate__animated animate__fadeInUp"
+            >
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold">Ejemplo 1: Dropdown Básico</h6>
+              </div>
+              <div class="card-body">
+                <h5 class="h5 mb-2">Descripción</h5>
+                <p>
+                  Se agrega un menú desplegable simple. Se añade la clase
+                  <code>.dropdown</code> al <code>&lt;li&gt;</code> y el
+                  <code>data-toggle="dropdown"</code> al <code>&lt;a&gt;</code>.
+                  El menú es un <code>&lt;div class="dropdown-menu"&gt;</code>.
+                </p>
+                <hr />
+                <h5 class="h5 mb-2">Código</h5>
+                <pre><code>&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"&gt;
+    ...
+    &lt;div class="collapse navbar-collapse" id="navEx2"&gt;
+        &lt;ul class="navbar-nav mr-auto"&gt;
+            &lt;!-- Este es el Dropdown --&gt;
+            &lt;li class="nav-item dropdown"&gt;
+                &lt;a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"&gt;
+                    Cursos
+                &lt;/a&gt;
+                &lt;div class="dropdown-menu" aria-labelledby="navbarDropdown"&gt;
+                    &lt;a class="dropdown-item" href="#"&gt;Enlace A&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="#"&gt;Enlace B&lt;/a&gt;
+                    &lt;a class="dropdown-item" href="#"&gt;Enlace C&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        ...
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+                <hr />
+                <h5 class="h5 mb-3">Ejecución del Código</h5>
+                <button class="btn btn-primary" id="btnEx2" type="button">
+                  Ejecutar
+                </button>
+                <div
+                  class="mt-4"
+                  id="execEx2"
+                  style="display: none; border: 1px solid #ddd; padding: 20px"
+                >
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">Grupo 04</a>
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navEx2-exec"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navEx2-exec">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                          <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdownExec"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Cursos (Haz clic)
+                          </a>
+                          <div
+                            class="dropdown-menu"
+                            aria-labelledby="navbarDropdownExec"
+                          >
+                            <a class="dropdown-item" href="#">Enlace A</a>
+                            <a class="dropdown-item" href="#">Enlace B</a>
+                            <a class="dropdown-item" href="#">Enlace C</a>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Enlace 1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Enlace 2</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Enlace 3</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card shadow mb-4 wow animate__animated animate__fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold">
+                  Ejemplo 2: Megamenú con Grid
+                </h6>
+              </div>
+              <div class="card-body">
+                <h5 class="h5 mb-2">Descripción</h5>
+                <p>
+                  Este ejemplo aplica las clases <code>.mega-dropdown</code> y
+                  <code>.mega-dropdown-menu</code>. A diferencia del Ejemplo 1,
+                  dentro del menú usamos la cuadrícula (Grid) de Bootstrap
+                  (<code>.row</code> y <code>.col-sm-4</code>) para mostrar 3
+                  columnas de texto simple.
+                </p>
+                <hr />
+
+                <h5 class="h5 mb-2">Código</h5>
+                <pre><code>&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+    ...
+    &lt;div class="collapse navbar-collapse" id="navEx3"&gt;
+        &lt;ul class="navbar-nav mr-auto"&gt;
+            
+            &lt;li class="nav-item dropdown mega-dropdown"&gt;
+                &lt;a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"&gt;
+                    Cursos
+                &lt;/a&gt;
+                
+                &lt;!-- El menú ahora contiene una fila (row) --&gt;
+                &lt;div class="dropdown-menu mega-dropdown-menu"&gt;
+                    &lt;div class="row"&gt;
+                        &lt;!-- Columna 1 de 3 --&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;p class="text-dark small"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut assumenda, placeat...&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;!-- Columna 2 de 3 --&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;p class="text-dark small"&gt;Officia ullam nobis quisquam quae cumque minima, molestias. Non porro perspiciatis...&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;!-- Columna 3 de 3 --&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;p class="text-dark small"&gt;Explicabo ipsa facere cum quisquam soluta ea accusamus incidunt sit amet nisi...&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+                <hr />
+                <h5 class="h5 mb-3">Ejecución del Código</h5>
+
+                <button class="btn btn-primary" id="btnEx3" type="button">
+                  Ejecutar
+                </button>
+
+                <div
+                  class="mt-4"
+                  id="execEx3"
+                  style="display: none; border: 1px solid #ddd; padding: 20px"
+                >
+                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">Grupo 04</a>
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navEx3-exec"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navEx3-exec">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown mega-dropdown">
+                          <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdownExec3"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Cursos (Haz Clic)
+                          </a>
+
+                          <div
+                            class="dropdown-menu mega-dropdown-menu"
+                            aria-labelledby="navbarDropdownExec3"
+                          >
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <p class="text-dark small">
+                                  Lorem ipsum dolor sit amet, consectetur
+                                  adipisicing elit. Aut assumenda, placeat,
+                                  possimus, pariatur perferendis inventore ex
+                                  error fuga labore cumque omnis debitis rem
+                                  illo qui facere hic, eligendi! Voluptatum,
+                                  nobis.
+                                </p>
+                              </div>
+                              <div class="col-sm-4">
+                                <p class="text-dark small">
+                                  Officia ullam nobis quisquam quae cumque
+                                  minima, molestias. Non porro perspiciatis
+                                  eveniet veniam voluptatum, saepe. Magnam eos
+                                  fuga architecto. Sunt, deleniti assumenda!
+                                </p>
+                              </div>
+                              <div class="col-sm-4">
+                                <p class="text-dark small">
+                                  Explicabo ipsa facere cum quisquam soluta ea
+                                  accusamus incidunt sit amet nisi eveniet
+                                  adipisci maxime expedita at dolores dolorum,
+                                  eos iste, obcaecati.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card shadow mb-4 wow animate__animated animate__fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold">
+                  Ejemplo 3: Megamenú Completo
+                </h6>
+              </div>
+              <div class="card-body">
+                <h5 class="h5 mb-2">Descripción del Código</h5>
+                <p>
+                  Se añaden las 3 columnas con contenido enriquecido: un
+                  carrusel, una lista de enlaces (list-group) y una descripción
+                  con imagen.
+                </p>
+                <hr />
+
+                <h5 class="h5 mb-2">Código</h5>
+                <pre><code>&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+    &lt;a class="navbar-brand" href="#"&gt;Devcode.la&lt;/a&gt;
+    &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#megamenu-exec"&gt;
+        &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="megamenu-exec"&gt;
+        &lt;ul class="navbar-nav mr-auto"&gt;
+            
+            &lt;li class="nav-item dropdown mega-dropdown"&gt;
+                &lt;a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"&gt;
+                    Cursos Profesionales
+                &lt;/a&gt;
+                
+                &lt;div class="dropdown-menu mega-dropdown-menu"&gt;
+                    &lt;div class="row"&gt;
+                        
+                        &lt;!-- Columna 1: Carrusel --&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;div id="mislider" class="carousel slide" data-ride="carousel"&gt;
+                                &lt;div class="carousel-inner"&gt;
+                                    &lt;div class="carousel-item active"&gt;
+                                        &lt;img src="../../img/Imagen1.jpg" class="d-block w-100"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="carousel-item"&gt;
+                                        &lt;img src="../../img/Imagen2.jpg" class="d-block w-100"&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="carousel-item"&gt;
+                                        &lt;img src="../../img/Imagen3.jpg" class="d-block w-100"&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;button class="btn btn-primary btn-block mt-3"&gt;Visítanos en Devcode.la&lt;/button&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;!-- Columna 2: Lista (COMPLETA) --&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;div class="list-group"&gt;
+                                &lt;a href="#" class="list-group-item list-group-item-action active"&gt;
+                                    Cursos Básicos
+                                &lt;/a&gt;
+                                &lt;a href="#" class="list-group-item list-group-item-action"&gt;Less&lt;/a&gt;
+                                &lt;a href="#" class="list-group-item list-group-item-action"&gt;Android&lt;/a&gt;
+                                &lt;a href="#" class="list-group-item list-group-item-action"&gt;Laravel&lt;/a&gt;
+                                &lt;a href="#" class="list-group-item list-group-item-action"&gt;Backbone.js&lt;/a&gt;
+                                &lt;a href="#" class="list-group-item list-group-item-action"&gt;Ruby on Rails&lt;/a&gt;
+                                &lt;a href="#" class="list-group-item list-group-item-action"&gt;Responsive Web Design&lt;/a&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        
+                        &lt;!-- Columna 3: Descripción (COMPLETA) --&gt;
+                        &lt;div class="col-sm-4"&gt;
+                            &lt;img src="../../img/Imagen1.jpg" class="img-fluid mb-3"&gt;
+                            &lt;h5 class="text-dark"&gt;Introducción a Bootstrap 3&lt;/h5&gt;
+                            &lt;p class="text-dark small"&gt;Hablaremos sobre su historia, características, algunas técnicas y herramientas para crear sitios y aplicaciones web de una manera fácil, rápida y correcta.&lt;/p&gt;
+                        &lt;/div&gt;
+                        
+                    &lt;/div&gt; &lt;!-- Fin Row --&gt;
+                &lt;/div&gt; &lt;!-- Fin Dropdown Menu --&gt;
+            &lt;/li&gt; &lt;!-- Fin Dropdown LI --&gt;
+
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;</code></pre>
+
+                <hr />
+                <h5 class="h5 mb-3">Ejecución del Código</h5>
+                <button class="btn btn-primary" id="btnEx4" type="button">
+                  Ejecutar
+                </button>
+
+                <div
+                  class="mt-4"
+                  id="execEx4"
+                  style="display: none; border: 1px solid #ddd; padding: 20px"
+                >
+                  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">Grupo 04</a>
+                    <button
+                      class="navbar-toggler"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#megamenu-exec-inner"
+                      aria-controls="megamenu-exec-inner"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div
+                      class="collapse navbar-collapse"
+                      id="megamenu-exec-inner"
+                    >
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown mega-dropdown">
+                          <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="megamenuDropdownExec"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                          >
+                            Cursos Profesionales (Haz Clic)
+                          </a>
+
+                          <div
+                            class="dropdown-menu mega-dropdown-menu"
+                            aria-labelledby="megamenuDropdownExec"
+                          >
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <div
+                                  id="mislider-exec-inner"
+                                  class="carousel slide"
+                                  data-ride="carousel"
+                                >
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <img
+                                        src="img/Imagen1.jpg"
+                                        class="d-block w-100"
+                                        alt="Imagen 1"
+                                      />
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img
+                                        src="img/Imagen2.jpg"
+                                        class="d-block w-100"
+                                        alt="Imagen 2"
+                                      />
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img
+                                        src="img/Imagen3.jpg"
+                                        class="d-block w-100"
+                                        alt="Imagen 3"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="btn btn-primary btn-block mt-3">
+                                  Visítanos
+                                </button>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <div class="list-group">
+                                  <a
+                                    href="#"
+                                    class="list-group-item list-group-item-action active"
+                                  >
+                                    Cursos Básicos
+                                  </a>
+                                  <a
+                                    href="#"
+                                    class="list-group-item list-group-item-action"
+                                    >Less</a
+                                  >
+                                  <a
+                                    href="#"
+                                    class="list-group-item list-group-item-action"
+                                    >Android</a
+                                  >
+                                  <a
+                                    href="#"
+                                    class="list-group-item list-group-item-action"
+                                    >Laravel</a
+                                  >
+                                  <a
+                                    href="#"
+                                    class="list-group-item list-group-item-action"
+                                    >Backbone.js</a
+                                  >
+                                  <a
+                                    href="#"
+                                    class="list-group-item list-group-item-action"
+                                    >Ruby on Rails</a
+                                  >
+                                  <a
+                                    href="#"
+                                    class="list-group-item list-group-item-action"
+                                    >Responsive Web Design</a
+                                  >
+                                </div>
+                              </div>
+
+                              <div class="col-sm-4">
+                                <img
+                                  src="img/Imagen1.jpg"
+                                  class="img-fluid mb-3"
+                                  alt="Bootstrap"
+                                />
+                                <h5 class="text-dark">
+                                  Introducción a Bootstrap
+                                </h5>
+                                <p class="text-dark small">
+                                  Hablaremos sobre su historia, características,
+                                  algunas técnicas y herramientas para crear
+                                  sitios y aplicaciones web de una manera fácil,
+                                  rápida y correcta.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card shadow mb-4 wow animate__animated animate__fadeInUp"
+              data-wow-delay="0.1s"
+            >
+              <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold">
+                  Ejemplo 4: Prueba 
+                </h6>
+              </div>
+              <div class="card-body">
+                <h5 class="h5 mb-2">Descripción</h5>
+                <p>
+                  Se utiliza el megamenu con un gryd de 3 para observar los grupos de manera
+                  distribuida.
+                  El grupo 4 abre la tabla.
+                </p>
+                <p>
+                  La navegación interna del proyecto (hacer clic en sus enlaces)
+                  funcionará completamente dentro del recuadro, sin recargar la
+                  página principal.
+                </p>
+                
+                <h5 class="h5 mb-3">Ejecución del Código</h5>
+
+                <button class="btn btn-primary" id="btnEx5" type="button">
+                  Ejecutar
+                </button>
+
+                <div class="mt-4" id="execEx5" style="display: none">
+                  <iframe
+                    src="Prueba1_Parte2/index.html"
+                    width="100%"
+                    height="600px"
+                    style="border: 1px solid #ccc; border-radius: 0 !important"
+                  >
+                    Tu navegador no soporta iframes.
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="../../js/sb-admin-2.min.js"></script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="js/main.js"></script>
-    
-</body>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>

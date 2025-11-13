@@ -5,13 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Página de Componentes de Bootstrap">
+    <meta name="author" content="Grupo 08">
 
-    <title>EXAMEN PARCIAL 1 - Badge</title>
+    <title>EXAMEN PARCIAL 1 - Componentes</title>
 
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
 
@@ -25,6 +24,7 @@
 
 <body id="page-top">
     <div id="wrapper">
+
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../../index.html">
@@ -81,7 +81,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-certificate"></i>
-                    <span>Badge</span>
+                    <span>Componentes</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -93,7 +93,9 @@
 
         </ul>
         <div id="content-wrapper" class="d-flex flex-column">
+
             <div id="content">
+
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
@@ -129,21 +131,595 @@
                         </li>
                     </ul>
                 </nav>
-
                 <div class="container-fluid">
-                    <h1 class="h3 mb-4">Badge - Grupo 08</h1>
-                    
+
+                    <h1 class="h3 mb-4">Badge, Breadcrumbs, Pagination y Label - Grupo 08</h1>
+
+                    <div class="card shadow mb-4 content-card">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">Recursos Generales</h6>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="mb-3">Tutorial en Video y Ejemplos Visuales</h5>
+                            <div class="d-flex flex-wrap mb-4">
+                                <button id="btn-mostrar-video" class="btn btn-info btn-sm me-2 mb-2">
+                                    <i class="fas fa-video"></i> Mostrar Video Tutorial General
+                                </button>
+                                <button id="btn-mostrar-imagenes" class="btn btn-secondary btn-sm mb-2">
+                                    <i class="fas fa-image"></i> Mostrar Imágenes de Ejemplo
+                                </button>
+                            </div>
+                            
+                            <div id="video-container" style="display: none;">
+                                <h6 class="mt-4 mb-3">Video Explicativo General</h6>
+                                <div class="video-responsive">
+                                    <video controls preload="none">
+                                        <source src="resources/video/badge_tutorial.mp4" type="video/mp4">
+                                        Tu navegador no soporta la etiqueta de video.
+                                    </video>
+                                </div>
+                            </div>
+                            
+                            <div id="imagenes-container" style="display: none;">
+                                <h6 class="mt-4 mb-3">Ejemplos Visuales por Tema</h6>
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 mb-3">
+                                        <h6><i class="fas fa-certificate me-1"></i>Badges</h6>
+                                        <img src="resources/img/badge_ejemplo.png" class="img-fluid img-ejemplo" alt="Ejemplo de Badges">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3">
+                                        <h6><i class="fas fa-angle-double-right me-1"></i>Breadcrumbs</h6>
+                                        <img src="resources/img/breadcrumb_ejemplo.png" class="img-fluid img-ejemplo" alt="Ejemplo de Breadcrumbs">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3">
+                                        <h6><i class="fas fa-ellipsis-h me-1"></i>Pagination</h6>
+                                        <img src="resources/img/pagination_ejemplo.png" class="img-fluid img-ejemplo" alt="Ejemplo de Paginación">
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 mb-3">
+                                        <h6><i class="fas fa-tag me-1"></i>Labels</h6>
+                                        <img src="resources/img/label_ejemplo.png" class="img-fluid img-ejemplo" alt="Ejemplo de Labels">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <ul class="nav nav-temas" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="tab-badge" data-toggle="tab" href="#pane-badge" role="tab" aria-controls="pane-badge" aria-selected="false">
+                                <i class="fas fa-certificate me-2"></i>Badge
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="tab-breadcrumb" data-toggle="tab" href="#pane-breadcrumb" role="tab" aria-controls="pane-breadcrumb" aria-selected="false">
+                                <i class="fas fa-angle-double-right me-2"></i>Breadcrumbs
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="tab-pagination" data-toggle="tab" href="#pane-pagination" role="tab" aria-controls="pane-pagination" aria-selected="false">
+                                <i class="fas fa-ellipsis-h me-2"></i>Pagination
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="tab-label" data-toggle="tab" href="#pane-label" role="tab" aria-controls="pane-label" aria-selected="false">
+                                <i class="fas fa-tag me-2"></i>Label (Etiqueta)
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+
+                        <div class="tab-pane fade" id="pane-badge" role="tabpanel" aria-labelledby="tab-badge">
+                            
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card shadow mb-4 content-card">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold">1. TEORÍA: ¿Qué es un Badge?</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Los **Badges (insignias)** son pequeños componentes de contador o etiquetado que se utilizan para mostrar información adicional, como el número de notificaciones, mensajes no leídos o el estado de un elemento.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card shadow mb-4 content-card">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold">2. EJEMPLO: Sintaxis y Uso de Badges</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="mt-4">2.1 Badges Contextuales</h5>
+                                            <pre><code class="language-html">&lt;span class="badge bg-primary"&gt;Primary&lt;/span&gt;</code></pre>
+                                            <button id="btn-ejecutar-badge-contextuales" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-badge-contextuales" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <span class="badge bg-primary">Primary</span>
+                                            </div>
+
+                                            <h5 class="mt-4">2.2 Badges tipo "Pill" (Píldora)</h5>
+                                            <pre><code class="language-html">&lt;span class="badge rounded-pill bg-success"&gt;Success&lt;/span&gt;</code></pre>
+                                            <button id="btn-ejecutar-badge-pill" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-badge-pill" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <span class="badge rounded-pill bg-success">Success</span>
+                                            </div>
+
+                                            <h5 class="mt-4">2.3 Badges dentro de Botones</h5>
+                                            <pre><code class="language-html">&lt;button type="button" class="btn btn-dark position-relative"&gt;...&lt;/button&gt;</code></pre>
+                                            <button id="btn-ejecutar-badge-botones" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-badge-botones" class="ejecucion-code-block" style="display: none; min-height: 120px;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <button type="button" class="btn btn-dark position-relative">
+                                                    Profile
+                                                    <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+                                                        <span class="visually-hidden">New alerts</span>
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pane-breadcrumb" role="tabpanel" aria-labelledby="tab-breadcrumb">
+                            
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card shadow mb-4 content-card">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold">1. TEORÍA: ¿Qué es un Breadcrumb?</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>Un **Breadcrumb (migas de pan)** es un componente de navegación secundario que indica la ubicación del usuario dentro de la jerarquía de un sitio web.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card shadow mb-4 content-card">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold">2. EJEMPLO: Sintaxis de Breadcrumbs</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="mt-4">2.1 Breadcrumb Básico</h5>
+                                            <pre><code class="language-html">&lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" aria-current="page"&gt;Datos&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                                            <button id="btn-ejecutar-breadcrumb-default" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-breadcrumb-default" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <nav aria-label="breadcrumb">
+                                                  <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#" onclick="return false;">Inicio</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page">Datos</li>
+                                                  </ol>
+                                                </nav>
+                                            </div>
+
+                                            <h5 class="mt-4">2.2 Breadcrumb con Iconos</h5>
+                                            <pre><code class="language-html">&lt;ol class="breadcrumb"&gt;
+    &lt;li class="breadcrumb-item"&gt;&lt;a href="#"&gt;&lt;i class="fas fa-home"&gt;&lt;/i&gt; Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="breadcrumb-item active" ...&gt;&lt;i class="fas fa-book"&gt;&lt;/i&gt; Biblioteca&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                                            <button id="btn-ejecutar-breadcrumb-iconos" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-breadcrumb-iconos" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <nav aria-label="breadcrumb">
+                                                  <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="#" onclick="return false;"><i class="fas fa-home me-1"></i> Inicio</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page"><i class="fas fa-book me-1"></i> Biblioteca</li>
+                                                  </ol>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pane-pagination" role="tabpanel" aria-labelledby="tab-pagination">
+                            
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card shadow mb-4 content-card">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold">1. TEORÍA: ¿Qué es Pagination?</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>El componente **Pagination (Paginación)** se utiliza para dividir contenido extenso en varias páginas, permitiendo al usuario navegar entre ellas.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card shadow mb-4 content-card">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold">2. EJEMPLO: Sintaxis de Pagination</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="mt-4">2.1 Paginación Básica</h5>
+                                            <pre><code class="language-html">&lt;ul class="pagination"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item active"&gt;&lt;span class="page-link"&gt;2&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                            <button id="btn-ejecutar-pagination-default" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-pagination-default" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <nav aria-label="Navegación de página">
+                                                  <ul class="pagination">
+                                                    <li class="page-item"><a class="page-link" href="#" onclick="return false;">1</a></li>
+                                                    <li class="page-item active" aria-current="page"><span class="page-link">2</span></li>
+                                                    <li class="page-item"><a class="page-link" href="#" onclick="return false;">3</a></li>
+                                                  </ul>
+                                                </nav>
+                                            </div>
+
+                                            <h5 class="mt-4">2.2 Paginación con Iconos</h5>
+                                            <pre><code class="language-html">&lt;ul class="pagination"&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&laquo;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="page-item"&gt;&lt;a class="page-link" href="#"&gt;&raquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                            <button id="btn-ejecutar-pagination-iconos" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-pagination-iconos" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <ul class="pagination">
+                                                  <li class="page-item"><a class="page-link" href="#" onclick="return false;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                                  <li class="page-item"><a class="page-link" href="#" onclick="return false;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                                </ul>
+                                            </div>
+
+                                            <h5 class="mt-4">2.3 Estados (Activo y Deshabilitado)</h5>
+                                            <pre><code class="language-html">&lt;ul class="pagination"&gt;
+  &lt;li class="page-item disabled"&gt;&lt;span class="page-link"&gt;Anterior&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="page-item active"&gt;&lt;span class="page-link"&gt;1&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                            <button id="btn-ejecutar-pagination-estados" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-pagination-estados" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <ul class="pagination">
+                                                  <li class="page-item disabled"><span class="page-link">Anterior</span></li>
+                                                  <li class="page-item active"><span class="page-link">1</span></li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <h5 class="mt-4">2.4 Tamaños (Sizing)</h5>
+                                            <pre><code class="language-html">&lt;ul class="pagination pagination-lg"&gt;...&lt;/ul&gt;
+&lt;ul class="pagination pagination-sm"&gt;...&lt;/ul&gt;</code></pre>
+                                            <button id="btn-ejecutar-pagination-sizing" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-pagination-sizing" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <nav><ul class="pagination pagination-lg"><li class="page-item active" aria-current="page"><span class="page-link">1</span></li></ul></nav>
+                                                <nav><ul class="pagination pagination-sm"><li class="page-item active" aria-current="page"><span class="page-link">1</span></li></ul></nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="pane-label" role="tabpanel" aria-labelledby="tab-label">
+                            
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card shadow mb-4 content-card">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold">1. TEORÍA: ¿Qué es un Label?</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>El componente **Label (Etiqueta)** era usado en versiones anteriores de Bootstrap (como Bootstrap 3). En **Bootstrap 5**, esta funcionalidad se ha fusionado con el componente <code>.badge</code>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card shadow mb-4 content-card">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold">2. EJEMPLO: Sintaxis de Labels (usando Badges)</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5 class="mt-4">2.1 "Labels" Básicos</h5>
+                                            <p>Para crear una etiqueta, simplemente usa la clase <code>.badge</code>.</p>
+                                            <pre><code class="language-html">&lt;h3&gt;Título &lt;span class="badge bg-secondary"&gt;Nuevo&lt;/span&gt;&lt;/h3&gt;</code></pre>
+                                            <button id="btn-ejecutar-label-default" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-label-default" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <h3>Título de Ejemplo <span class="badge bg-secondary">Nuevo</span></h3>
+                                            </div>
+
+                                            <h5 class="mt-4">2.2 "Labels" de Colores</h5>
+                                            <pre><code class="language-html">&lt;span class="badge bg-success"&gt;Completado&lt;/span&gt;
+&lt;span class="badge bg-warning text-dark"&gt;Pendiente&lt;/span&gt;</code></pre>
+                                            <button id="btn-ejecutar-label-colores" class="btn btn-ejecutar btn-sm">
+                                                <i class="fas fa-play"></i> Ejecutar
+                                            </button>
+                                            <div id="ejecucion-label-colores" class="ejecucion-code-block" style="display: none;">
+                                                <span class="ejecucion-titulo">Resultado:</span>
+                                                <span class="badge bg-success">Completado</span>
+                                                <span class="badge bg-warning text-dark">Pendiente</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div> <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card shadow mb-4 content-card">
+                                <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                                    <h6 class="m-0 font-weight-bold">3. EJEMPLO PRÁCTICO: Aplicación Web</h6>
+                                    <button id="btn-mostrar-ejemplo-practico" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-laptop-code"></i> Mostrar Ejemplo Práctico
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-3">
+                                        Este ejemplo práctico demuestra cómo todos estos componentes (<strong>Badges, Breadcrumbs, Pagination y Labels</strong>) se combinan para construir una interfaz de usuario moderna, limpia e informativa, como un panel de control real.
+                                    </p>
+                                    <hr class="my-3">
+                                    <div id="ejemplo-practico-contenido" class="ejemplo-interactivo" style="display: none;">
+                                        <h5>Mini-aplicación con todos los componentes</h5>
+                                        <iframe src="PruebasPracticas/ejemplo_badge_practico.html" class="iframe-ejercicio" frameborder="0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card shadow mb-4 content-card">
+                                <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                                    <h6 class="m-0 font-weight-bold">4. EJERCICIO PRUEBA_PARTE II: Implementación</h6>
+                                    <button id="btn-mostrar-prueba-parcial" class="btn btn-primary btn-sm">
+                                        <i class="fas fa-code"></i> Mostrar Prueba
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    
+                                    <p class="mb-3">
+                                        Este es el ejercicio de la<strong>prueba</strong>. Se le han añadido las funcionalidades (como <strong>Badges/Labels</strong> para contadores y estados) que vimos en esta página, demostrando su aplicación en un entorno real.
+                                    </p>
+                                    <hr class="my-3">
+
+                                    <div id="prueba-parcial-contenido" class="ejercicio-contenido" style="display: none;">
+                                        
+                                        <h5>Descripción del Ejercicio</h5>
+                                        <p>
+                                            Este es un proyecto web completo, basado en los temas tratados. 
+                                        </p>
+                                        <ul>
+                                            <li><strong>Páginas:</strong> Incluye <code>index.html</code>, <code>Formulario.html</code>, <code>Comandante.html</code> y <code>Grupo10.html</code>.</li>
+                                            <li><strong>Estilos:</strong> Usa sus propias hojas de estilo en <code>css/</code> y <code>Recursos/</code>.</li>
+                                            <li><strong>Fuentes:</strong> Carga sus propias fuentes de iconos (<code>fonts/glyphicons...</code> y <code>fonts/icomoon...</code>).</li>
+                                        </ul>
+                                        <p>
+                                            Se puede navegar por este mini-sitio (el <code>iframe</code> de abajo) como si fuera una página independiente, pero sin salir de esta sección.
+                                        </p>
+                                        
+                                        <hr class="my-4">
+
+<h5 class="card-title mb-4">Explicación del Código Principal</h5>
+                        <p class="text-justify mb-4">
+                            En nuestro proyecto web, implementamos los nuevos componentes (Breadcrumbs, Pagination, y Labels/Badges) en varios lugares clave para mejorar la navegación y la interfaz. A continuación, se detalla cada implementación.
+                        </p>
+                        
+						<div class="mb-4">
+                            <h6 class="font-weight-bold">1. Labels de Contador en el Menú (index.html)</h6>
+                            <p class="text-justify mb-3">
+                                Se añadieron contadores al menú de la izquierda. En Bootstrap 3 (que usa el proyecto), se utiliza <code>.label</code> con clases de color (ej. <code>.label-danger</code>) y <code>.pull-right</code> para crear "badges" coloridos que indican notificaciones.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="bg-light p-3 rounded">
+<pre><code>&lt;!-- index.html (Menú Izquierdo) --&gt;
+&lt;ul class="nav nav-pills nav-stacked"&gt;
+  &lt;li&gt;
+    &lt;a href="FormRegistro.html"&gt;
+        &lt;span class="label label-danger pull-right"&gt;2&lt;/span&gt; 
+        &lt;span class="glyphicon glyphicon-hdd"&gt;&lt;/span&gt; Registro
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="FormProducto.html"&gt;
+        &lt;span class="label label-primary pull-right"&gt;5&lt;/span&gt;
+        &lt;span class="glyphicon glyphicon-book"&gt;&lt;/span&gt; Producto
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="Formulario.html"&gt;
+        &lt;span class="label label-success pull-right"&gt;1&lt;/span&gt;
+        &lt;span class="glyphicon glyphicon-list-alt"&gt;&lt;/span&gt; Formulario
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>(Captura del menú izquierdo con labels)</strong></p>
+                                    <img src="resources/img/Captura ejercicio 1.png" class="img-fluid rounded" alt="Captura del menú lateral con labels">
+                                </div>
+                            </div>
+                        </div>
+
+						<div class="mb-4">
+                            <h6 class="font-weight-bold">2. Labels de Estado en Contenido (index.html)</h6>
+                            <p class="text-justify mb-3">
+                                En el contenedor verde <code>#content</code>, se agregó una lista de "Tareas Pendientes". Esta implementación usa <code>.label</code> de colores para mostrar un estado o prioridad (como "Urgente" o "Media"), en lugar de un número.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="bg-light p-3 rounded">
+<pre><code>&lt;!-- index.html (Contenido) --&gt;
+&lt;div id="content" ...&gt;
+    ...
+    &lt;div style="margin-top: 25px; ..."&gt;
+        &lt;h4 style="color: white;"&gt;Tareas Pendientes&lt;/h4&gt;
+        &lt;ul class="list-group"&gt;
+            &lt;li class="list-group-item"&gt;
+                &lt;span class="label label-danger"&gt;Urgente&lt;/span&gt;
+                ...
+            &lt;/li&gt;
+            &lt;li class="list-group-item"&gt;
+                &lt;span class="label label-warning"&gt;Media&lt;/span&gt;
+                ...
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>(Captura del cuadro verde con la lista)</strong></p>
+                                    <img src="resources/img/Captura ejercicio 2.png" class="img-fluid rounded" alt="Captura del contenido con lista de tareas">
+                                </div>
+                            </div>
+                        </div>
+
+						<div class="mb-4">
+                            <h6 class="font-weight-bold">3. Breadcrumbs en Sub-Páginas (ej. Grupo08.html)</h6>
+                            <p class="text-justify mb-3">
+                                Se añadió el componente <code>.breadcrumb</code> al inicio de cada sub-página (<code>Formulario.html</code>, <code>Comandante.html</code> y <code>Grupo08.html</code>). Esto sirve como "migas de pan" para indicarle al usuario su ubicación actual en el sitio.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="bg-light p-3 rounded">
+<pre><code>&lt;!-- Grupo08.html (También en Comandante.html, etc.) --&gt;
+&lt;body&gt;
+&lt;!-- INICIO DE BREADCRUMB --&gt;
+&lt;div class="container" style="margin-top: 20px;"&gt;
+  &lt;ol class="breadcrumb"&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;Grupo 08&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+&lt;!-- FIN DE BREADCRUMB --&gt;
+...
+&lt;/body&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>(Captura de una sub-página con el breadcrumb)</strong></p>
+                                    <img src="resources/img/formulario breadcrumb.png" class="img-fluid rounded" alt="Captura de página con breadcrumb">
+                                </div>
+                            </div>
+                        </div>
+
+						<div class="mb-4">
+                            <h6 class="font-weight-bold">4. Label en Título de Página (Grupo08.html)</h6>
+                            <p class="text-justify mb-3">
+                                En la página <code>Grupo08.html</code>, se añadió un <code>.label .label-primary</code> directamente en la etiqueta <code>&lt;h2&gt;</code> para mostrar la cantidad total de integrantes (2) en la tabla.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="bg-light p-3 rounded">
+<pre><code>&lt;!-- Grupo08.html --&gt;
+&lt;div class="container" ...&gt;
+    &lt;h2&gt;Integrantes - Grupo 08 
+        &lt;span class="label label-primary"&gt;2&lt;/span&gt;
+    &lt;/h2&gt;
+    &lt;p&gt;Lista de integrantes del grupo 08.&lt;/p&gt;
+    &lt;table class="table ..."&gt;
+        ...
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>(Captura de la tabla con el título)</strong></p>
+                                    <img src="resources/img/Captura ejercicio 3.png" class="img-fluid rounded" alt="Captura de la página de grupo con label en título">
+                                </div>
+                            </div>
+                        </div>
+
+						<div class="mb-4">
+                            <h6 class="font-weight-bold">5. Paginación de Tabla (Grupo08.html)</h6>
+                            <p class="text-justify mb-3">
+                                Debajo de la tabla en <code>Grupo08.html</code>, se agregó el componente <code>.pagination</code>. Esto simula la existencia de más páginas de resultados, mejorando la navegación en tablas con muchos datos.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="bg-light p-3 rounded">
+<pre><code>&lt;!-- Grupo08.html --&gt;
+    ...
+    &lt;/table&gt;
+    
+    &lt;!-- INICIO DE PAGINACIÓN --&gt;
+    &lt;div class="text-center"&gt;
+      &lt;ul class="pagination"&gt;
+        &lt;li class="disabled"&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&Aa href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;&amp;raquo;&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- FIN DE PAGINACIÓN --&gt;
+    
+    &lt;a href="index.html" class="btn btn-primary"&gt;...&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>(Captura de la tabla con la paginación)</strong></p>
+                                    <img src="resources/img/paginación.png" class="img-fluid rounded" alt="Captura de la tabla con paginación">
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-5">
+
+                                        <h5>Ejecución del código</h5> 
+                                        <iframe src="Prueba1_Parte2/index.html" class="iframe-ejercicio" frameborder="0"></iframe>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+                </div>
+            </footer>
             </div>
         </div>
-    </div>
-
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="../../js/sb-admin-2.min.js"></script>
-    
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     
     <script src="js/main.js"></script>
     

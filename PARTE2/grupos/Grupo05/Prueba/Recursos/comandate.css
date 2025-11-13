@@ -1,0 +1,20 @@
+body{
+    background-image: url(/Recursos/img/astronauta-fotorrealista-de-disparo-medio.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+h4{
+    text-align: center;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ACB6E5;
+}
+.container-incon{
+    font-size: 30px;
+    margin-left: 500px;
+    color: black;
+    opacity: 0.5;
+}

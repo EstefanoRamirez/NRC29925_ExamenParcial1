@@ -1,0 +1,240 @@
+/* Estilos generales del body */
+body {
+    padding: 10px;
+    position: relative;
+}
+
+/* Header Section */
+.header-section {
+    background-color: #00FFFF;
+    border: 3px solid gray;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.header-section img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
+
+/* Content Section (cuadro verde) */
+.content-section {
+    background-color: #339933;
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #FFFF00;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    min-height: 300px;
+}
+
+.footer-section a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.footer-section a span {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.footer-section .btn-facebook { background-color: #3b5998; }
+.footer-section .btn-twitter  { background-color: #55acee; }
+.footer-section .btn-youtube  { background-color: #cd201f; }
+
+/* Layout principal (las 3 columnas) */
+.main-content-row {
+    display: flex;
+    align-items: stretch;
+}
+
+/* Todas las columnas principales con la misma altura mínima */
+.equal-panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+/* ====== LEFT MENU ====== */
+.left-menu {
+    margin-bottom: 20px;
+}
+
+.left-menu-inner {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+/* 👈 ahora las dos columnas tienen ancho mínimo fijo */
+.left-menu .toc-column {
+    flex: 0 0 150px;          /* índice izquierdo (Header, Menú, ...) */
+}
+
+.left-menu .btn-column {
+    flex: 0 0 180px;          /* botones LOGIN, Registro... */
+}
+
+/* Scrollspy (columna izquierda del aside) */
+.left-menu .nav-pills {
+    background-color: #f8f8f8;
+    padding: 0;
+    border-radius: 5px;
+    margin-bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-menu .nav-pills > li {
+    display: flex;
+}
+
+.left-menu .nav-pills > li > a {
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    white-space: normal;
+    line-height: 1.2;
+}
+
+.left-menu .nav-pills > li:first-child > a {
+    border-radius: 5px 5px 0 0;
+}
+
+.left-menu .nav-pills > li:last-child > a {
+    border-radius: 0 0 5px 5px;
+}
+
+.left-menu .nav-pills > li > a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Estado activo */
+.left-menu .nav-pills > li.active > a,
+.left-menu .nav-pills > li.active > a:hover,
+.left-menu .nav-pills > li.active > a:focus {
+    background-color: #337ab7;
+    color: white;
+}
+
+/* Botones (columna derecha del aside) */
+.btn-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 0;
+}
+
+.btn-column .btn {
+    background-color: #e8e8e8;
+    border: 1px solid #ccc;
+    color: #333;
+    text-align: left;
+    font-weight: normal;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    /* 👈 que la altura se adapte al texto */
+    min-height: 58px;
+    height: auto;
+
+    /* 👈 y que el texto pueda saltar a otra línea sin romperse letra por letra */
+    white-space: normal;
+    word-break: normal;
+    line-height: 1.2;
+    font-size: 15px;
+}
+
+.btn-column .btn span.glyphicon {
+    margin-right: 4px;
+    font-size: 18px;
+    flex: 0 0 auto;
+}
+
+.btn-column .btn:hover {
+    background-color: #d8d8d8;
+}
+
+/* Navbar */
+.navbar {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Video Container misma altura */
+.video-container {
+    margin-top: 0;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-container .embed-responsive {
+    flex: 1;
+}
+
+/* Scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Espaciado para las secciones */
+#header, #menu, #info, #video-section, #footer, #tabla {
+    padding-top: 20px;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 991px) {
+    .main-content-row {
+        display: block;
+    }
+    .equal-panel {
+        min-height: auto;
+    }
+    .video-container {
+        min-height: auto;
+    }
+    .btn-column .btn {
+        min-height: auto;
+    }
+}
+
+/* cuando el aside ya es muy estrecho (zoom fuerte o cel chico) */
+@media (max-width: 450px) {
+    .left-menu .toc-column,
+    .left-menu .btn-column {
+        flex: 0 0 100%;
+    }
+    .left-menu .btn-column {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,174 @@
+/* Estilos anteriores (body, h2, Texto, header, etc...) ... */
+h2{
+  text-align: center;
+  margin-bottom: 10px;
+  color:#FFF;
+  font-family:Verdana, Geneva, sans-serif;
+  font-size: 30px;
+}
+
+.Texto{
+  text-align: center;
+  color:#000;
+  font-family:Arial;
+  font-size: 25px;
+	
+}
+
+/* HEADER   */
+#header {   
+  background:inherit;
+  background-color: rgba(0, 255, 255);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  margin-bottom: 15px; 
+ }
+
+/* Espaciado Navbar */
+.navbar-nav > li {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+/* leftMenu  */
+#leftMenu {
+  background:inherit;
+  background-color: rgba(255, 255, 255);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  padding: 30px;
+  min-height: 500px; 
+ }
+
+ 
+/* Botones Menú Izquierdo */
+#leftMenu .nav-pills > li > a {
+  background-color: #fdfdfd; 
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(121, 121, 121, 1); 
+  border-radius: 10px; 
+  color: #333; 
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 15px; 
+  transition: all 0.3s ease; 
+  text-align: center;
+  text-transform: capitalize; 
+}
+
+#leftMenu .nav-pills > li > a:hover {
+  background-color: #e6e6e6; 
+  border-color: #555; 
+  transform: scale(1.02); 
+}
+
+#leftMenu .glyphicon {
+  margin-right: 10px;
+  font-size: 18px;
+  top: 3px; 
+}
+ 
+ 
+/* content */
+#content {
+  background:inherit;
+  background-color: rgba(51, 153, 51);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  min-height: 400px; 
+  color: #FFF; 
+  padding: 20px;
+  text-align: center; 
+}
+
+
+
+/* rigthMenu */
+#rightMenu {
+  background:inherit;
+  background-color: rgba(0, 0, 0);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  padding: 10px;
+  min-height: 500px;
+}
+
+
+/* footer  */
+#footer {
+  background:inherit;
+  background-color: rgba(255,255,0);
+  box-sizing:border-box;
+  border-width:5px;
+  border-style:solid;
+  border-color:rgba(121, 121, 121, 1);
+  border-radius:10px;
+  padding: 20px;
+  margin-top: 15px; 
+  text-align: center; 
+}
+
+/* ========================================= */
+/* === Iconos Redes Sociales (Botones) === */
+/* ========================================= */
+#footer a {
+  font-size: 30px; /* Tamaño del icono */
+  color: #ffffff; /* Icono blanco */
+  background-color: #555; /* Fondo gris oscuro */
+  margin: 0 15px; /* Espaciado */
+  text-decoration: none; 
+  transition: all 0.3s ease; 
+  
+  /* === Forma de botón circular === */
+  border-radius: 50%; /* Círculo perfecto */
+  width: 60px;  /* Ancho */
+  height: 60px; /* Alto */
+  display: inline-block; /* Para que tome width/height */
+  line-height: 60px; /* Centra el icono verticalmente */
+}
+
+/* Efecto Hover (escala) */
+#footer a:hover {
+  transform: scale(1.15); /* Aumenta tamaño */
+  color: #fff; /* Mantiene icono blanco */
+}
+
+/* Colores de fondo específicos en hover */
+#footer a.fb:hover { background-color: #3b5998; }
+#footer a.tw:hover { background-color: #1DA1F2; }
+#footer a.yt:hover { background-color: #FF0000; }
+
+
+/* ================================================= */
+/* === NUEVO ESTILO FONDO Formulario Comandante === */
+/* ================================================= */
+
+.comandante-body-elaborate {
+  /* Ruta a tu imagen de fondo */
+  /* Asegúrate de tener una imagen en 'Recursos/img/background.jpg' */
+  background-image: url('img/fondo.jpg');
+  
+  /* Propiedades para que el fondo cubra todo */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+
+  
+}
+

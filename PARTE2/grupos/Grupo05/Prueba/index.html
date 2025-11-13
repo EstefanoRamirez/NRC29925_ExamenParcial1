@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prueba Grupo07</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Recursos/bootstrap-theme.css">
+    <link rel="stylesheet" href="./Recursos/bootstrap-theme.css.map">
+    <link rel="stylesheet" href="./Recursos/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./Recursos/bootstrap.css">
+    <link rel="stylesheet" href="./Recursos/bootstrap.css.map">
+    <link rel="stylesheet" href="./Recursos/bootstrap.min.css">
+    <link rel="stylesheet" href="./Recursos/estilos.css">
+  <!-- Font Awesome (para los iconos .fab .fa-...) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
+<body>
+    <div class="container-fluid">
+      <header id="header" class="row">
+        <div class="col-xs-12">
+          <img id="Espe_img" src="Recursos/img/logo_ESPE.png" class="img-responsive center-block" alt="Logo ESPE">
+        </div>
+      </header>
+      <nav id="navBar" class="row">
+        <div class="col-xs-12">
+          <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Grupo 7</a>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="nav navbar-nav">
+                  <li><a href="#">Docente</a></li>
+                  <li><a href="./comandante.html">Comandante</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Grupos <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu" id="listaGrupos">
+                      <li><a href="#" data-grupo ="1">Grupo 1</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#" data-grupo ="2">Grupo 2</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#" data-grupo ="3">Grupo 3</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#" data-grupo ="4">Grupo 4</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#" data-grupo ="5">Grupo 5</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#" data-grupo ="6">Grupo 6</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#" data-grupo ="7">Grupo 7</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#" data-grupo ="8">Grupo 8</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search" style="margin-left:10px;">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Buscar">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </nav>
+
+      <div class="container mt-5" id="tablagrupo" style="display: none;">
+        <h3 class="text-center">Integrantes del grupo</h3>
+        <div class="table-responsive"></div>
+      </div>
+      <!--Barra de progreso controlado-->
+        <div id="barra-progreso-container" class="container text-center" style="display:none; margin-top:30px;">
+          <div class="progress" style="height: 30px; border-radius: 15px; background-color: #f0f0f0; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <div id="barra-progreso"
+                class="progress-bar progress-bar-striped progress-bar-animated active"
+                role="progressbar"
+                style="width:0%; 
+                        border-radius:15px; 
+                        background: linear-gradient(90deg, #00b09b, #96c93d);
+                        font-weight: bold;
+                        font-size: 16px;
+                        color: white;
+                        transition: width 0.3s ease;">
+              Cargando...
+            </div>
+          </div>
+        </div>
+
+
+      <!-- Main row with left, center, right -->
+      <main class="row" id="mainRow">
+        <aside id="leftMenu" class="col-xs-12 col-sm-3 col-md-3">
+          <div class="panel panel-default">
+            <div class="panel-body text-center">
+              <!-- Vertical button group for left menu -->
+              <div class="btn-group-vertical" role="group" aria-label="Left menu" style="width:100%;">
+                <a class="btn btn-default btn-block" href=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Login</a>
+                <a class="btn btn-default btn-block" href=""><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Registro</a>
+                <a class="btn btn-default btn-block" href=""><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Producto</a>
+                <a id="botonformulario" class="btn btn-default btn-block" href=""><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Formulario</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <section id="content" class="col-xs-12 col-sm-6 col-md-6 Texto">
+          <div class="content-box">
+            <h2>Aplicaciones de Tecnologias Web</h2>
+            <p><small>Integrantes:</small></p>
+            <p><small>Joselin Liseth Villegas Chicaiza </small></p>
+            <p><small>Kevin Daniel Llumiquinga Toapanta</small></p>
+            <p><small>NRC: 29925</small></p>
+            <p><small>Grupo 7</small></p>
+          </div>
+        </section>
+        <aside id="rightMenu" class="col-xs-12 col-sm-3 col-md-3">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/_mLQ4BaMPoY" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </aside>
+      </main>
+      <!--Modal para el login-->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="formulariologinLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style="border-radius:10px; box-shadow:0 0 20px rgba(0,0,0,0.3);">
+          <div class="modal-header" style="background-color:#4fe46a; color:white; border-top-left-radius:10px; border-top-right-radius:10px;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar" style="color:rgb(223, 44, 44);"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center" id="miModalFormularioLabel">Formulario de Login</h4>
+          </div>
+          <div class="modal-body" style="background-color:#f7f9fb;">
+            <form id="modalFormLogin" action="#" method="post">
+              <div class="form-group">
+                <label for="modal_usuario">Usuario</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" id="modal_usuario" name="usuario" placeholder="Usuario" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="modal_contrasena">Contraseña</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="bi bi-lock"></i></span>
+                  <input type="password" class="form-control" id="modal_contrasena" name="contrasena" placeholder="Ingrese su contraseña" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="modal_confirmar">Confirmar contraseña</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="bi bi-eye"></i></span>
+                  <input type="password" class="form-control" id="modal_confirmar" name="confirmar" placeholder="Confirme su contraseña" required>
+                </div>
+              </div>
+              <div class="col-xs-12 text-center">
+              <div class="container-fluid">
+                  <div class="social-icons">
+                    <a class="social-icon fb" href="#" title="Facebook" aria-label="Facebook">
+                      <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                      <span class="label">Facebook</span>
+                    </a>
+                    <a class="social-icon tw" href="#" title="Twitter" aria-label="Twitter">
+                      <i class="fab fa-twitter" aria-hidden="true"></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                    <a class="social-icon yt" href="#" title="YouTube" aria-label="YouTube">
+                      <i class="fab fa-youtube" aria-hidden="true"></i>
+                      <span class="label">Youtube</span>
+                    </a>
+                  </div>
+              </div>
+        </div>
+            </form>
+          </div>
+          <br>
+          <div class="modal-footer" style="background-color:#f1f1f1; border-bottom-left-radius:10px; border-bottom-right-radius:10px;">
+            <button type="submit" form="modalFormLogin" class="btn btn-success">Aceptar</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="btvolver">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+      <!--Modal para el formulario-->
+      <div class="modal fade" id="formulariologin" tabindex="-1" role="dialog" aria-labelledby="formulariologinLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style="border-radius:10px; box-shadow:0 0 20px rgba(0,0,0,0.3);">
+          <div class="modal-header" style="background-color:#cfdd3c; color:white; border-top-left-radius:10px; border-top-right-radius:10px;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar" style="color:white;"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title text-center" id="miModalFormularioLabel">Formulario de Registro</h4>
+          </div>
+          <div class="modal-body" style="background-color:#f7f9fb;">
+            <form id="modalFormLogin" action="#" method="post">
+              <div class="form-group">
+                <label for="modal_nombre">Nombre completo</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" id="modal_nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="modal_usuario">Usuario</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="bi bi-person"></i></span>
+                  <input type="text" class="form-control" id="modal_usuario" name="usuario" placeholder="Usuario" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="modal_contrasena">Contraseña</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="bi bi-lock"></i></span>
+                  <input type="password" class="form-control" id="modal_contrasena" name="contrasena" placeholder="Ingrese su contraseña" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="modal_confirmar">Confirmar contraseña</label>
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="bi bi-eye"></i></span>
+                  <input type="password" class="form-control" id="modal_confirmar" name="confirmar" placeholder="Confirme su contraseña" required>
+                </div>
+              </div>
+              <div class="">
+                <div class="panel-heading text-center"><strong>Genero</strong></div>
+                <div class="panel-body">
+                  <div class="form-group">
+                    <label for="modal_genero">Seleccione su genero</label>
+                    <select id="modal_genero" name="genero" class="form-control" required>
+                      <option value="" disabled selected>Seleccione</option>
+                      <option value="masculino">Masculino</option>
+                      <option value="femenino">Femenino</option>
+                      <option value="lgtb">LGTB</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer" style="background-color:#f1f1f1; border-bottom-left-radius:10px; border-bottom-right-radius:10px;">
+            <button type="submit" form="modalFormLogin" class="btn btn-success">Aceptar</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="btvolver">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Footer social bar -->
+       <footer id="footer" class="row">
+        <div class="col-xs-12 text-center">
+          <div class="social-bar">
+              <div class="social-icons">
+                <a class="social-icon fb" href="#" title="Facebook" aria-label="Facebook">
+                  <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                  <span class="label">Facebook</span>
+                </a>
+                <a class="social-icon tw" href="#" title="Twitter" aria-label="Twitter">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                  <span class="label">Twitter</span>
+                </a>
+                <a class="social-icon yt" href="#" title="YouTube" aria-label="YouTube">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                  <span class="label">Youtube</span>
+                </a>
+              </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./modal.js"></script>
+  </body>
+</html>

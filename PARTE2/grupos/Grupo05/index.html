@@ -19,7 +19,7 @@
     
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="css/style.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
 
 </head>
 
@@ -132,11 +132,730 @@
 
                 <div class="container-fluid">
                     <h1 class="h3 mb-4">Progress Bar - Grupo 05</h1>
+
+                         <!--  TEORÍA -->
+
+                         <div style="border: 1px solid black; margin: 20px; padding: 15px; border-radius: 6px; background-color: #fff;">
+
+                          <div class="card shadow mb-4 wow animate__animated animate__fadeInUp" style="border: none; background-color: transparent;">
+                            
+                            <!-- Encabezado con color de fondo -->
+                            <div class="card-header py-3" >
+                              <h6 class="m-0 font-weight-bold"> Teoría</h6>
+                            </div>
+
+                            <div class="card-body">
+
+                              <p class="text-secondary mb-4">
+                                Una <strong>barra de progreso</strong> es un componente visual utilizado para 
+                                indicar el <strong>avance</strong> de una tarea o proceso en curso. 
+                                Su propósito es ofrecer <strong>retroalimentación inmediata</strong> al usuario, mostrando de forma clara cuanto 
+                                del proceso se ha completado.  
+                              </p>
+
+                              <p class="text-secondary mb-4">
+                                En <strong>Bootstrap</strong>, las barras de progreso son totalmente 
+                                <strong>adaptables, accesibles y personalizables</strong>. Gracias a su estructura modular, 
+                                es posible modificar fácilmente su apariencia, color, animación y tamaño, 
+                                manteniendo una presentación profesional y consistente.
+                              </p>
+
+                              <div class="bg-white border rounded-3 shadow-sm p-3 mb-4">
+                                <pre class="mb-0"><code>&lt;div class="progress"&gt;
+                          &lt;div class="progress-bar" role="progressbar" aria-valuenow="70"
+                              aria-valuemin="0" aria-valuemax="100" style="width:70%"&gt;
+                              70% Complete
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                                </code></pre>
+                              </div>
+
+                                                            <div class="text-center mb-4">
+                                  <img src="./img/img1.png" class="img-fluid rounded-3 shadow-sm" 
+                                      alt="Ejemplo teórico de barra de progreso" 
+                                      style="width: 100%; max-width: 50%;">
+                                </div>
+
+                              <h6 class="fw-bold text-primary mb-3">
+                                Características principales de las barras de progreso en Bootstrap:
+                              </h6>
+
+                              <ul class="text-secondary">
+                                <li>Representan visualmente el progreso desde un valor mínimo hasta un máximo definido.</li>
+                                <li>Son completamente <strong>responsivas</strong> y se adaptan al tamaño de su contenedor.</li>
+                                <li>Permiten incluir <strong>animaciones dinámicas</strong> mediante la clase <code>.progress-bar-animated</code>.</li>
+                                <li>Su color se puede personalizar con clases como <code>.bg-success</code>, <code>.bg-warning</code> o <code>.bg-danger</code>.</li>
+                                <li>El porcentaje de avance se controla mediante <code>style="width:X%"</code>.</li>
+                                <li>Incorporan atributos <strong>ARIA</strong> para mejorar la accesibilidad (<code>aria-valuenow</code>, <code>aria-valuemin</code>, <code>aria-valuemax</code>).</li>
+                                <li>Admiten texto interno, como el porcentaje o descripción del progreso.</li>
+                                <li>Su <strong>altura</strong> puede modificarse fácilmente con CSS.</li>
+                              </ul>
+
+                              <div class="alert alert-info mt-4 mb-0 rounded-3 shadow-sm border border-dark">
+                                <i class="fas fa-info-circle me-2"></i>
+                                En conclusión, las barras de progreso son un componente fundamental en el diseño web moderno, 
+                                especialmente útiles para representar el estado de procesos como descargas, cargas o instalaciones. 
+                                Bootstrap ofrece una implementación flexible, moderna y accesible para este propósito.
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                           
+                          <!-- ==================== 2) VIDEO TUTORIAL ==================== -->
+                          <div style="border: 1px solid black; margin: 20px; padding: 15px; border-radius: 6px; background-color: #fff;">
+                            <div class="card shadow mb-4 wow animate__animated animate__fadeInUp" style="border: none; background-color: transparent;">
+                              <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold">2) Video Tutorial</h6>
+                              </div>
+
+                              <div class="card-body">
+                                <p class="text-secondary mb-3">
+                                  A continuación se muestra un video explicativo sobre la implementación de las barras de progreso.
+                                </p>
+
+                                <div class="text-center">
+                                  <video class="rounded shadow-sm" width="80%" controls>
+                                    <source src="./video/Capítulo 5 - Barras de progreso.mp4" type="video/mp4">
+                                    Tu navegador no soporta la reproducción de videos.
+                                  </video>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+                        <!-- ==================== EJEMPLOS PRÁCTICOS ==================== -->
+
+                                                <!-- ===== 1) Barras de progreso básicas ===== -->
+                          <div style="border: 1px solid black; margin: 20px; padding: 15px; border-radius: 6px; background-color: #fff;">
+                            <div class="card shadow mb-4 wow animate__animated animate__fadeInUp" style="border: none; background-color: transparent;">
+                              <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold">1) Barras de progreso básicas</h6>
+                              </div>
+
+                              <div class="card-body">
+                                <p>
+                                  Las barras de progreso pueden mostrar diferentes porcentajes de avance mediante la propiedad <code>width</code> en línea.
+                                </p>
+
+                                <!-- BLOQUE DE CÓDIGO MOSTRADO -->
+                                <div class="bg-light p-3 rounded border">
+                                  <h6 class="mb-2">Ejemplo</h6>
+                                  <pre><code>&lt;div class="container"&gt;
+                            &lt;h1&gt;Barras de Progreso&lt;/h1&gt;
+                            &lt;div class="progress"&gt;
+                              &lt;div class="progress-bar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%"&gt;
+                                &lt;span&gt;60&lt;/span&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/div&gt;
+                          </code></pre>
+                                </div>
+
+                                <!-- BOTÓN PARA MOSTRAR/OCULTAR RESULTADO -->
+                                <div class="text-center mt-3">
+                                  <button class="btn btn-success px-4 py-2 rounded-pill" onclick="toggleView('resultado1')">
+                                    <i class="bi bi-play-fill me-2"></i>Visualizar ejercicio
+                                  </button>
+                                </div>
+
+                                <!-- RESULTADO DEL CÓDIGO (EJECUTADO) -->
+                                <div id="resultado1" class="bg-white p-4 border rounded shadow-sm mt-3 d-none">
+                                  <div class="container">
+                                    <h1>Barras de Progreso</h1>
+                                    <div class="progress">
+                                      <div class="progress-bar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                        <span>60</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+
+
                     
+
+
+                      <!-- ===== 2) Barras de progreso contextual (versión unificada con container) ===== -->
+                      <div style="border: 1px solid black; margin: 20px; padding: 15px; border-radius: 6px; background-color: #fff;">
+                        <div class="card shadow mb-4 wow animate__animated animate__fadeInUp" style="border: none; background-color: transparent;">
+                          
+                          <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">2) Barras de progreso contextual</h6>
+                          </div>
+
+                          <div class="card-body">
+                            <p>
+                              Las <strong>barras de progreso contextual</strong> permiten transmitir distintos estados o niveles de avance mediante clases contextuales de Bootstrap.
+                            </p>
+
+                            <ul>
+                              <li><code>.bg-success</code> → Éxito o tarea completada.</li>
+                              <li><code>.bg-info</code> → Información o proceso en curso.</li>
+                              <li><code>.bg-warning</code> → Advertencia o precaución.</li>
+                              <li><code>.bg-danger</code> → Error o situación crítica.</li>
+                            </ul>
+
+                            <div class="bg-light p-3 rounded border">
+                              <h6 class="mb-2">Ejemplo (código HTML)</h6>
+                              <pre><code>&lt;div class="progress"&gt;
+                        &lt;div class="progress-bar progress-bar-successful" style="width:60%;"&gt;60%&lt;/div&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="progress"&gt;
+                        &lt;div class="progress-bar progress-bar-info" style="width:60%;"&gt;60%&lt;/div&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="progress"&gt;
+                        &lt;div class="progress-bar progress-bar-warning" style="width:60%;"&gt;60%&lt;/div&gt;
+                      &lt;/div&gt;
+
+                      &lt;div class="progress"&gt;
+                        &lt;div class="progress-bar progress-bar-danger" style="width:60%;"&gt;60%&lt;/div&gt;
+                      &lt;/div&gt;
+                      </code></pre>
+                            </div>
+
+                            <!-- BOTÓN PARA MOSTRAR/OCULTAR RESULTADO -->
+                            <div class="text-center mt-3">
+                              <button class="btn btn-success px-4 py-2 rounded-pill" onclick="toggleView('resultadoBarrasContainer')">
+                                <i class="bi bi-play-fill me-2"></i>Visualizar ejercicio
+                              </button>
+                            </div>
+
+                            <!-- RESULTADO DEL CÓDIGO (EJECUTADO) -->
+                            <div id="resultadoBarrasContainer" class="bg-white p-4 border rounded shadow-sm mt-3 d-none">
+                              <div class="container">
+                                <h5 class="mb-4 text-center">Ejemplo de Barras de Progreso Contextual </h5>
+
+                                <!-- Barras integradas -->
+                                <div class="progress mb-3">
+                                  <div class="progress-bar progress-bar-successful bg-success" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                    <span>60% Éxito</span>
+                                  </div>
+                                </div>
+
+                                <div class="progress mb-3">
+                                  <div class="progress-bar progress-bar-info bg-info" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                    <span>60% Información</span>
+                                  </div>
+                                </div>
+
+                                <div class="progress mb-3">
+                                  <div class="progress-bar progress-bar-warning bg-warning text-dark" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                    <span>60% Advertencia</span>
+                                  </div>
+                                </div>
+
+                                <div class="progress mb-3">
+                                  <div class="progress-bar progress-bar-danger bg-danger" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                    <span>60% Peligro</span>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <!-- ===== 3) Barras de progreso cebreadas ===== -->
+                      <div style="border: 1px solid black; margin: 20px; padding: 15px; border-radius: 6px; background-color: #fff;">
+                        <div class="card shadow mb-4 wow animate__animated animate__fadeInUp" style="border: none; background-color: transparent;">
+                          
+                          <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">3) Barras de progreso cebreadas</h6>
+                          </div>
+
+                          <div class="card-body">
+                            <p>
+                              Las barras de progreso también pueden tener <strong>rayas decorativas y animadas</strong> que añaden un efecto visual dinámico.
+                            </p>
+                            <p>
+                              Usa las clases <code>.progress-bar-striped</code> y <code>.progress-bar-animated</code> para aplicar el efecto de rayas en movimiento.
+                            </p>
+
+                            <div class="bg-light p-3 rounded border">
+                              <h6 class="mb-2">Ejemplo</h6>
+                              <pre><code>&lt;div class="progress progress-striped"&gt;
+                              &lt;div class="progress-bar progress-bar-successful" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%"&gt;
+                                &lt;span&gt;60%&lt;/span&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;</code></pre>
+                                  </div>
+
+                            <!-- Botón de visualización -->
+                            <div class="text-center mt-3">
+                              <button class="btn btn-success px-4 py-2 rounded-pill" onclick="toggleView('resultadoRayadas')">
+                                <i class="bi bi-play-fill me-2"></i>Visualizar ejercicio
+                              </button>
+                            </div>
+
+                            <!-- RESULTADO VISUAL -->
+                            <div id="resultadoRayadas" class="bg-white p-4 border rounded shadow-sm mt-3 d-none">
+
+                              <!-- Éxito -->
+                              <div class="progress progress-striped mb-3" style="height:30px;">
+                                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" 
+                                    role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 
+                                    style="width:60%">
+                                  60% Completado (éxito)
+                                </div>
+                              </div>
+
+                              <!-- Información -->
+                              <div class="progress progress-striped mb-3" style="height:30px;">
+                                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" 
+                                    role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 
+                                    style="width:60%">
+                                  60% Completado (información)
+                                </div>
+                              </div>
+
+                              <!-- Advertencia -->
+                              <div class="progress progress-striped mb-3" style="height:30px;">
+                                <div class="progress-bar bg-warning text-dark progress-bar-striped progress-bar-animated" 
+                                    role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 
+                                    style="width:60%">
+                                  60% Completado (advertencia)
+                                </div>
+                              </div>
+
+                              <!-- Peligro -->
+                              <div class="progress progress-striped" style="height:30px;">
+                                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" 
+                                    role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 
+                                    style="width:60%">
+                                  60% Completado (peligro)
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                        <!-- ===== 4) Barra de progreso animada ===== -->
+                        <div style="border: 1px solid black; margin: 20px; padding: 15px; border-radius: 6px; background-color: #fff;">
+                          <div class="card shadow mb-4 wow animate__animated animate__fadeInUp" style="border: none; background-color: transparent;">
+
+                            <div class="card-header py-3">
+                              <h6 class="m-0 font-weight-bold">4) Barra de progreso animada</h6>
+                            </div>
+
+                            <div class="card-body">
+                              <p>
+                                Puedes agregar <strong>movimiento</strong> a la barra de progreso para indicar que un proceso está en curso.
+                              </p>
+                              <p>
+                                Añade las clases <code>.progress-bar-striped</code> y <code>.progress-bar-animated</code> (en Bootstrap 5) para activar la animación continua.
+                              </p>
+
+                              <div class="bg-light p-3 rounded">
+                                <h6 class="mb-3">Código del ejemplo</h6>
+
+                                <pre style="background:#f8f9fa; padding:10px; border-radius:6px; white-space:pre-wrap; box-shadow:none;">
+                        &lt;div class="progress progress-striped active"&gt;
+                          &lt;div class="progress-bar bg-success progress-bar-striped progress-bar-animated" 
+                              role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"&gt;
+                            60%
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="progress progress-striped active"&gt;
+                          &lt;div class="progress-bar bg-info progress-bar-striped progress-bar-animated" 
+                              role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"&gt;
+                            60%
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="progress progress-striped active"&gt;
+                          &lt;div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" 
+                              role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"&gt;
+                            60%
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+
+                        &lt;div class="progress progress-striped active"&gt;
+                          &lt;div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" 
+                              role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%;"&gt;
+                            60%
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                                </pre>
+                              </div>
+
+                              <div class="text-center mt-3">
+                                <button class="btn btn-success px-4 py-2 rounded-pill" onclick="toggleView('resultadoAnimada')">
+                                  <i class="bi bi-play-fill me-2"></i>Visualizar ejercicio
+                                </button>
+                              </div>
+
+                              <!-- Contenedor que se muestra al presionar el botón -->
+                              <div id="resultadoAnimada" class="bg-white p-4 border rounded shadow-sm mt-3 d-none">
+                                <h6 class="mb-3 text-center">Resultado visual</h6>
+
+                                <!-- Barra verde -->
+                                <div class="progress progress-striped active mb-3">
+                                  <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" 
+                                      role="progressbar" style="width:60%;">60%</div>
+                                </div>
+
+                                <!-- Barra azul -->
+                                <div class="progress progress-striped active mb-3">
+                                  <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" 
+                                      role="progressbar" style="width:60%;">60%</div>
+                                </div>
+
+                                <!-- Barra amarilla -->
+                                <div class="progress progress-striped active mb-3">
+                                  <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" 
+                                      role="progressbar" style="width:60%;">60%</div>
+                                </div>
+
+                                <!-- Barra roja -->
+                                <div class="progress progress-striped active">
+                                  <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" 
+                                      role="progressbar" style="width:60%;">60%</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      <!-- ===== 5) Barras de progreso segmentada ===== -->
+                      <div style="border: 1px solid black; margin: 20px; padding: 15px; border-radius: 6px; background-color: #fff;">
+                        <div class="card shadow mb-4 wow animate__animated animate__fadeInUp" style="border: none; background-color: transparent;">
+
+                          <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold">5) Barras de progreso segmentada</h6>
+                          </div>
+
+                          <div class="card-body">
+                            <p>
+                              Las barras de progreso también se pueden <strong>apilar</strong> dentro de un mismo contenedor
+                              para representar diferentes estados o categorías.
+                            </p>
+                            <p>
+                              Crea una barra de progreso apilada colocando varias barras dentro del mismo
+                              <code>&lt;div class="progress"&gt;</code>:
+                            </p>
+
+                            <div class="bg-light p-3 rounded border">
+                              <h6 class="mb-2">Ejemplo</h6>
+                              <pre><code>&lt;div class="progress"&gt;
+                        &lt;div class="progress-bar progress-bar-success" style="width:35%"&gt;
+                          &lt;span class="sr-only"&gt;35% completado (éxito)&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class="progress-bar progress-bar-warning" style="width:20%"&gt;
+                          &lt;span class="sr-only"&gt;20% completado (aviso)&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class="progress-bar progress-bar-danger" style="width:10%"&gt;
+                          &lt;span class="sr-only"&gt;10% completado (peligro)&lt;/span&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;</code></pre>
+                            </div>
+
+                            <div class="text-center mt-3">
+                              <button class="btn btn-success px-4 py-2 rounded-pill" onclick="toggleView('resultadoApiladas')">
+                                <i class="bi bi-play-fill me-2"></i>Visualizar ejercicio
+                              </button>
+                            </div>
+
+                            <!-- Contenedor de resultado -->
+                            <div id="resultadoApiladas" class="bg-white p-4 border rounded shadow-sm mt-3 d-none">
+                              <div class="container">
+                                <h1 class="mb-4 text-center">Barras de Progreso</h1>
+
+                                <div class="progress" style="height: 30px;">
+                                  <div class="progress-bar bg-success" role="progressbar" style="width:35%">
+                                    <span class="sr-only">35% completado (éxito)</span>
+                                  </div>
+                                  <div class="progress-bar bg-warning text-dark" role="progressbar" style="width:20%">
+                                    <span class="sr-only">20% completado (aviso)</span>
+                                  </div>
+                                  <div class="progress-bar bg-danger" role="progressbar" style="width:10%">
+                                    <span class="sr-only">10% completado (peligro)</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                                        
+
+
+
+
+
+                  <!-- =====  Ejercicio adicional ===== -->
+                  <div style="border: 1px solid black; margin: 20px; padding: 15px; border-radius: 6px; background-color: #fff;">
+                    <div class="card shadow mb-4 wow animate__animated animate__fadeInUp" style="border: none; background-color: transparent;">
+
+                      <div class="card-header py-3" >
+                        <h6 class="m-0 font-weight-bold"> Ejercicio adicional</h6>
+                      </div>
+
+                      <div class="card-body">
+                        <p>
+                          Crea una barra de progreso que cambie de color según el porcentaje alcanzado.
+                        </p>
+
+                        <div class="bg-light p-3 rounded border">
+                          <h6 class="mb-2">Ejemplo</h6>
+                          <pre><code>&lt;div class="card shadow mb-4 wow animate__animated animate__fadeInUp"&gt;
+                    &lt;div class="card-header py-3"&gt;
+                      &lt;h6 class="m-0 font-weight-bold text-primary"&gt;Ejercicio&lt;/h6&gt;
+                    &lt;/div&gt;
+                    &lt;div class="card-body text-center"&gt;
+                      &lt;p&gt;Crea una barra de progreso que cambie de color según el porcentaje alcanzado.&lt;/p&gt;
+
+                      &lt;img src="img/ejercicio_explicacion.png" class="img-fluid rounded shadow mb-3" alt="Explicación del ejercicio"&gt;
+
+                      &lt;div class="progress mb-3" style="height: 30px;"&gt;
+                        &lt;div id="barraEjercicio" class="progress-bar bg-success" style="width: 0%;"&gt;0%&lt;/div&gt;
+                      &lt;/div&gt;
+                      &lt;button class="btn btn-success" onclick="aumentarProgreso()"&gt;Aumentar&lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;</code></pre>
+                        </div>
+
+                        <div class="text-center mt-3">
+                          <button class="btn btn-success px-4 py-2 rounded-pill" onclick="toggleView('resultadoEjercicio')">
+                            <i class="bi bi-play-fill me-2"></i>Visualizar ejercicio
+                          </button>
+                        </div>
+
+                        <div id="resultadoEjercicio" class="bg-white p-4 border rounded shadow-sm mt-3 d-none text-center">
+                          <p>
+                            Crea una barra de progreso que cambie de color según el porcentaje alcanzado.
+                          </p>
+
+                          <div class="progress mb-3" style="height: 30px;">
+                            <div id="barraEjercicioReal" class="progress-bar bg-success" style="width: 0%;">0%</div>
+                          </div>
+                          <button class="btn btn-success" onclick="aumentarProgresoReal()">Aumentar</button>
+                        </div>
+                      </div>
                     </div>
-            </div>
-        </div>
-    </div>
+                  </div>
+
+
+                    <!-- ===== Ejercicio Práctico ===== -->
+                    <div style="border: 1px solid black; margin: 20px; padding: 15px; border-radius: 6px; background-color: #fff;">
+                      <div class="card content-card mb-4" style="border: none; background-color: transparent;">
+
+                        <div class="card-header" >
+                          <h6 class="m-0 font-weight-bold">Ejercicio Práctico</h6>
+                        </div>
+
+                        <div class="card-body">
+                          <p class="text-justify mb-4">
+                            A continuación se presenta un ejercicio práctico que ilustra como implementar una barra de progreso personalizada en una página web utilizando HTML, CSS y JavaScript.
+                          </p>
+
+                          <p class="text-justify mb-4">
+                            En este ejercicio, se creará una barra de progreso que se llenará a medida que el usuario interactúe con un botón "Login". Se utilizarán estilos CSS para personalizar la apariencia de la barra y JavaScript para controlar su comportamiento.
+                          </p>
+
+                          <div class="text-center mb-4">
+                            <button class="btn btn-success px-4 py-2 rounded-pill" type="button" id="btn-mostrar-ejercicio">
+                              Visualizar Ejercicio
+                            </button>
+                          </div>
+
+                          <!-- Contenedor del Ejercicio -->
+                          <div class="ejercicio-contenido" id="ejercicio-contenido" style="display: none;">
+
+                            <h5 class="card-title mb-4">Pasos a ser explicados de la integración del Progress Bar en el archivo de Prueba.</h5>
+
+                            <!-- 1. Estructura HTML Base -->
+                            <div class="mb-4">
+                              <h6 class="font-weight-bold">1. Estructura HTML con clases</h6>
+                              <p class="text-justify mb-3">
+                                En esta parte se puede ver el código de HTML implementado para la barra de progreso debajo de la etiqueta nav. 
+                              </p>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="bg-light p-3 rounded">
+                                    <pre><code>&lt;div id="barra-progreso-container" class="container text-center" style="display:none; margin-top:30px;"&gt;
+                      &lt;div class="progress" style="height: 30px; border-radius: 15px; background-color: #f0f0f0; box-shadow: 0 0 10px rgba(0,0,0,0.1);"&gt;
+                        &lt;div id="barra-progreso"
+                            class="progress-bar progress-bar-striped progress-bar-animated active"
+                            role="progressbar"
+                            style="width:0%; 
+                                    border-radius:15px; 
+                                    background: linear-gradient(90deg, #00b09b, #96c93d);
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    color: white;
+                                    transition: width 0.3s ease;"&gt;
+                          Cargando...
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;</code></pre>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <img src="./img/code.png" class="img-fluid rounded" alt="Estructura HTML del ejercicio">
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 2. Progress Bar -->
+                            <div class="mb-4">
+                              <h6 class="font-weight-bold">2. Progress Bar</h6>
+                              <p class="text-justify mb-3">
+                                En el menú lateral se encuentran los botones que al dar clic en el botón de "login" se activa la barra de progreso.
+                              </p>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="bg-light p-3 rounded">
+                                    <pre><code>&lt;aside id="leftMenu" class="col-xs-12 col-sm-3 col-md-3"&gt;
+                      &lt;div class="panel panel-default"&gt;
+                        &lt;div class="panel-body text-center"&gt;
+                          &lt;div class="btn-group-vertical" role="group" aria-label="Left menu" style="width:100%;"&gt;
+                            &lt;a class="btn btn-default btn-block" href=""&gt;&lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; Login&lt;/a&gt;
+                            &lt;a class="btn btn-default btn-block" href=""&gt;&lt;span class="glyphicon glyphicon-hdd"&gt;&lt;/span&gt; Registro&lt;/a&gt;
+                            &lt;a class="btn btn-default btn-block" href=""&gt;&lt;span class="glyphicon glyphicon-book"&gt;&lt;/span&gt; Producto&lt;/a&gt;
+                            &lt;a id="botonformulario" class="btn btn-default btn-block" href=""&gt;&lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; Formulario&lt;/a&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/aside&gt;</code></pre>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <img src="./img/Pagina.png" class="img-fluid rounded" alt="Menú lateral del ejercicio">
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 3. Estilos CSS Personalizados -->
+                            <div class="mb-4">
+                              <h6 class="font-weight-bold">3. Estilos CSS Personalizados</h6>
+                              <p class="text-justify mb-3">
+                                Para dar una personalización adicional a la barra de progreso, se agregan estilos CSS personalizados que incluyen animaciones para mejorar la experiencia visual.
+                              </p>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="bg-light p-3 rounded">
+                                    <pre><code>#barra-progreso-container {
+                      animation: aparecer 0.6s ease;
+                    }
+
+                    @keyframes aparecer {
+                      from { opacity: 0; transform: translateY(-10px); }
+                      to   { opacity: 1; transform: translateY(0); }
+                    }
+
+                    #barra-progreso::after {
+                      content: "";
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      height: 100%;
+                      width: 100%;
+                      background: linear-gradient(120deg, rgba(255,255,255,0.2), transparent);
+                      animation: brillo 1.5s linear infinite;
+                      border-radius: 15px;
+                    }
+
+                    @keyframes brillo {
+                      0% { transform: translateX(-100%); }
+                      100% { transform: translateX(100%); }
+                    }</code></pre>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <img src="./img/code1.png" class="img-fluid rounded" alt="Estilos CSS">
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- 4. Inicialización con JavaScript -->
+                            <div class="mb-4">
+                              <h6 class="font-weight-bold">4. Evento y Animación con JavaScript</h6>
+                              <p class="text-justify mb-3">
+                                En un archivo JavaScript separado, se realiza la animación y el control de la barra de progreso al dar clic en el botón de "login"
+                              </p>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <div class="bg-light p-3 rounded">
+                                    <pre><code>&lt;script&gt;
+                    $(document).ready(function () {
+                      $(".btn[href='']").first().on("click", function (e) {
+                        e.preventDefault();
+
+                        $("#barra-progreso-container").fadeIn();
+                        let progreso = 0;
+                        let intervalo = setInterval(function () {
+                          progreso += 10;
+                          $("#barra-progreso")
+                            .css("width", progreso + "%")
+                            .text("Cargando " + progreso + "%");
+                          if (progreso >= 100) {
+                            clearInterval(intervalo);
+                            $("#barra-progreso-container").fadeOut();
+                            $("#login").modal("show");
+                          }
+                        }, 200);
+                      });
+                    });
+                    &lt;/script&gt;</code></pre>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                  <img src="./img/code2.png" class="img-fluid rounded" alt="Inicialización JavaScript">
+                                </div>
+                              </div>
+                            </div>
+
+                            <hr class="my-5">
+
+                            <h5 class="card-title mb-4">Página WEB</h5>
+                            <p class="text-justify mb-4">
+                              En esta parte podrá ver la página web con la implementación de la barra de progreso.
+                            </p>
+
+                            <!-- Ejercicio Interactivo -->
+                            <div class="ejercicio-interactivo-ejecucion">
+                              <div class="container-fluid px-0">
+                                <iframe
+                                  src="./Prueba/index.html"
+                                  class="iframe-ejercicio"
+                                  title="Demostración Scrollspy"
+                                  frameborder="0">
+                                </iframe>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
 
     <script src="../../vendor/jquery/jquery.min.js"></script>
     <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -146,6 +865,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
     
     <script src="js/main.js"></script>
+
+     <script>
+document.getElementById("btnMostrar").addEventListener("click", function() {
+  const contenedor = document.getElementById("contenedorEjemplo");
+  contenedor.classList.toggle("d-none");
+  this.innerHTML = contenedor.classList.contains("d-none") 
+    ? '<i class="bi bi-play-fill me-2"></i> Mostrar Ejemplo Interactivo'
+    : '<i class="bi bi-eye-slash-fill me-2"></i> Ocultar Ejemplo';
+});
+</script>
+
+
+
+<script>
+  // Función para aumentar el progreso dinámicamente
+  function aumentarProgresoReal() {
+    const barra = document.getElementById("barraEjercicioReal");
+    let progreso = parseInt(barra.style.width);
+    if (progreso < 100) {
+      progreso += 10;
+      barra.style.width = progreso + "%";
+      barra.textContent = progreso + "%";
+
+      // Cambiar color según el porcentaje
+      barra.classList.remove("bg-success", "bg-warning", "bg-danger");
+      if (progreso < 50) barra.classList.add("bg-success");
+      else if (progreso < 80) barra.classList.add("bg-warning");
+      else barra.classList.add("bg-danger");
+    }
+  }
+</script>
+
+
+<script>
+function toggleView(id) {
+  const contenedor = document.getElementById(id);
+  contenedor.classList.toggle('d-none');
+}
+</script>
+
+   
     
 </body>
 

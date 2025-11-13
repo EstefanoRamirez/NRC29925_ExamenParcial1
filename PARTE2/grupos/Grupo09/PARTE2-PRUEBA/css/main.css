@@ -1,0 +1,130 @@
+body {
+  max-width: 1300px;
+  margin: 0 auto; /* Para que el contenedor este centrado */
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: #fff;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 28px;
+}
+
+/* box: bordes, fondo y espaciado entre cajas */
+.box {
+  box-sizing: border-box;
+  border: 5px solid #797979;
+  border-radius: 10px;
+  padding: 15px;
+  background-clip: padding-box;
+  margin-top: 15px;
+}
+
+.Texto {
+  text-align: center;
+  color: #000;
+  font-family: Arial;
+  font-size: 25px;
+}
+
+.Texto-peque {
+  text-align: center;
+  color: #000;
+  font-family: Arial;
+  font-size: 15px;
+}
+
+/* HEADER   */
+#header {
+  min-height: 170px;
+  background-color: #00ffff;
+  padding: 20px 15px;
+}
+
+/* Centrar el contenido del header (logo) horizontal y verticalmente */
+#header .col-xs-12 {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  background: transparent;
+  padding: 0;
+}
+
+/* navBar  */
+#navBar {
+  min-height: 70px;
+  background: inherit;
+  background-color: #181817;
+  padding: 10px 15px;
+}
+
+/* leftMenu  */
+#leftMenu {
+  background: inherit;
+  background-color: #ffffff;
+  padding-top: 30px;
+  margin-bottom: 15px;
+  min-height: 320px; /* igual altura que las otras cajas */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* content */
+#content {
+  background: inherit;
+  background-color: #339933;
+  padding: 20px;
+  min-height: 320px;
+  margin-bottom: 15px;
+}
+
+/* rigthMenu */
+#rightMenu {
+  background: inherit;
+  background-color: #000000;
+  padding: 10px;
+  min-height: 320px;
+  margin-bottom: 15px;
+}
+
+/* Hacer el iframe responsivo dentro del bloque */
+#rightMenu .embed-responsive,
+#rightMenu iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* footer  */
+#footer {
+  min-height: 60px;
+  background: inherit;
+  background-color: rgba(255, 255, 0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#footer span {
+  cursor: pointer;
+  margin: 0 20px;
+}
+
+/* Logo image sizing: totalmente responsive y centrado en su contenedor */
+#Espe_img {
+  width: 100%;
+  max-width: 500px; /* tamaño máximo en pantallas grandes */
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+
+#seccion-tabla-grupo { display: none; }
+        /* Estilo para el título del modal */
+        #formularioModal .modal-header h4 {
+            color: #E91E63; /* Color rosa/magenta */
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+        }

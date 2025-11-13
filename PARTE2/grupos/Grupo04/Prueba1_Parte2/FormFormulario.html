@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario de Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="Recursos/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Recursos/MisEstilos.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row justify-content-center align-items-center min-vh-100">
+        <div class="col-12 col-md-6 col-lg-4">
+          <form name="FormaLogin" action="#" method="POST" class="p-4 shadow-sm bg-light rounded">
+            <h2 class="text-center mb-4">Formulario de Login</h2>
+
+            <!-- Campo Nombre -->
+            <div class="form-group">
+              <label for="txtNombre"><strong>Nombre:</strong></label>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+                </span>
+                <input type="text" class="form-control" id="txtNombre" name="txtNombre" placeholder="Ingrese su nombre" required>
+              </div>
+            </div>
+
+            <!-- Usuario -->
+            <div class="form-group">
+              <label for="txtUsuario"><strong>Usuario:</strong></label>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-log-in"></span>
+                </span>
+                <input type="text" class="form-control" id="txtUsuario" name="txtUsuario" placeholder="Ingrese su usuario" required>
+              </div>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="form-group">
+              <label for="txtContraseña"><strong>Contraseña:</strong></label>
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <span class="glyphicon glyphicon-lock"></span>
+                </span>
+                <input type="password" class="form-control" id="txtContraseña" name="txtContraseña" placeholder="Ingrese su contraseña" required>
+              </div>
+            </div>
+
+            <!-- Género -->
+            <div class="seccion form-group mt-4">
+              <fieldset class="border p-3 rounded">
+                <legend class="w-auto px-2 text-primary"><strong>Género</strong></legend>
+                <label for="genero" class="form-label">Seleccione su género:</label>
+                <select class="form-control" id="genero" name="genero" required>
+                  <option value="">--Seleccione--</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="LGTB">LGTB</option>
+                </select>
+              </fieldset>
+            </div>
+
+            <!-- Botón de envío -->
+            <button type="submit" class="btn btn-warning btn-block mt-3">
+              <span class="glyphicon glyphicon-ok"></span> Ingresar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="Recursos/js/jquery-1.11.0.min.js"></script>
+    <script src="Recursos/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
