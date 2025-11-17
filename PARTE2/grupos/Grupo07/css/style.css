@@ -35,10 +35,6 @@ h1, h2, h3, h4, h5, h6, pre {
     border-top: 1px solid #333;
 }
 
-.sidebar .nav-item .nav-link i {
-    margin-right: 12px; 
-}
-
 .btn-primary {
      background-color: #000 !important;
      border-color: #000 !important;
@@ -125,7 +121,7 @@ h1, h2, h3, h4, h5, h6, pre {
     color: #858796; 
 }
 
-.container-fluid h1.h3 {
+.container-fluid > h1.h3 {
     text-align: center !important;
     color: #000000 !important; 
     font-family: 'Roboto Mono', monospace !important;
@@ -138,14 +134,18 @@ h1, h2, h3, h4, h5, h6, pre {
     font-family: 'Roboto Mono', monospace !important;
 }
 
-
-/* --- INICIO ESTILOS ESPECÍFICOS DE PANELES (ORIGINALES DEL CLIENTE) --- */
-
+/* Estilos para los paneles */
 .panel {
     border: 2px solid #000;
     border-radius: 0;
     transition: box-shadow 0.3s ease-in-out;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .panel:hover {
@@ -155,37 +155,11 @@ h1, h2, h3, h4, h5, h6, pre {
 .panel-heading {
     border-bottom: 2px solid #000;
     border-radius: 0;
-    /* [CAMBIO] Títulos de panel centrados */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
 }
 
 .panel-title {
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-}
-
-/* [CAMBIO] Corrección de texto gris y padding */
-.panel-body {
-    padding: 20px; /* Arregla el problema de "muy pegado" */
-    color: #000 !important; /* Arregla el texto gris */
-    font-family: 'Nunito', sans-serif; /* Fuente más legible */
-}
-/* [CAMBIO] Corrección del subtítulo "Tipos de paneles" */
-.panel-body h3 {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.25rem;
-    color: #000;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 .panel-1 .panel-heading {
@@ -208,25 +182,35 @@ h1, h2, h3, h4, h5, h6, pre {
     color: #fff;
 }
 
-/* Estilos específicos para panel-4 (Ejercicio) */
+/* Estilos específicos para panel-4 */
 .panel-4 {
-    height: 850px; /* Altura aumentada para el iframe */
-}
-
-.panel-4 .panel-body {
-    padding: 0;
-    height: 100%;
-    position: relative;
-    overflow: hidden; 
-}
-
-.panel-4 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-bottom: 30px;
     width: 100%;
-    height: 100%;
+}
+
+/* Panel-4: contenido con altura automática para texto e imágenes */
+.panel-4 .panel-body {
+    padding: 15px;
+    height: auto;
+}
+
+.panel-4 p {
+    margin: 0 0 12px 0;
+    color: #222;
+}
+
+.panel-4 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Si hay iframes, la clase .video-responsive controla el tamaño responsive */
+.panel-4 iframe {
     border: none;
+    width: 100%;
 }
 
 /* Contenedor responsivo para videos (mantiene relación 16:9) */
@@ -240,6 +224,7 @@ h1, h2, h3, h4, h5, h6, pre {
 
 .video-responsive video,
 .video-responsive iframe {
+    border-radius: 4%;
     position: absolute;
     top: 0;
     left: 0;
@@ -255,6 +240,7 @@ h1, h2, h3, h4, h5, h6, pre {
     margin-bottom: 1rem;
 }
 
+/* Utilidad global para cualquier imagen que necesite ser responsiva */
 .img-responsive {
     max-width: 100%;
     height: auto;
@@ -266,14 +252,10 @@ h1, h2, h3, h4, h5, h6, pre {
     background-color: #000;
     color: #fff;
     font-weight: 700;
-    font-family: 'Roboto Mono', monospace;
-    border-radius: 0;
-    border-color: #333;
 }
 .panel-2 .accordion-button:not(.collapsed) {
     background-color: #222;
     color: #fff;
-    box-shadow: none;
 }
 .panel-2 .accordion-body {
     background-color: #fff;
@@ -288,15 +270,240 @@ h1, h2, h3, h4, h5, h6, pre {
     justify-content: center;
 }
 
-/* Sidebar y Topbar Fijas */
-.sidebar {
-    position: sticky;
-    top: 0;
-    height: 100vh;
+/* Estilos para paneles que contienen código */
+.code-panel .panel-heading {
+    background-color: #000;
+    color: #fff;
+}
+.code-panel .panel-body {
+    background-color: #f8f9fa;
+    padding: 12px;
+}
+.code-panel pre {
+    background: #0b1220; /* fondo oscuro tipo terminal */
+    color: #cfe8ff;
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 16px;
+    overflow-x: auto;
+    white-space: pre;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    margin: 0;
+    border-radius: 6px;
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02);
+}
+.code-panel code {
+    color: #222;
 }
 
-.topbar {
-    position: sticky;
-    top: 0;
-    z-index: 1030;
+/* Puesto que ahora usamos fondo oscuro para el pre, ajustar color del <code> dentro */
+.code-panel .code-sample {
+    color: #cfe8ff;
+}
+
+/* Estilos para el textarea de código en el panel 3 */
+#codigo {
+    width: 100%;
+    min-height: 150px; /* mantiene similar a la altura original inline */
+    background: #0b1220; /* mismo fondo oscuro que los snippets */
+    color: #cfe8ff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.95rem;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 6px;
+    box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02);
+    resize: vertical;
+}
+
+/* Asegurar que el contenedor de resultado contraste bien */
+#resultado {
+    background: #fff;
+    color: #000;
+}
+
+/* Estilos para los resultados de los ejemplos en panel-2 */
+.example-result {
+    min-height: 60px;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.example-actions .btn-sm {
+    padding: 6px 10px;
+}
+
+/* Ajustes responsivos: paneles de ejemplo apilan en una columna en pantallas pequeñas */
+@media (max-width: 767.98px) {
+    .example-panels .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Estilos para el carrusel de paneles */
+.carousel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.carousel-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-content h4 {
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 700;
+}
+
+.example-panel {
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+}
+
+.example-panel .panel-body {
+    padding: 0;
+}
+
+.example-panel .video-responsive,
+.example-panel iframe,
+.example-panel video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-indicators {
+    bottom: -40px;
+}
+
+.carousel-indicators button {
+    background-color: #000;
+    width: 10px;
+    height: 10px;
+    border-radius: 200%;
+    margin: 0 5px;
+}
+
+.panel-info, .panel-success, .panel-warning, .panel-danger {
+    margin-bottom: 10px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.carousel-content .panel-body {
+    padding: 10px;
+    background-color: white;
+}
+
+/* Estilos para las tarjetas de características */
+.panel-features {
+    padding: 20px 0;
+}
+
+.feature-card {
+    background-color: white;
+    border: 2px solid #000;
+    padding: 20px;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #000;
+    margin-bottom: 15px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 2px solid #000;
+}
+
+.feature-card h5 {
+    color: #000;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.feature-list li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #666;
+    position: relative;
+    padding: 0;
+}
+
+.feature-list li::before {
+    display: none;
+}
+
+.panel-features h4 {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.panel-features h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+}
+
+.panel-body {
+    padding: 3%;
+    
 }

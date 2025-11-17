@@ -2,11 +2,38 @@
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>Login</title>
 
     <link rel="stylesheet" href="Recursos/css/bootstrap.min.css" />
     <link rel="stylesheet" href="Recursos/css/login.css" />
+    <style>
+      @media (max-width: 500px) {
+        /* 1. Ajustamos el contenedor */
+        .login-container {
+          width: 100% !important;
+          padding: 15px 10px !important; /* Relleno mínimo */
+          margin: 0 auto !important;
+          box-shadow: none !important;
+        }
+
+        /* 2. LA SOLUCIÓN: Ocultar los iconos para ganar espacio */
+        .icon-wrapper {
+          display: none !important;
+        }
+
+        /* 3. Hacemos que el input ocupe todo el ancho y tenga bordes redondeados */
+        .input-group input {
+          width: 100% !important;
+          border-radius: 5px !important; /* Redondeamos porque ya no tiene icono al lado */
+          padding: 10px !important;      /* Input cómodo */
+        }
+
+        /* 4. Ajustes menores de texto */
+        h2 { font-size: 20px !important; margin-bottom: 15px !important; }
+        .btn { width: 100% !important; }
+      }
+    </style>
   </head>
 
   <body>
