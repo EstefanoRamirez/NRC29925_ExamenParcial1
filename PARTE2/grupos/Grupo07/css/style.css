@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6, pre {
     color: #858796; 
 }
 
-.container-fluid > h1.h3 {
+.container-fluid h1.h3 {
     text-align: center !important;
     color: #000000 !important; 
     font-family: 'Roboto Mono', monospace !important;
