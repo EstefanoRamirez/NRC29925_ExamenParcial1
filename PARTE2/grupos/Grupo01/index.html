@@ -965,6 +965,7 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
                 </div>
 
     <script src="../../vendor/jquery/jquery.min.js"></script>
+    
     <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="../../js/sb-admin-2.min.js"></script>
     
@@ -972,7 +973,19 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     
     <script src="js/main.js"></script>
      
-    
-</body>
+    <script>
+        (function($) {
+            $(window).on('load', function() {
+                
+                setTimeout(function() {
+                    if ($(window).width() > 768) {
+                        $("body").removeClass("sidebar-toggled");
+                        $(".sidebar").removeClass("toggled");
+                    }
+                }, 10);
+            });
+        })(jQuery);
+    </script>
+    </body>
 
 </html>
