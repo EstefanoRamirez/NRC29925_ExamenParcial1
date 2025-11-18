@@ -507,3 +507,15 @@ h1, h2, h3, h4, h5, h6, pre {
     padding: 3%;
     
 }
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
